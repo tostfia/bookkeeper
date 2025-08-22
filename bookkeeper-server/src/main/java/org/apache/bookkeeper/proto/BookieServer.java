@@ -26,6 +26,8 @@ import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -377,197 +379,133 @@ public class BookieServer implements NIOServerFactory.PacketProcessor, Bookkeepe
         }
     }
 
-    public void processPacket(ByteBuffer packet, Cnxn src) {
-        PacketHeader h = PacketHeader.fromInt(packet.getInt());
+    //INIZIO
 
-        boolean success = false;
-        int statType = BKStats.STATS_UNKNOWN;
-        long startTime = 0;
-        if (isStatsEnabled) {
-            startTime = MathUtils.now();
+    // Definizione di un handler per opcode
+    @FunctionalInterface
+    private interface PacketHandler {
+        void handle(ByteBuffer packet, PacketHeader header, long ledgerId, long entryId, byte[] masterKey, Cnxn src);
+    }
+
+    // Mappa opcode -> handler
+    private final Map<Integer, PacketHandler> packetHandlers = new HashMap<>();
+
+    public void initHandlers() {
+        packetHandlers.put((int) BookieProtocol.ADDENTRY, this::handleAddEntry);
+        packetHandlers.put((int) BookieProtocol.READENTRY, this::handleReadEntry);
+    }
+
+    public void processPacket(ByteBuffer packet, Cnxn src) {
+        PacketHeader header = PacketHeader.fromInt(packet.getInt());
+
+        if (header.getVersion() < BookieProtocol.LOWEST_COMPAT_PROTOCOL_VERSION
+                || header.getVersion() > BookieProtocol.CURRENT_PROTOCOL_VERSION) {
+            LOG.error("Invalid protocol version {}, expected between {} & {}");
+            src.sendResponse(buildResponse(BookieProtocol.EBADVERSION, header.getVersion(), header.getOpCode(), -1, BookieProtocol.INVALID_ENTRY_ID));
+            return;
         }
 
-        // packet format is different between ADDENTRY and READENTRY
         long ledgerId = -1;
         long entryId = BookieProtocol.INVALID_ENTRY_ID;
         byte[] masterKey = null;
-        switch (h.getOpCode()) {
-        case BookieProtocol.ADDENTRY:
-            // first read master key
+
+        // Leggi dati in base all'opcode
+        if (header.getOpCode() == BookieProtocol.ADDENTRY) {
             masterKey = new byte[BookieProtocol.MASTER_KEY_LENGTH];
-            packet.get(masterKey, 0, BookieProtocol.MASTER_KEY_LENGTH);
+            packet.get(masterKey);
             ByteBuffer bb = packet.duplicate();
             ledgerId = bb.getLong();
             entryId = bb.getLong();
-            break;
-        case BookieProtocol.READENTRY:
+        } else if (header.getOpCode() == BookieProtocol.READENTRY) {
             ledgerId = packet.getLong();
             entryId = packet.getLong();
-            break;
         }
 
-        if (h.getVersion() < BookieProtocol.LOWEST_COMPAT_PROTOCOL_VERSION
-            || h.getVersion() > BookieProtocol.CURRENT_PROTOCOL_VERSION) {
-            LOG.error("Invalid protocol version, expected something between "
-                      + BookieProtocol.LOWEST_COMPAT_PROTOCOL_VERSION 
-                      + " & " + BookieProtocol.CURRENT_PROTOCOL_VERSION
-                    + ". got " + h.getVersion());
-            src.sendResponse(buildResponse(BookieProtocol.EBADVERSION, 
-                                           h.getVersion(), h.getOpCode(), ledgerId, entryId));
-            return;
-        }
-        short flags = h.getFlags();
-        switch (h.getOpCode()) {
-        case BookieProtocol.ADDENTRY:
-            statType = BKStats.STATS_ADD;
-
-            if (bookie.isReadOnly()) {
-                LOG.warn("BookieServer is running as readonly mode,"
-                        + " so rejecting the request from the client!");
-                src.sendResponse(buildResponse(BookieProtocol.EREADONLY,
-                        h.getVersion(), h.getOpCode(), ledgerId, entryId));
-                break;
-            }
-
-            try {
-                TimedCnxn tsrc = new TimedCnxn(src, startTime);
-                if ((flags & BookieProtocol.FLAG_RECOVERY_ADD) == BookieProtocol.FLAG_RECOVERY_ADD) {
-                    bookie.recoveryAddEntry(packet.slice(), this, tsrc, masterKey);
-                } else {
-                    bookie.addEntry(packet.slice(), this, tsrc, masterKey);
-                }
-                success = true;
-            } catch (IOException e) {
-                LOG.error("Error writing " + entryId + "@" + ledgerId, e);
-                src.sendResponse(buildResponse(BookieProtocol.EIO, h.getVersion(), h.getOpCode(), ledgerId, entryId));
-            } catch (BookieException.LedgerFencedException lfe) {
-                LOG.error("Attempt to write to fenced ledger", lfe);
-                src.sendResponse(buildResponse(BookieProtocol.EFENCED, h.getVersion(), h.getOpCode(), ledgerId, entryId));
-            } catch (BookieException e) {
-                LOG.error("Unauthorized access to ledger " + ledgerId, e);
-                src.sendResponse(buildResponse(BookieProtocol.EUA, h.getVersion(), h.getOpCode(), ledgerId, entryId));
-            }
-            break;
-        case BookieProtocol.READENTRY:
-            statType = BKStats.STATS_READ;
-            ByteBuffer[] rsp = new ByteBuffer[2];
-            LOG.debug("Received new read request: {}, {}", ledgerId, entryId);
-            int errorCode = BookieProtocol.EIO;
-            try {
-                Future<Boolean> fenceResult = null;
-                if ((flags & BookieProtocol.FLAG_DO_FENCING) == BookieProtocol.FLAG_DO_FENCING) {
-                    LOG.warn("Ledger " + ledgerId + " fenced by " + src.getPeerName());
-                    if (h.getVersion() >= 2) {
-                        masterKey = new byte[BookieProtocol.MASTER_KEY_LENGTH];
-                        packet.get(masterKey, 0, BookieProtocol.MASTER_KEY_LENGTH);
-
-                        fenceResult = bookie.fenceLedger(ledgerId, masterKey);
-                    } else {
-                        LOG.error("Password not provided, Not safe to fence {}", ledgerId);
-                        throw BookieException.create(BookieException.Code.UnauthorizedAccessException);
-                    }
-                }
-                rsp[1] = bookie.readEntry(ledgerId, entryId);
-                LOG.debug("##### Read entry ##### {}", rsp[1].remaining());
-                if (null != fenceResult) {
-                    // TODO:
-                    // currently we don't have readCallback to run in separated read
-                    // threads. after BOOKKEEPER-429 is complete, we could improve
-                    // following code to make it not wait here
-                    //
-                    // For now, since we only try to wait after read entry. so writing
-                    // to journal and read entry are executed in different thread
-                    // it would be fine.
-                    try {
-                        Boolean fenced = fenceResult.get(1000, TimeUnit.MILLISECONDS);
-                        if (null == fenced || !fenced) {
-                            // if failed to fence, fail the read request to make it retry.
-                            errorCode = BookieProtocol.EIO;
-                            success = false;
-                            rsp[1] = null;
-                        } else {
-                            errorCode = BookieProtocol.EOK;
-                            success = true;
-                        }
-                    } catch (InterruptedException ie) {
-                        LOG.error("Interrupting fence read entry (lid:" + ledgerId
-                                  + ", eid:" + entryId + ") :", ie);
-                        errorCode = BookieProtocol.EIO;
-                        success = false;
-                        rsp[1] = null;
-                    } catch (ExecutionException ee) {
-                        LOG.error("Failed to fence read entry (lid:" + ledgerId
-                                  + ", eid:" + entryId + ") :", ee);
-                        errorCode = BookieProtocol.EIO;
-                        success = false;
-                        rsp[1] = null;
-                    } catch (TimeoutException te) {
-                        LOG.error("Timeout to fence read entry (lid:" + ledgerId
-                                  + ", eid:" + entryId + ") :", te);
-                        errorCode = BookieProtocol.EIO;
-                        success = false;
-                        rsp[1] = null;
-                    }
-                } else {
-                    errorCode = BookieProtocol.EOK;
-                    success = true;
-                }
-            } catch (Bookie.NoLedgerException e) {
-                if (LOG.isTraceEnabled()) {
-                    LOG.error("Error reading " + entryId + "@" + ledgerId, e);
-                }
-                errorCode = BookieProtocol.ENOLEDGER;
-            } catch (Bookie.NoEntryException e) {
-                if (LOG.isTraceEnabled()) {
-                    LOG.error("Error reading " + entryId + "@" + ledgerId, e);
-                }
-                errorCode = BookieProtocol.ENOENTRY;
-            } catch (IOException e) {
-                if (LOG.isTraceEnabled()) {
-                    LOG.error("Error reading " + entryId + "@" + ledgerId, e);
-                }
-                errorCode = BookieProtocol.EIO;
-            } catch (BookieException e) {
-                LOG.error("Unauthorized access to ledger " + ledgerId, e);
-                errorCode = BookieProtocol.EUA;
-            }
-            rsp[0] = buildResponse(errorCode, h.getVersion(), h.getOpCode(), ledgerId, entryId);
-
-            if (LOG.isTraceEnabled()) {
-                LOG.trace("Read entry rc = " + errorCode + " for " + entryId + "@" + ledgerId);
-            }
-            if (rsp[1] == null) {
-                // We haven't filled in entry data, so we have to send back
-                // the ledger and entry ids here
-                rsp[1] = ByteBuffer.allocate(16);
-                rsp[1].putLong(ledgerId);
-                rsp[1].putLong(entryId);
-                rsp[1].flip();
-            }
-            if (LOG.isTraceEnabled()) {
-                byte[] content = new byte[rsp[1].remaining()];
-                rsp[1].duplicate().get(content);
-                LOG.trace("Sending response for: {}, content: {}", entryId, Hex.encodeHexString(content));
-            } else {
-                LOG.debug("Sending response for: {}, length: {}", entryId, rsp[1].remaining());
-            }
-            src.sendResponse(rsp);
-            break;
-        default:
-            src.sendResponse(buildResponse(BookieProtocol.EBADREQ, h.getVersion(), h.getOpCode(), ledgerId, entryId));
-        }
-        if (isStatsEnabled) {
-            if (success) {
-                // for add operations, we compute latency in writeComplete callbacks.
-                if (statType != BKStats.STATS_ADD) {
-                    long elapsedTime = MathUtils.now() - startTime;
-                    bkStats.getOpStats(statType).updateLatency(elapsedTime);
-                }
-            } else {
-                bkStats.getOpStats(statType).incrementFailedOps();
-            }
+        // Trova e invoca handler
+        PacketHandler handler = packetHandlers.get(header.getOpCode());
+        if (handler != null) {
+            handler.handle(packet, header, ledgerId, entryId, masterKey, src);
+        } else {
+            src.sendResponse(buildResponse(BookieProtocol.EBADREQ, header.getVersion(), header.getOpCode(), ledgerId, entryId));
         }
     }
+
+    // Gestione AddEntry
+    private void handleAddEntry(ByteBuffer packet, PacketHeader header, long ledgerId, long entryId, byte[] masterKey, Cnxn src) {
+        if (bookie.isReadOnly()) {
+            LOG.warn("BookieServer is readonly, rejecting request!");
+            src.sendResponse(buildResponse(BookieProtocol.EREADONLY, header.getVersion(), header.getOpCode(), ledgerId, entryId));
+            return;
+        }
+        try {
+            TimedCnxn tsrc = new TimedCnxn(src, MathUtils.now());
+            if ((header.getFlags() & BookieProtocol.FLAG_RECOVERY_ADD) == BookieProtocol.FLAG_RECOVERY_ADD) {
+                bookie.recoveryAddEntry(packet.slice(), this, tsrc, masterKey);
+            } else {
+                bookie.addEntry(packet.slice(), this, tsrc, masterKey);
+            }
+            updateStats(BKStats.STATS_ADD, true);
+        } catch (IOException e) {
+            LOG.error("Error writing entry {}@{}");
+            src.sendResponse(buildResponse(BookieProtocol.EIO, header.getVersion(), header.getOpCode(), ledgerId, entryId));
+            updateStats(BKStats.STATS_ADD, false);
+        } catch (BookieException e) {
+            handleBookieException(e, header, ledgerId, entryId, src);
+            updateStats(BKStats.STATS_ADD, false);
+        }
+    }
+
+    // Gestione ReadEntry
+    private void handleReadEntry(ByteBuffer packet, PacketHeader header, long ledgerId, long entryId, byte[] masterKey, Cnxn src) {
+        ByteBuffer[] rsp = new ByteBuffer[2];
+        int errorCode = BookieProtocol.EIO;
+        try {
+            rsp[1] = bookie.readEntry(ledgerId, entryId);
+            errorCode = BookieProtocol.EOK;
+        } catch (Bookie.NoLedgerException e) {
+            errorCode = BookieProtocol.ENOLEDGER;
+        } catch (IOException e) {
+            errorCode = BookieProtocol.ENOENTRY;
+
+        }
+
+        rsp[0] = buildResponse(errorCode, header.getVersion(), header.getOpCode(), ledgerId, entryId);
+
+        if (rsp[1] == null) {
+            rsp[1] = ByteBuffer.allocate(16);
+            rsp[1].putLong(ledgerId);
+            rsp[1].putLong(entryId);
+            rsp[1].flip();
+        }
+        src.sendResponse(rsp);
+
+        updateStats(BKStats.STATS_READ, errorCode == BookieProtocol.EOK);
+    }
+
+    // Aggiorna statistiche
+    private void updateStats(int statType, boolean success) {
+        if (!isStatsEnabled) return;
+        if (success) {
+            bkStats.getOpStats(statType).updateLatency(MathUtils.now()); // o calcola differenza se vuoi
+        } else {
+            bkStats.getOpStats(statType).incrementFailedOps();
+        }
+    }
+
+    // Gestione eccezioni Bookie
+    private void handleBookieException(BookieException e, PacketHeader header, long ledgerId, long entryId, Cnxn src) {
+        if (e instanceof BookieException.LedgerFencedException) {
+            LOG.error("Attempt to write to fenced ledger", e);
+            src.sendResponse(buildResponse(BookieProtocol.EFENCED, header.getVersion(), header.getOpCode(), ledgerId, entryId));
+        } else {
+            LOG.error("Unauthorized access to ledger {}", ledgerId, e);
+            src.sendResponse(buildResponse(BookieProtocol.EUA, header.getVersion(), header.getOpCode(), ledgerId, entryId));
+        }
+    }
+
+
+
+    //FINE
 
     private ByteBuffer buildResponse(int errorCode, byte version, byte opCode, long ledgerId, long entryId) {
         ByteBuffer rsp = ByteBuffer.allocate(24);

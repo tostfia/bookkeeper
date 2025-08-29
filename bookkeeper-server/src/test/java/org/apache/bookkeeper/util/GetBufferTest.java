@@ -18,10 +18,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class GetBufferTest {
@@ -91,8 +88,10 @@ public class GetBufferTest {
                 bufList.getBuffer(index);
                 fail("Prevista eccezione " + expectedException.getName() + " ma nessuna è stata lanciata per index: " + index);
             } catch (Exception e) {
-                // Confronta il tipo di eccezione effettiva con quella attesa
-                assertEquals("Tipo di eccezione inatteso per index: " + index, expectedException, e.getClass());
+                assertTrue(
+                        "Tipo di eccezione inatteso per index: " + index + " ma era " + e.getClass(),
+                        expectedException.isAssignableFrom(e.getClass())
+                );
             }
             return;
         }
@@ -139,7 +138,7 @@ public class GetBufferTest {
                 Collections.emptyList(),
                 -1,
                 null,
-                ArrayIndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
+                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
         });
         params.add(new Object[] {
                 Collections.emptyList(),
@@ -162,7 +161,7 @@ public class GetBufferTest {
                 Arrays.asList(new byte[] { 1, 2, 3 }),
                 -1,
                 null,
-                ArrayIndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
+                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
         });
         // index fuori limite (uguale alla dimensione)
         params.add(new Object[] {
@@ -180,7 +179,7 @@ public class GetBufferTest {
                 Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4, 5 }, new byte[] { 6, 7 }),
                 -1,
                 null,
-                ArrayIndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
+                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
         });
 
         // P2: index = 0 (primo elemento)

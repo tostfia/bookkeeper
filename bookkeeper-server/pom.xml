@@ -24,6 +24,21 @@
   </parent>
   <artifactId>bookkeeper-server</artifactId>
   <name>Apache BookKeeper :: Server</name>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>EvoSuite</id>
+      <name>EvoSuite Repository</name>
+      <url>https://www.evosuite.org/m2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <repositories>
+    <repository>
+      <id>EvoSuite</id>
+      <name>EvoSuite Repository</name>
+      <url>https://www.evosuite.org/m2</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.apache.bookkeeper</groupId>
@@ -49,7 +64,7 @@
     <dependency>
       <groupId>org.evosuite</groupId>
       <artifactId>evosuite-standalone-runtime</artifactId>
-      <version>1.0.5</version>
+      <version>1.0.6</version>
       <scope>test</scope>
     </dependency>
 
@@ -310,10 +325,17 @@
             <exclude>**/randoop/**</exclude>
           </excludes>
           <!-- Questa riga è cruciale per JaCoCo, assicura che l'agente sia usato durante i test -->
-          <argLine>${argLine}</argLine>
+          <!--<argLine>${argLine}</argLine>-->
           <!-- Mantieni eventuali altre configurazioni che avevi, come reportsDirectories se fossero qui -->
           <!-- Nel tuo caso, le reportsDirectories sono nel surefire-report-plugin,
                quindi non le mettiamo qui a meno che tu non le voglia anche per il plugin di esecuzione test. -->
+          <!-- AGGIUNGI QUESTA SEZIONE PER EVOSUITE -->
+          <properties>
+            <property>
+              <name>listener</name>
+              <value>org.evosuite.runtime.InitializingListener</value>
+            </property>
+          </properties>
         </configuration>
         <dependencies>
           <dependency>
@@ -392,10 +414,10 @@
         <version>1.20.2</version>
         <configuration>
           <targetClasses>
-            <param>org.apache.storm.*</param>
+            <param>org.apache.bookkeeper.*</param>
           </targetClasses>
           <targetTests>
-            <param>org.apache.storm.*Test</param>
+            <param>org.apache.bookkeeper.*Test</param>
           </targetTests>
           <outputFormats>
             <param>HTML</param>
@@ -409,20 +431,38 @@
       <plugin>
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <executions>
           <execution>
+            <id>evosuite-prepare</id>
+            <phase>process-test-classes</phase>
+            <goals>
+              <goal>prepare</goal>
+            </goals>
+            <!-- RIMUOVI LA SEZIONE <configuration> DA QUI -->
+            <!-- La fase prepare non ha bisogno di targetClasses -->
+          </execution>
+          <execution>
+            <id>evosuite-generate-export</id>
+            <phase>generate-test-sources</phase>
             <goals>
               <goal>generate</goal>
               <goal>export</goal>
             </goals>
+            <configuration> <!-- LASCIA LA CONFIGURAZIONE SOLO QUI -->
+              <targetClasses>
+                <param>org.apache.bookkeeper.util.ByteBufList</param>
+                <param>org.apache.bookkeeper.bookie.LogMark</param>
+                <!-- Aggiungi qui i nomi completi delle due classi che ti interessano -->
+              </targetClasses>
+              <memoryInMB>2048</memoryInMB>
+              <timeInMinutesPerClass>2</timeInMinutesPerClass>
+              <criterion>LINE:BRANCH:EXCEPTION:WEAKMUTATION:OUTPUT:METHOD:CBRANCH</criterion>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <memoryInMB>2048</memoryInMB>
-          <timeInMinutesPerClass>2</timeInMinutesPerClass>
-          <criterion>LINE:BRANCH:EXCEPTION:WEAKMUTATION:OUTPUT:METHOD:CBRANCH</criterion>
-        </configuration>
+        <!-- RIMUOVI LA SEZIONE <configuration> GLOBALE DA QUI -->
+        <!-- Non è necessaria se la configuri per le singole execution -->
       </plugin>
     </plugins>
   </build>

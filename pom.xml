@@ -50,6 +50,21 @@
     <system>Jenkins</system>
     <url>https://builds.apache.org/job/bookkeeper-master</url>
   </ciManagement>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>EvoSuite</id>
+      <name>EvoSuite Repository</name>
+      <url>https://www.evosuite.org/m2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <repositories>
+    <repository>
+      <id>EvoSuite</id>
+      <name>EvoSuite Repository</name>
+      <url>https://www.evosuite.org/m2</url>
+    </repository>
+  </repositories>
   <modules>
     <module>buildtools</module>
     <module>native-library-common</module>
@@ -1010,7 +1025,7 @@
       <plugin>
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
       </plugin>
       <plugin>
         <groupId>com.github.spotbugs</groupId>

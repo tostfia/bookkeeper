@@ -414,10 +414,12 @@
         <version>1.20.2</version>
         <configuration>
           <targetClasses>
-            <param>org.apache.bookkeeper.*</param>
+            <param>org.apache.bookkeeper.bookie.LogMark</param>
+            <param>org.apache.bookkeeper.util.ByteBufList</param>
           </targetClasses>
           <targetTests>
-            <param>org.apache.bookkeeper.*Test</param>
+            <param>org.apache.bookkeeper.bookie.*Test</param>
+            <param>org.apache.bookkeeper.util.*Test</param>
           </targetTests>
           <outputFormats>
             <param>HTML</param>

@@ -430,7 +430,7 @@
           </mutators>
         </configuration>
       </plugin>
-      <plugin>
+      <!--<plugin>
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
         <version>1.0.6</version>
@@ -441,8 +441,7 @@
             <goals>
               <goal>prepare</goal>
             </goals>
-            <!-- RIMUOVI LA SEZIONE <configuration> DA QUI -->
-            <!-- La fase prepare non ha bisogno di targetClasses -->
+
           </execution>
           <execution>
             <id>evosuite-generate-export</id>
@@ -451,21 +450,17 @@
               <goal>generate</goal>
               <goal>export</goal>
             </goals>
-            <configuration> <!-- LASCIA LA CONFIGURAZIONE SOLO QUI -->
-              <targetClasses>
-                <param>org.apache.bookkeeper.util.ByteBufList</param>
-                <param>org.apache.bookkeeper.bookie.LogMark</param>
-                <!-- Aggiungi qui i nomi completi delle due classi che ti interessano -->
-              </targetClasses>
+            <configuration>
+
               <memoryInMB>2048</memoryInMB>
               <timeInMinutesPerClass>2</timeInMinutesPerClass>
               <criterion>LINE:BRANCH:EXCEPTION:WEAKMUTATION:OUTPUT:METHOD:CBRANCH</criterion>
             </configuration>
           </execution>
         </executions>
-        <!-- RIMUOVI LA SEZIONE <configuration> GLOBALE DA QUI -->
-        <!-- Non è necessaria se la configuri per le singole execution -->
-      </plugin>
+
+
+      </plugin>-->
     </plugins>
   </build>
   <profiles>

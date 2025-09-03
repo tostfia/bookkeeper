@@ -90,6 +90,7 @@ public class GetBytesTest {
         }
     }
 
+
     @Parameters
     public static Collection<Object[]> data() {
         List<Object[]> params = new ArrayList<>();
@@ -208,6 +209,30 @@ public class GetBytesTest {
                 new byte[] { 1, 2, 3, 4 },
                 null
         });
+
+
+        // Questo test si assicura che il metodo processi tutti i buffer, incluso l'ultimo.
+        // Se la mutazione altera la condizione in modo da saltare l'ultimo buffer (es. idx < buffers.size() - 1),
+        // il test fallirà perché non tutti i byte verranno copiati o il contenuto di dst sarà errato.
+        params.add(new Object[] {
+                new byte[4],                                // dstInput: l'array di destinazione può contenere 4 byte
+                Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4 }), // bufListContent: Due buffer. Il secondo è essenziale.
+                4,                                          // expectedCopied: ci aspettiamo 4 byte copiati
+                new byte[] { 1, 2, 3, 4 },                  // expectedDstContent: il contenuto di entrambi i buffer
+                null                                        // Nessuna eccezione attesa
+        });
+
+        // --- Caso extra per uccidere "changed conditional boundary - idx < buffers.size()" ---
+        // Se la condizione diventasse <=, il metodo proverebbe ad accedere a buffers.get(1)
+        params.add(new Object[] {
+                new byte[5],                            // dst più lungo dei dati
+                Collections.singletonList(new byte[]{9, 8}),        // Solo un buffer (2 byte)
+                2,                                      // Expected copied
+                new byte[] { 9, 8, 0, 0, 0 },           // Copiati 2 byte, resto zero
+                null                                    // Nessuna eccezione attesa normalmente
+        });
+
+
 
         return params;
     }

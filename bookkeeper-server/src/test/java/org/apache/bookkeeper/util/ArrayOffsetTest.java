@@ -84,5 +84,40 @@ public class ArrayOffsetTest {
         assertFalse(bufList.hasArray());
         // Non chiamare array() / arrayOffset() perché non valido
     }
+
+
+    //AGGIUNTA PER PIT
+    @Test
+    public void testSingleHeapBufferWithNonZeroOffset() {
+        // Creiamo un array di backing più grande
+        byte[] backingArray = new byte[10];
+        byte[] data = "test".getBytes(); // Dati effettivi
+
+        // Copiamo i dati nell'array di backing con un offset
+        int expectedOffset = 2; // Offset non zero
+        System.arraycopy(data, 0, backingArray, expectedOffset, data.length);
+
+        // Creiamo un ByteBuf che avvolge una porzione dell'array di backing, con un offset iniziale
+        // Il ByteBuf avrà 'test' come contenuto leggibile, e il suo arrayOffset() sarà 2
+        ByteBuf wrappedBuf = Unpooled.wrappedBuffer(backingArray, expectedOffset, data.length);
+        bufList.add(wrappedBuf);
+
+        assertTrue(bufList.hasArray());
+
+        byte[] backing = bufList.array();
+        int offset = bufList.arrayOffset(); // Chiamata al metodo mutato
+        int length = bufList.readableBytes();
+
+        byte[] actual = new byte[length];
+        System.arraycopy(backing, offset, actual, 0, length);
+
+        assertArrayEquals("I dati copiati non corrispondono all'originale", data, actual);
+        // QUESTA ASSERZIONE UCCIDERÀ LA MUTAZIONE:
+        // Il metodo originale restituirebbe 'expectedOffset' (2).
+        // Il metodo mutato restituirebbe '0'.
+        // Il test fallirebbe se il mutatore ha sostituito il ritorno con 0.
+        assertEquals("arrayOffset non corrisponde all'offset atteso", expectedOffset, offset);
+    }
+    //La mutazione "replaced int return with 0 for org/apache/bookkeeper/util/ByteBufList::arrayOffset" è sopravvissuta perché il tuo test testSingleHeapBuffer attende che arrayOffset() restituisca 0.
 }
 

@@ -32,13 +32,8 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <repositories>
-    <repository>
-      <id>EvoSuite</id>
-      <name>EvoSuite Repository</name>
-      <url>https://www.evosuite.org/m2</url>
-    </repository>
-  </repositories>
+
+
   <dependencies>
     <dependency>
       <groupId>org.apache.bookkeeper</groupId>
@@ -60,13 +55,7 @@
       <artifactId>bookkeeper-slogger-slf4j</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-standalone-runtime -->
-    <dependency>
-      <groupId>org.evosuite</groupId>
-      <artifactId>evosuite-standalone-runtime</artifactId>
-      <version>1.0.6</version>
-      <scope>test</scope>
-    </dependency>
+
 
     <dependency>
       <groupId>org.apache.bookkeeper</groupId>
@@ -266,6 +255,12 @@
       <artifactId>awaitility</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.evosuite</groupId>
+      <artifactId>evosuite-standalone-runtime</artifactId>
+      <version>1.0.6</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -430,37 +425,11 @@
           </mutators>
         </configuration>
       </plugin>
-      <!--<plugin>
+      <plugin>
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
         <version>1.0.6</version>
-        <executions>
-          <execution>
-            <id>evosuite-prepare</id>
-            <phase>process-test-classes</phase>
-            <goals>
-              <goal>prepare</goal>
-            </goals>
-
-          </execution>
-          <execution>
-            <id>evosuite-generate-export</id>
-            <phase>generate-test-sources</phase>
-            <goals>
-              <goal>generate</goal>
-              <goal>export</goal>
-            </goals>
-            <configuration>
-
-              <memoryInMB>2048</memoryInMB>
-              <timeInMinutesPerClass>2</timeInMinutesPerClass>
-              <criterion>LINE:BRANCH:EXCEPTION:WEAKMUTATION:OUTPUT:METHOD:CBRANCH</criterion>
-            </configuration>
-          </execution>
-        </executions>
-
-
-      </plugin>-->
+      </plugin>
     </plugins>
   </build>
   <profiles>

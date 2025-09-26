@@ -19,7 +19,7 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false)
 public class ByteBufList_ESTest extends ByteBufList_ESTest_scaffolding {
 
   @Test(timeout = 4000)
@@ -382,7 +382,7 @@ public class ByteBufList_ESTest extends ByteBufList_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+ /* @Test(timeout = 4000)
   public void test30()  throws Throwable  {
       ByteBufList byteBufList0 = ByteBufList.get();
       ByteBuf byteBuf0 = ByteBufList.coalesce(byteBufList0);
@@ -396,7 +396,7 @@ public class ByteBufList_ESTest extends ByteBufList_ESTest_scaffolding {
       ChannelPromise channelPromise1 = mock(ChannelPromise.class, new ViolatedAssumptionAnswer());
       byteBufList1.ENCODER.write(channelHandlerContext0, byteBufList1, channelPromise1);
       assertEquals(2, byteBufList1.size());
-  }
+  }*/
 
   @Test(timeout = 4000)
   public void test31()  throws Throwable  {

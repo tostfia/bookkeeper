@@ -236,6 +236,30 @@ public class GetBytesTest {
 
         return params;
     }
+
+    //Test aggiunti per uccidere la mutation
+    /*@Test
+    public void testDoesNotCopyBeyondDstLength() {
+
+        // Primo buffer con più dati di quanti ce ne stanno in dst
+        ByteBuf buf1 = Unpooled.buffer();
+        buf1.writeBytes(new byte[]{1, 2, 3, 4, 5});
+        bufList.add(buf1);
+
+        // Secondo buffer che non dovrebbe mai essere letto,
+        // perché dst è troppo corto
+        ByteBuf buf2 = Unpooled.buffer();
+        buf2.writeBytes(new byte[]{9, 9, 9});
+        bufList.add(buf2);
+
+        byte[] dst = new byte[2];
+        int copied = bufList.getBytes(dst);
+
+        // Verifica che copia solo i primi due byte
+        assertEquals(2, copied);
+        assertArrayEquals(new byte[]{1, 2}, dst);
+    }*/
+
 }
 
 

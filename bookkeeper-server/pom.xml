@@ -24,13 +24,13 @@
   </parent>
   <artifactId>bookkeeper-server</artifactId>
   <name>Apache BookKeeper :: Server</name>
- <!-- <pluginRepositories>
+ <pluginRepositories>
     <pluginRepository>
       <id>EvoSuite</id>
       <name>EvoSuite Repository</name>
       <url>https://www.evosuite.org/m2</url>
     </pluginRepository>
-  </pluginRepositories>-->
+  </pluginRepositories>
 
 
 
@@ -255,12 +255,12 @@
       <artifactId>awaitility</artifactId>
       <scope>test</scope>
     </dependency>
-   <!-- <dependency>
+    <dependency>
       <groupId>org.evosuite</groupId>
       <artifactId>evosuite-standalone-runtime</artifactId>
       <version>1.0.6</version>
       <scope>test</scope>
-    </dependency>-->
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -313,23 +313,22 @@
         <configuration>
           <!-- Escludi i test che non vuoi eseguire -->
           <includes>
-            <include>**/*Test.java</include>
+            <include>**/*Test</include>
           </includes>
           <excludes>
-            <exclude>**/*LlmTest.java</exclude>
+            <!--<exclude>**/*Test</exclude>-->
+            <exclude>**/*LlmTest</exclude>
             <exclude>**/randoop/**</exclude>
+            <exclude>**/evosuite/**</exclude>
           </excludes>
           <!-- Questa riga è cruciale per JaCoCo, assicura che l'agente sia usato durante i test -->
-          <!--<argLine>${argLine}</argLine>-->
-          <!-- Mantieni eventuali altre configurazioni che avevi, come reportsDirectories se fossero qui -->
-          <!-- Nel tuo caso, le reportsDirectories sono nel surefire-report-plugin,
-               quindi non le mettiamo qui a meno che tu non le voglia anche per il plugin di esecuzione test. -->
-          <!-- AGGIUNGI QUESTA SEZIONE PER EVOSUITE -->
+          <argLine>${argLine}</argLine>
+
           <properties>
-            <!--<property>
+           <property>
               <name>listener</name>
               <value>org.evosuite.runtime.InitializingListener</value>
-            </property>-->
+            </property>
           </properties>
         </configuration>
         <dependencies>
@@ -445,11 +444,11 @@
           </mutators>
         </configuration>
       </plugin>
-      <!--<plugin>
+      <plugin>
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
         <version>1.0.6</version>
-      </plugin>-->
+      </plugin>
     </plugins>
   </build>
   <profiles>

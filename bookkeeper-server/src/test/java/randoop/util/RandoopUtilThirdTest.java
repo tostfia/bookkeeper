@@ -23,7 +23,7 @@ public class RandoopUtilThirdTest {
     @Test
     public void test1001() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest2.test1001");
+            System.out.format("%n%s%n", "Regression3Test.test1001");
         org.apache.bookkeeper.util.ByteBufList.Encoder encoder0 = new org.apache.bookkeeper.util.ByteBufList.Encoder();
         io.netty.channel.ChannelHandlerContext channelHandlerContext1 = null;
         encoder0.handlerRemoved(channelHandlerContext1);
@@ -47,7 +47,7 @@ public class RandoopUtilThirdTest {
     @Test
     public void test1002() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest2.test1002");
+            System.out.format("%n%s%n", "Regression3Test.test1002");
         org.apache.bookkeeper.util.ByteBufList.Encoder encoder0 = new org.apache.bookkeeper.util.ByteBufList.Encoder();
         io.netty.channel.ChannelHandlerContext channelHandlerContext1 = null;
         encoder0.handlerRemoved(channelHandlerContext1);
@@ -62,7 +62,7 @@ public class RandoopUtilThirdTest {
     @Test
     public void test1003() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest2.test1003");
+            System.out.format("%n%s%n", "Regression3Test.test1003");
         org.apache.bookkeeper.util.ByteBufList byteBufList0 = org.apache.bookkeeper.util.ByteBufList.get();
         int int1 = byteBufList0.readableBytes();
         io.netty.util.ReferenceCounted referenceCounted3 = byteBufList0.retain((int) (byte) 1);
@@ -145,7 +145,7 @@ public class RandoopUtilThirdTest {
     @Test
     public void test1004() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest2.test1004");
+            System.out.format("%n%s%n", "Regression3Test.test1004");
         org.apache.bookkeeper.util.ByteBufList byteBufList0 = org.apache.bookkeeper.util.ByteBufList.get();
         int int1 = byteBufList0.readableBytes();
         io.netty.util.ReferenceCounted referenceCounted3 = byteBufList0.retain((int) (byte) 1);

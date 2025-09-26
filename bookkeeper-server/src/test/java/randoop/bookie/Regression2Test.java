@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class RegressionTest1 {
+public class Regression2Test {
 
     public static boolean debug = false;
 
@@ -22,7 +22,7 @@ public class RegressionTest1 {
     @Test
     public void test0501() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0501");
+            System.out.format("%n%s%n", "Regression2Test.test0501");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -85,8 +85,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long58 + "' != '" + 10L + "'", long58 == 10L);
         org.junit.Assert.assertTrue("'" + int59 + "' != '" + 0 + "'", int59 == 0);
         org.junit.Assert.assertNotNull(logMark61);
-// flaky "1) test0501(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long62 + "' != '" + 32L + "'", long62 == 32L);
-// flaky "1) test0501(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str65 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 32" + "'", str65, "LogMark: logFileId - 100 , logFileOffset - 32");
+// flaky "1) test0501(Regression2Test)":         org.junit.Assert.assertTrue("'" + long62 + "' != '" + 32L + "'", long62 == 32L);
+// flaky "1) test0501(Regression2Test)":         org.junit.Assert.assertEquals("'" + str65 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 32" + "'", str65, "LogMark: logFileId - 100 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + long72 + "' != '" + 52L + "'", long72 == 52L);
         org.junit.Assert.assertTrue("'" + int73 + "' != '" + (-1) + "'", int73 == (-1));
         org.junit.Assert.assertTrue("'" + int74 + "' != '" + 1 + "'", int74 == 1);
@@ -95,7 +95,7 @@ public class RegressionTest1 {
     @Test
     public void test0502() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0502");
+            System.out.format("%n%s%n", "Regression2Test.test0502");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -113,7 +113,7 @@ public class RegressionTest1 {
     @Test
     public void test0503() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0503");
+            System.out.format("%n%s%n", "Regression2Test.test0503");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -122,7 +122,7 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark7 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.Class<?> wildcardClass8 = logMark0.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "2) test0503(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
+// flaky "2) test0503(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
         org.junit.Assert.assertTrue("'" + long6 + "' != '" + 32L + "'", long6 == 32L);
         org.junit.Assert.assertNotNull(wildcardClass8);
     }
@@ -130,7 +130,7 @@ public class RegressionTest1 {
     @Test
     public void test0504() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0504");
+            System.out.format("%n%s%n", "Regression2Test.test0504");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -171,7 +171,7 @@ public class RegressionTest1 {
     @Test
     public void test0505() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0505");
+            System.out.format("%n%s%n", "Regression2Test.test0505");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -185,7 +185,7 @@ public class RegressionTest1 {
     @Test
     public void test0506() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0506");
+            System.out.format("%n%s%n", "Regression2Test.test0506");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -205,7 +205,7 @@ public class RegressionTest1 {
     @Test
     public void test0507() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0507");
+            System.out.format("%n%s%n", "Regression2Test.test0507");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -245,7 +245,7 @@ public class RegressionTest1 {
     @Test
     public void test0508() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0508");
+            System.out.format("%n%s%n", "Regression2Test.test0508");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -261,7 +261,7 @@ public class RegressionTest1 {
     @Test
     public void test0509() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0509");
+            System.out.format("%n%s%n", "Regression2Test.test0509");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 1, (long) (short) 0);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -276,7 +276,7 @@ public class RegressionTest1 {
     @Test
     public void test0510() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0510");
+            System.out.format("%n%s%n", "Regression2Test.test0510");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -302,7 +302,7 @@ public class RegressionTest1 {
     @Test
     public void test0511() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0511");
+            System.out.format("%n%s%n", "Regression2Test.test0511");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -316,7 +316,7 @@ public class RegressionTest1 {
     @Test
     public void test0512() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0512");
+            System.out.format("%n%s%n", "Regression2Test.test0512");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -332,7 +332,7 @@ public class RegressionTest1 {
         logMark1.setLogMark((long) 'a', (long) 1);
         logMark1.setLogMark((long) (byte) -1, (long) '#');
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "3) test0512(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "3) test0512(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
@@ -342,7 +342,7 @@ public class RegressionTest1 {
     @Test
     public void test0513() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0513");
+            System.out.format("%n%s%n", "Regression2Test.test0513");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -390,7 +390,7 @@ public class RegressionTest1 {
     @Test
     public void test0514() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0514");
+            System.out.format("%n%s%n", "Regression2Test.test0514");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -414,7 +414,7 @@ public class RegressionTest1 {
     @Test
     public void test0515() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0515");
+            System.out.format("%n%s%n", "Regression2Test.test0515");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -427,7 +427,7 @@ public class RegressionTest1 {
         java.lang.Class<?> wildcardClass15 = logMark2.getClass();
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
-// flaky "4) test0515(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+// flaky "4) test0515(Regression2Test)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
         org.junit.Assert.assertEquals("'" + str13 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 35" + "'", str13, "LogMark: logFileId - 0 , logFileOffset - 35");
         org.junit.Assert.assertTrue("'" + long14 + "' != '" + 35L + "'", long14 == 35L);
         org.junit.Assert.assertNotNull(wildcardClass15);
@@ -436,7 +436,7 @@ public class RegressionTest1 {
     @Test
     public void test0516() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0516");
+            System.out.format("%n%s%n", "Regression2Test.test0516");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -455,7 +455,7 @@ public class RegressionTest1 {
     @Test
     public void test0517() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0517");
+            System.out.format("%n%s%n", "Regression2Test.test0517");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -473,7 +473,7 @@ public class RegressionTest1 {
     @Test
     public void test0518() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0518");
+            System.out.format("%n%s%n", "Regression2Test.test0518");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 35L);
         java.lang.String str3 = logMark2.toString();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -491,7 +491,7 @@ public class RegressionTest1 {
     @Test
     public void test0519() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0519");
+            System.out.format("%n%s%n", "Regression2Test.test0519");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -505,15 +505,15 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark18 = new org.apache.bookkeeper.bookie.LogMark(logMark8);
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
-// flaky "5) test0519(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
-// flaky "2) test0519(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str10, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "5) test0519(Regression2Test)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + (-1) + "'", int9 == (-1));
+// flaky "2) test0519(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str10, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertEquals("'" + str17 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str17, "LogMark: logFileId - 100 , logFileOffset - 97");
     }
 
     @Test
     public void test0520() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0520");
+            System.out.format("%n%s%n", "Regression2Test.test0520");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, 35L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -544,7 +544,7 @@ public class RegressionTest1 {
     @Test
     public void test0521() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0521");
+            System.out.format("%n%s%n", "Regression2Test.test0521");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -561,14 +561,14 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "6) test0521(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
-// flaky "3) test0521(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 100L + "'", long4 == 100L);
+// flaky "6) test0521(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
+// flaky "3) test0521(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 100L + "'", long4 == 100L);
     }
 
     @Test
     public void test0522() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0522");
+            System.out.format("%n%s%n", "Regression2Test.test0522");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
@@ -618,7 +618,7 @@ public class RegressionTest1 {
     @Test
     public void test0523() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0523");
+            System.out.format("%n%s%n", "Regression2Test.test0523");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -661,7 +661,7 @@ public class RegressionTest1 {
     @Test
     public void test0524() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0524");
+            System.out.format("%n%s%n", "Regression2Test.test0524");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -683,7 +683,7 @@ public class RegressionTest1 {
     @Test
     public void test0525() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0525");
+            System.out.format("%n%s%n", "Regression2Test.test0525");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -705,7 +705,7 @@ public class RegressionTest1 {
     @Test
     public void test0526() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0526");
+            System.out.format("%n%s%n", "Regression2Test.test0526");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.Class<?> wildcardClass4 = logMark3.getClass();
@@ -715,7 +715,7 @@ public class RegressionTest1 {
     @Test
     public void test0527() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0527");
+            System.out.format("%n%s%n", "Regression2Test.test0527");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) 1);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(35L, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -735,9 +735,9 @@ public class RegressionTest1 {
         int int32 = logMark2.compare(logMark5);
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
         org.junit.Assert.assertNotNull(logMark23);
-// flaky "7) test0527(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
-// flaky "4) test0527(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long25 + "' != '" + 10L + "'", long25 == 10L);
-// flaky "1) test0527(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int26 + "' != '" + 1 + "'", int26 == 1);
+// flaky "7) test0527(Regression2Test)":         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
+// flaky "4) test0527(Regression2Test)":         org.junit.Assert.assertTrue("'" + long25 + "' != '" + 10L + "'", long25 == 10L);
+// flaky "1) test0527(Regression2Test)":         org.junit.Assert.assertTrue("'" + int26 + "' != '" + 1 + "'", int26 == 1);
         org.junit.Assert.assertTrue("'" + int30 + "' != '" + 1 + "'", int30 == 1);
         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 1 + "'", int31 == 1);
         org.junit.Assert.assertTrue("'" + int32 + "' != '" + 1 + "'", int32 == 1);
@@ -746,7 +746,7 @@ public class RegressionTest1 {
     @Test
     public void test0528() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0528");
+            System.out.format("%n%s%n", "Regression2Test.test0528");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long2 = logMark0.getLogFileOffset();
@@ -758,7 +758,7 @@ public class RegressionTest1 {
         java.lang.String str10 = logMark6.toString();
         long long11 = logMark6.getLogFileOffset();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "8) test0528(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
+// flaky "8) test0528(Regression2Test)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
         org.junit.Assert.assertNotNull(logMark6);
         org.junit.Assert.assertTrue("'" + long7 + "' != '" + 97L + "'", long7 == 97L);
         org.junit.Assert.assertTrue("'" + int8 + "' != '" + 0 + "'", int8 == 0);
@@ -769,7 +769,7 @@ public class RegressionTest1 {
     @Test
     public void test0529() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0529");
+            System.out.format("%n%s%n", "Regression2Test.test0529");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 1, 10L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
@@ -780,7 +780,7 @@ public class RegressionTest1 {
     @Test
     public void test0530() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0530");
+            System.out.format("%n%s%n", "Regression2Test.test0530");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -826,7 +826,7 @@ public class RegressionTest1 {
     @Test
     public void test0531() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0531");
+            System.out.format("%n%s%n", "Regression2Test.test0531");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         logMark2.setLogMark((long) (short) 0, (long) '#');
         long long6 = logMark2.getLogFileOffset();
@@ -838,7 +838,7 @@ public class RegressionTest1 {
     @Test
     public void test0532() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0532");
+            System.out.format("%n%s%n", "Regression2Test.test0532");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 0L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -858,7 +858,7 @@ public class RegressionTest1 {
     @Test
     public void test0533() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0533");
+            System.out.format("%n%s%n", "Regression2Test.test0533");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -883,7 +883,7 @@ public class RegressionTest1 {
     @Test
     public void test0534() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0534");
+            System.out.format("%n%s%n", "Regression2Test.test0534");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
@@ -939,7 +939,7 @@ public class RegressionTest1 {
     @Test
     public void test0535() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0535");
+            System.out.format("%n%s%n", "Regression2Test.test0535");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         long long6 = logMark5.getLogFileId();
@@ -956,7 +956,7 @@ public class RegressionTest1 {
     @Test
     public void test0536() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0536");
+            System.out.format("%n%s%n", "Regression2Test.test0536");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -981,7 +981,7 @@ public class RegressionTest1 {
     @Test
     public void test0537() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0537");
+            System.out.format("%n%s%n", "Regression2Test.test0537");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 1L);
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 1L + "'", long3 == 1L);
@@ -990,7 +990,7 @@ public class RegressionTest1 {
     @Test
     public void test0538() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0538");
+            System.out.format("%n%s%n", "Regression2Test.test0538");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -1027,7 +1027,7 @@ public class RegressionTest1 {
     @Test
     public void test0539() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0539");
+            System.out.format("%n%s%n", "Regression2Test.test0539");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -1060,7 +1060,7 @@ public class RegressionTest1 {
     @Test
     public void test0540() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0540");
+            System.out.format("%n%s%n", "Regression2Test.test0540");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1085,7 +1085,7 @@ public class RegressionTest1 {
     @Test
     public void test0541() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0541");
+            System.out.format("%n%s%n", "Regression2Test.test0541");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, (-1L));
         long long3 = logMark2.getLogFileId();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -1102,7 +1102,7 @@ public class RegressionTest1 {
     @Test
     public void test0542() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0542");
+            System.out.format("%n%s%n", "Regression2Test.test0542");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 0L);
         logMark2.setLogMark((long) (byte) -1, (long) 'a');
     }
@@ -1110,7 +1110,7 @@ public class RegressionTest1 {
     @Test
     public void test0543() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0543");
+            System.out.format("%n%s%n", "Regression2Test.test0543");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(10L, 0L);
         logMark2.setLogMark((long) (short) -1, (long) (short) 1);
     }
@@ -1118,7 +1118,7 @@ public class RegressionTest1 {
     @Test
     public void test0544() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0544");
+            System.out.format("%n%s%n", "Regression2Test.test0544");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -1148,7 +1148,7 @@ public class RegressionTest1 {
     @Test
     public void test0545() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0545");
+            System.out.format("%n%s%n", "Regression2Test.test0545");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -1167,7 +1167,7 @@ public class RegressionTest1 {
     @Test
     public void test0546() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0546");
+            System.out.format("%n%s%n", "Regression2Test.test0546");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -1192,7 +1192,7 @@ public class RegressionTest1 {
     @Test
     public void test0547() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0547");
+            System.out.format("%n%s%n", "Regression2Test.test0547");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1225,7 +1225,7 @@ public class RegressionTest1 {
     @Test
     public void test0548() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0548");
+            System.out.format("%n%s%n", "Regression2Test.test0548");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1244,7 +1244,7 @@ public class RegressionTest1 {
     @Test
     public void test0549() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0549");
+            System.out.format("%n%s%n", "Regression2Test.test0549");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(9223372036854775807L, (-1L));
         java.lang.String str3 = logMark2.toString();
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 9223372036854775807 , logFileOffset - -1" + "'", str3, "LogMark: logFileId - 9223372036854775807 , logFileOffset - -1");
@@ -1253,7 +1253,7 @@ public class RegressionTest1 {
     @Test
     public void test0550() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0550");
+            System.out.format("%n%s%n", "Regression2Test.test0550");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -1277,7 +1277,7 @@ public class RegressionTest1 {
     @Test
     public void test0551() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0551");
+            System.out.format("%n%s%n", "Regression2Test.test0551");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -1336,7 +1336,7 @@ public class RegressionTest1 {
     @Test
     public void test0552() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0552");
+            System.out.format("%n%s%n", "Regression2Test.test0552");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(10L, (long) (short) 0);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -1351,7 +1351,7 @@ public class RegressionTest1 {
     @Test
     public void test0553() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0553");
+            System.out.format("%n%s%n", "Regression2Test.test0553");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', 0L);
         long long3 = logMark2.getLogFileId();
         java.lang.Class<?> wildcardClass4 = logMark2.getClass();
@@ -1362,7 +1362,7 @@ public class RegressionTest1 {
     @Test
     public void test0554() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0554");
+            System.out.format("%n%s%n", "Regression2Test.test0554");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -1395,7 +1395,7 @@ public class RegressionTest1 {
     @Test
     public void test0555() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0555");
+            System.out.format("%n%s%n", "Regression2Test.test0555");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         logMark2.setLogMark((long) (-1), 9223372036854775807L);
         java.lang.String str6 = logMark2.toString();
@@ -1406,7 +1406,7 @@ public class RegressionTest1 {
     @Test
     public void test0556() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0556");
+            System.out.format("%n%s%n", "Regression2Test.test0556");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         java.lang.String str3 = logMark2.toString();
         logMark2.setLogMark((long) 1, (long) (short) -1);
@@ -1416,7 +1416,7 @@ public class RegressionTest1 {
     @Test
     public void test0557() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0557");
+            System.out.format("%n%s%n", "Regression2Test.test0557");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -1445,7 +1445,7 @@ public class RegressionTest1 {
     @Test
     public void test0558() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0558");
+            System.out.format("%n%s%n", "Regression2Test.test0558");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -1462,7 +1462,7 @@ public class RegressionTest1 {
     @Test
     public void test0559() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0559");
+            System.out.format("%n%s%n", "Regression2Test.test0559");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -1490,7 +1490,7 @@ public class RegressionTest1 {
     @Test
     public void test0560() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0560");
+            System.out.format("%n%s%n", "Regression2Test.test0560");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1504,7 +1504,7 @@ public class RegressionTest1 {
     @Test
     public void test0561() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0561");
+            System.out.format("%n%s%n", "Regression2Test.test0561");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -1523,7 +1523,7 @@ public class RegressionTest1 {
     @Test
     public void test0562() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0562");
+            System.out.format("%n%s%n", "Regression2Test.test0562");
         org.apache.bookkeeper.bookie.LogMark logMark0 = new org.apache.bookkeeper.bookie.LogMark();
         java.lang.String str1 = logMark0.toString();
         long long2 = logMark0.getLogFileId();
@@ -1535,7 +1535,7 @@ public class RegressionTest1 {
     @Test
     public void test0563() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0563");
+            System.out.format("%n%s%n", "Regression2Test.test0563");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 100, 52L);
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 52L + "'", long3 == 52L);
@@ -1544,7 +1544,7 @@ public class RegressionTest1 {
     @Test
     public void test0564() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0564");
+            System.out.format("%n%s%n", "Regression2Test.test0564");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -1561,7 +1561,7 @@ public class RegressionTest1 {
         java.lang.String str21 = logMark20.toString();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str4, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "9) test0564(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+// flaky "9) test0564(Regression2Test)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
         org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
         org.junit.Assert.assertTrue("'" + long19 + "' != '" + (-1L) + "'", long19 == (-1L));
@@ -1571,14 +1571,14 @@ public class RegressionTest1 {
     @Test
     public void test0565() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0565");
+            System.out.format("%n%s%n", "Regression2Test.test0565");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, (long) (short) 100);
     }
 
     @Test
     public void test0566() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0566");
+            System.out.format("%n%s%n", "Regression2Test.test0566");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -1593,7 +1593,7 @@ public class RegressionTest1 {
     @Test
     public void test0567() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0567");
+            System.out.format("%n%s%n", "Regression2Test.test0567");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -1615,12 +1615,12 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark26 = new org.apache.bookkeeper.bookie.LogMark(logMark24);
         java.lang.Class<?> wildcardClass27 = logMark24.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "10) test0567(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "10) test0567(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
-// flaky "5) test0567(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+// flaky "5) test0567(Regression2Test)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
-// flaky "2) test0567(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long15 + "' != '" + (-1L) + "'", long15 == (-1L));
+// flaky "2) test0567(Regression2Test)":         org.junit.Assert.assertTrue("'" + long15 + "' != '" + (-1L) + "'", long15 == (-1L));
         org.junit.Assert.assertEquals("'" + str22 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 35" + "'", str22, "LogMark: logFileId - 1 , logFileOffset - 35");
         org.junit.Assert.assertTrue("'" + int25 + "' != '" + 1 + "'", int25 == 1);
         org.junit.Assert.assertNotNull(wildcardClass27);
@@ -1629,7 +1629,7 @@ public class RegressionTest1 {
     @Test
     public void test0568() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0568");
+            System.out.format("%n%s%n", "Regression2Test.test0568");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -1649,18 +1649,18 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "11) test0568(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "6) test0568(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "11) test0568(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "6) test0568(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "3) test0568(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
+// flaky "3) test0568(Regression2Test)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
-// flaky "1) test0568(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long8 + "' != '" + 10L + "'", long8 == 10L);
+// flaky "1) test0568(Regression2Test)":         org.junit.Assert.assertTrue("'" + long8 + "' != '" + 10L + "'", long8 == 10L);
     }
 
     @Test
     public void test0569() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0569");
+            System.out.format("%n%s%n", "Regression2Test.test0569");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1708,7 +1708,7 @@ public class RegressionTest1 {
     @Test
     public void test0570() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0570");
+            System.out.format("%n%s%n", "Regression2Test.test0570");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -1756,10 +1756,10 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "12) test0570(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
-// flaky "7) test0570(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "12) test0570(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
+// flaky "7) test0570(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
-// flaky "4) test0570(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
+// flaky "4) test0570(Regression2Test)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
         org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 0 + "'", int31 == 0);
@@ -1768,8 +1768,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long37 + "' != '" + 10L + "'", long37 == 10L);
         org.junit.Assert.assertEquals("'" + str42 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str42, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark46);
-// flaky "2) test0570(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
-// flaky "1) test0570(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
+// flaky "2) test0570(Regression2Test)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
+// flaky "1) test0570(Regression2Test)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
         org.junit.Assert.assertTrue("'" + int56 + "' != '" + 0 + "'", int56 == 0);
         org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
         org.junit.Assert.assertTrue("'" + long60 + "' != '" + 97L + "'", long60 == 97L);
@@ -1779,7 +1779,7 @@ public class RegressionTest1 {
     @Test
     public void test0571() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0571");
+            System.out.format("%n%s%n", "Regression2Test.test0571");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -1822,10 +1822,10 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark63 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long64 = logMark2.getLogFileId();
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "13) test0571(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
-// flaky "8) test0571(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "13) test0571(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
+// flaky "8) test0571(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
-// flaky "5) test0571(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
+// flaky "5) test0571(Regression2Test)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
         org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 0 + "'", int31 == 0);
@@ -1834,8 +1834,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long37 + "' != '" + 10L + "'", long37 == 10L);
         org.junit.Assert.assertEquals("'" + str42 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str42, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark46);
-// flaky "3) test0571(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
-// flaky "2) test0571(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
+// flaky "3) test0571(Regression2Test)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
+// flaky "2) test0571(Regression2Test)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
         org.junit.Assert.assertTrue("'" + int56 + "' != '" + 0 + "'", int56 == 0);
         org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
         org.junit.Assert.assertTrue("'" + long60 + "' != '" + 97L + "'", long60 == 97L);
@@ -1847,7 +1847,7 @@ public class RegressionTest1 {
     @Test
     public void test0572() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0572");
+            System.out.format("%n%s%n", "Regression2Test.test0572");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -1863,7 +1863,7 @@ public class RegressionTest1 {
     @Test
     public void test0573() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0573");
+            System.out.format("%n%s%n", "Regression2Test.test0573");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -1883,7 +1883,7 @@ public class RegressionTest1 {
     @Test
     public void test0574() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0574");
+            System.out.format("%n%s%n", "Regression2Test.test0574");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -1898,15 +1898,15 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "14) test0574(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "9) test0574(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str13 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str13, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "6) test0574(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long14 + "' != '" + (-1L) + "'", long14 == (-1L));
+// flaky "14) test0574(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "9) test0574(Regression2Test)":         org.junit.Assert.assertEquals("'" + str13 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str13, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "6) test0574(Regression2Test)":         org.junit.Assert.assertTrue("'" + long14 + "' != '" + (-1L) + "'", long14 == (-1L));
     }
 
     @Test
     public void test0575() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0575");
+            System.out.format("%n%s%n", "Regression2Test.test0575");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) (short) 10);
         logMark2.setLogMark((long) (byte) 1, (long) 10);
         java.lang.String str6 = logMark2.toString();
@@ -1916,7 +1916,7 @@ public class RegressionTest1 {
     @Test
     public void test0576() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0576");
+            System.out.format("%n%s%n", "Regression2Test.test0576");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -1962,7 +1962,7 @@ public class RegressionTest1 {
     @Test
     public void test0577() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0577");
+            System.out.format("%n%s%n", "Regression2Test.test0577");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -1977,7 +1977,7 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "15) test0577(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "15) test0577(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str17 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str17, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertNotNull(wildcardClass18);
     }
@@ -1985,7 +1985,7 @@ public class RegressionTest1 {
     @Test
     public void test0578() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0578");
+            System.out.format("%n%s%n", "Regression2Test.test0578");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -2003,15 +2003,15 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "16) test0578(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "10) test0578(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "7) test0578(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long7 + "' != '" + 10L + "'", long7 == 10L);
+// flaky "16) test0578(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "10) test0578(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "7) test0578(Regression2Test)":         org.junit.Assert.assertTrue("'" + long7 + "' != '" + 10L + "'", long7 == 10L);
     }
 
     @Test
     public void test0579() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0579");
+            System.out.format("%n%s%n", "Regression2Test.test0579");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2052,8 +2052,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
-// flaky "17) test0579(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
-// flaky "11) test0579(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
+// flaky "17) test0579(Regression2Test)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+// flaky "11) test0579(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
         org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
         org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
         org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
@@ -2065,7 +2065,7 @@ public class RegressionTest1 {
     @Test
     public void test0580() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0580");
+            System.out.format("%n%s%n", "Regression2Test.test0580");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, 35L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -2073,7 +2073,7 @@ public class RegressionTest1 {
     @Test
     public void test0581() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0581");
+            System.out.format("%n%s%n", "Regression2Test.test0581");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -2092,12 +2092,12 @@ public class RegressionTest1 {
         java.lang.String str23 = logMark1.toString();
         long long24 = logMark1.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "18) test0581(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "18) test0581(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
-// flaky "12) test0581(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
+// flaky "12) test0581(Regression2Test)":         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 0 + "'", int13 == 0);
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
-// flaky "8) test0581(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long15 + "' != '" + (-1L) + "'", long15 == (-1L));
+// flaky "8) test0581(Regression2Test)":         org.junit.Assert.assertTrue("'" + long15 + "' != '" + (-1L) + "'", long15 == (-1L));
         org.junit.Assert.assertTrue("'" + long19 + "' != '" + 35L + "'", long19 == 35L);
         org.junit.Assert.assertEquals("'" + str23 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 32" + "'", str23, "LogMark: logFileId - 0 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 0L + "'", long24 == 0L);
@@ -2106,7 +2106,7 @@ public class RegressionTest1 {
     @Test
     public void test0582() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0582");
+            System.out.format("%n%s%n", "Regression2Test.test0582");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -2143,7 +2143,7 @@ public class RegressionTest1 {
     @Test
     public void test0583() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0583");
+            System.out.format("%n%s%n", "Regression2Test.test0583");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         logMark2.setLogMark((long) (-1), 9223372036854775807L);
         java.lang.String str6 = logMark2.toString();
@@ -2156,7 +2156,7 @@ public class RegressionTest1 {
     @Test
     public void test0584() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0584");
+            System.out.format("%n%s%n", "Regression2Test.test0584");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 0L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
@@ -2181,7 +2181,7 @@ public class RegressionTest1 {
     @Test
     public void test0585() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0585");
+            System.out.format("%n%s%n", "Regression2Test.test0585");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2206,7 +2206,7 @@ public class RegressionTest1 {
     @Test
     public void test0586() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0586");
+            System.out.format("%n%s%n", "Regression2Test.test0586");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2238,7 +2238,7 @@ public class RegressionTest1 {
     @Test
     public void test0587() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0587");
+            System.out.format("%n%s%n", "Regression2Test.test0587");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2265,7 +2265,7 @@ public class RegressionTest1 {
     @Test
     public void test0588() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0588");
+            System.out.format("%n%s%n", "Regression2Test.test0588");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2302,7 +2302,7 @@ public class RegressionTest1 {
     @Test
     public void test0589() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0589");
+            System.out.format("%n%s%n", "Regression2Test.test0589");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 100, 52L);
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 100L + "'", long3 == 100L);
@@ -2311,7 +2311,7 @@ public class RegressionTest1 {
     @Test
     public void test0590() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0590");
+            System.out.format("%n%s%n", "Regression2Test.test0590");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -2348,7 +2348,7 @@ public class RegressionTest1 {
     @Test
     public void test0591() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0591");
+            System.out.format("%n%s%n", "Regression2Test.test0591");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         long long4 = logMark2.getLogFileId();
@@ -2359,7 +2359,7 @@ public class RegressionTest1 {
     @Test
     public void test0592() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0592");
+            System.out.format("%n%s%n", "Regression2Test.test0592");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2395,15 +2395,15 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str23 + "' != '" + "LogMark: logFileId - 10 , logFileOffset - 10" + "'", str23, "LogMark: logFileId - 10 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str24 + "' != '" + "LogMark: logFileId - 10 , logFileOffset - 10" + "'", str24, "LogMark: logFileId - 10 , logFileOffset - 10");
         org.junit.Assert.assertNotNull(logMark25);
-// flaky "19) test0592(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long28 + "' != '" + (-1L) + "'", long28 == (-1L));
-// flaky "13) test0592(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int29 + "' != '" + 1 + "'", int29 == 1);
-// flaky "9) test0592(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + (-1L) + "'", long30 == (-1L));
+// flaky "19) test0592(Regression2Test)":         org.junit.Assert.assertTrue("'" + long28 + "' != '" + (-1L) + "'", long28 == (-1L));
+// flaky "13) test0592(Regression2Test)":         org.junit.Assert.assertTrue("'" + int29 + "' != '" + 1 + "'", int29 == 1);
+// flaky "9) test0592(Regression2Test)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + (-1L) + "'", long30 == (-1L));
     }
 
     @Test
     public void test0593() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0593");
+            System.out.format("%n%s%n", "Regression2Test.test0593");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -2422,7 +2422,7 @@ public class RegressionTest1 {
     @Test
     public void test0594() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0594");
+            System.out.format("%n%s%n", "Regression2Test.test0594");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -2448,19 +2448,19 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertNotNull(logMark2);
-// flaky "20) test0594(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "20) test0594(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str9 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str9, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark13);
-// flaky "14) test0594(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
+// flaky "14) test0594(Regression2Test)":         org.junit.Assert.assertTrue("'" + int15 + "' != '" + 0 + "'", int15 == 0);
         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
-// flaky "10) test0594(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str18, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "10) test0594(Regression2Test)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str18, "LogMark: logFileId - -1 , logFileOffset - 10");
     }
 
     @Test
     public void test0595() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0595");
+            System.out.format("%n%s%n", "Regression2Test.test0595");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2508,14 +2508,14 @@ public class RegressionTest1 {
     @Test
     public void test0596() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0596");
+            System.out.format("%n%s%n", "Regression2Test.test0596");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) 100);
     }
 
     @Test
     public void test0597() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0597");
+            System.out.format("%n%s%n", "Regression2Test.test0597");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2534,9 +2534,9 @@ public class RegressionTest1 {
         long long29 = logMark10.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
         org.junit.Assert.assertNotNull(logMark20);
-// flaky "21) test0597(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 10L + "'", long21 == 10L);
-// flaky "15) test0597(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
-// flaky "11) test0597(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+// flaky "21) test0597(Regression2Test)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 10L + "'", long21 == 10L);
+// flaky "15) test0597(Regression2Test)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
+// flaky "11) test0597(Regression2Test)":         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
         org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
         org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
         org.junit.Assert.assertTrue("'" + long29 + "' != '" + 1L + "'", long29 == 1L);
@@ -2545,7 +2545,7 @@ public class RegressionTest1 {
     @Test
     public void test0598() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0598");
+            System.out.format("%n%s%n", "Regression2Test.test0598");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         logMark2.setLogMark((long) (short) 0, (long) '#');
         java.nio.ByteBuffer byteBuffer6 = null;
@@ -2561,14 +2561,14 @@ public class RegressionTest1 {
     @Test
     public void test0599() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0599");
+            System.out.format("%n%s%n", "Regression2Test.test0599");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(1L, 35L);
     }
 
     @Test
     public void test0600() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0600");
+            System.out.format("%n%s%n", "Regression2Test.test0600");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', 10L);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -2583,7 +2583,7 @@ public class RegressionTest1 {
     @Test
     public void test0601() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0601");
+            System.out.format("%n%s%n", "Regression2Test.test0601");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark(100L, (long) '4');
@@ -2595,7 +2595,7 @@ public class RegressionTest1 {
     @Test
     public void test0602() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0602");
+            System.out.format("%n%s%n", "Regression2Test.test0602");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -2608,7 +2608,7 @@ public class RegressionTest1 {
     @Test
     public void test0603() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0603");
+            System.out.format("%n%s%n", "Regression2Test.test0603");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -2624,7 +2624,7 @@ public class RegressionTest1 {
     @Test
     public void test0604() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0604");
+            System.out.format("%n%s%n", "Regression2Test.test0604");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2669,7 +2669,7 @@ public class RegressionTest1 {
     @Test
     public void test0605() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0605");
+            System.out.format("%n%s%n", "Regression2Test.test0605");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 9223372036854775807L);
         long long3 = logMark2.getLogFileOffset();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -2686,7 +2686,7 @@ public class RegressionTest1 {
     @Test
     public void test0606() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0606");
+            System.out.format("%n%s%n", "Regression2Test.test0606");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2708,7 +2708,7 @@ public class RegressionTest1 {
     @Test
     public void test0607() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0607");
+            System.out.format("%n%s%n", "Regression2Test.test0607");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark(100L, (long) '4');
@@ -2725,7 +2725,7 @@ public class RegressionTest1 {
     @Test
     public void test0608() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0608");
+            System.out.format("%n%s%n", "Regression2Test.test0608");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2753,9 +2753,9 @@ public class RegressionTest1 {
         long long40 = logMark2.getLogFileId();
         long long41 = logMark2.getLogFileId();
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "22) test0608(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 97L + "'", long9 == 97L);
-// flaky "16) test0608(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str11, "LogMark: logFileId - 100 , logFileOffset - 97");
-// flaky "12) test0608(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
+// flaky "22) test0608(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 97L + "'", long9 == 97L);
+// flaky "16) test0608(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str11, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "12) test0608(Regression2Test)":         org.junit.Assert.assertTrue("'" + int12 + "' != '" + (-1) + "'", int12 == (-1));
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
         org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
@@ -2772,7 +2772,7 @@ public class RegressionTest1 {
     @Test
     public void test0609() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0609");
+            System.out.format("%n%s%n", "Regression2Test.test0609");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -2790,16 +2790,16 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "23) test0609(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 32L + "'", long1 == 32L);
-// flaky "17) test0609(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str3, "LogMark: logFileId - 32 , logFileOffset - 32");
-// flaky "13) test0609(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 32L + "'", long4 == 32L);
+// flaky "23) test0609(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 32L + "'", long1 == 32L);
+// flaky "17) test0609(Regression2Test)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str3, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "13) test0609(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 32L + "'", long4 == 32L);
         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
     }
 
     @Test
     public void test0610() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0610");
+            System.out.format("%n%s%n", "Regression2Test.test0610");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -2833,7 +2833,7 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertNotNull(logMark2);
-// flaky "24) test0610(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str4, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "24) test0610(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str4, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertEquals("'" + str9 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str9, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark13);
         org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
@@ -2849,7 +2849,7 @@ public class RegressionTest1 {
     @Test
     public void test0611() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0611");
+            System.out.format("%n%s%n", "Regression2Test.test0611");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (byte) -1);
         logMark2.setLogMark((long) (byte) 1, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -2859,7 +2859,7 @@ public class RegressionTest1 {
     @Test
     public void test0612() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0612");
+            System.out.format("%n%s%n", "Regression2Test.test0612");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 1, 10L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
@@ -2870,14 +2870,14 @@ public class RegressionTest1 {
     @Test
     public void test0613() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0613");
+            System.out.format("%n%s%n", "Regression2Test.test0613");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(52L, (long) (short) 1);
     }
 
     @Test
     public void test0614() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0614");
+            System.out.format("%n%s%n", "Regression2Test.test0614");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2898,13 +2898,13 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "25) test0614(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str10, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "25) test0614(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str10, "LogMark: logFileId - 32 , logFileOffset - 32");
     }
 
     @Test
     public void test0615() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0615");
+            System.out.format("%n%s%n", "Regression2Test.test0615");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -2913,14 +2913,14 @@ public class RegressionTest1 {
         long long5 = logMark1.getLogFileId();
         logMark1.setLogMark((long) ' ', (long) (byte) -1);
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "26) test0615(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
-// flaky "18) test0615(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long5 + "' != '" + 32L + "'", long5 == 32L);
+// flaky "26) test0615(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "18) test0615(Regression2Test)":         org.junit.Assert.assertTrue("'" + long5 + "' != '" + 32L + "'", long5 == 32L);
     }
 
     @Test
     public void test0616() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0616");
+            System.out.format("%n%s%n", "Regression2Test.test0616");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -2954,9 +2954,9 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
         org.junit.Assert.assertNotNull(logMark25);
-// flaky "27) test0616(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str27 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str27, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "27) test0616(Regression2Test)":         org.junit.Assert.assertEquals("'" + str27 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str27, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertNotNull(logMark29);
-// flaky "19) test0616(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 32L + "'", long30 == 32L);
+// flaky "19) test0616(Regression2Test)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 32L + "'", long30 == 32L);
         org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
         org.junit.Assert.assertTrue("'" + long35 + "' != '" + 10L + "'", long35 == 10L);
@@ -2966,7 +2966,7 @@ public class RegressionTest1 {
     @Test
     public void test0617() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0617");
+            System.out.format("%n%s%n", "Regression2Test.test0617");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -2983,7 +2983,7 @@ public class RegressionTest1 {
     @Test
     public void test0618() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0618");
+            System.out.format("%n%s%n", "Regression2Test.test0618");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3006,7 +3006,7 @@ public class RegressionTest1 {
         int int29 = logMark11.compare(logMark23);
         java.lang.Class<?> wildcardClass30 = logMark11.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "28) test0618(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "28) test0618(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
@@ -3021,7 +3021,7 @@ public class RegressionTest1 {
     @Test
     public void test0619() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0619");
+            System.out.format("%n%s%n", "Regression2Test.test0619");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3062,15 +3062,15 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
         org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
         org.junit.Assert.assertNotNull(logMark36);
-// flaky "29) test0619(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long37 + "' != '" + 32L + "'", long37 == 32L);
-// flaky "20) test0619(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str40 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str40, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "29) test0619(Regression2Test)":         org.junit.Assert.assertTrue("'" + long37 + "' != '" + 32L + "'", long37 == 32L);
+// flaky "20) test0619(Regression2Test)":         org.junit.Assert.assertEquals("'" + str40 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str40, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
     }
 
     @Test
     public void test0620() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0620");
+            System.out.format("%n%s%n", "Regression2Test.test0620");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, (long) 10);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -3078,7 +3078,7 @@ public class RegressionTest1 {
     @Test
     public void test0621() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0621");
+            System.out.format("%n%s%n", "Regression2Test.test0621");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) 0);
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -3087,7 +3087,7 @@ public class RegressionTest1 {
     @Test
     public void test0622() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0622");
+            System.out.format("%n%s%n", "Regression2Test.test0622");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -3120,7 +3120,7 @@ public class RegressionTest1 {
     @Test
     public void test0623() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0623");
+            System.out.format("%n%s%n", "Regression2Test.test0623");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3145,31 +3145,31 @@ public class RegressionTest1 {
         int int25 = logMark15.compare(logMark23);
         long long26 = logMark23.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "30) test0623(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "30) test0623(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
         org.junit.Assert.assertNotNull(logMark16);
-// flaky "21) test0623(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str18, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "21) test0623(Regression2Test)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str18, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertNotNull(logMark20);
-// flaky "14) test0623(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 32L + "'", long21 == 32L);
+// flaky "14) test0623(Regression2Test)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 32L + "'", long21 == 32L);
         org.junit.Assert.assertTrue("'" + int24 + "' != '" + 0 + "'", int24 == 0);
         org.junit.Assert.assertTrue("'" + int25 + "' != '" + 0 + "'", int25 == 0);
-// flaky "4) test0623(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long26 + "' != '" + 32L + "'", long26 == 32L);
+// flaky "4) test0623(Regression2Test)":         org.junit.Assert.assertTrue("'" + long26 + "' != '" + 32L + "'", long26 == 32L);
     }
 
     @Test
     public void test0624() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0624");
+            System.out.format("%n%s%n", "Regression2Test.test0624");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 1L);
     }
 
     @Test
     public void test0625() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0625");
+            System.out.format("%n%s%n", "Regression2Test.test0625");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3206,7 +3206,7 @@ public class RegressionTest1 {
     @Test
     public void test0626() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0626");
+            System.out.format("%n%s%n", "Regression2Test.test0626");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -3230,7 +3230,7 @@ public class RegressionTest1 {
     @Test
     public void test0627() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0627");
+            System.out.format("%n%s%n", "Regression2Test.test0627");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3278,7 +3278,7 @@ public class RegressionTest1 {
     @Test
     public void test0628() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0628");
+            System.out.format("%n%s%n", "Regression2Test.test0628");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3334,7 +3334,7 @@ public class RegressionTest1 {
     @Test
     public void test0629() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0629");
+            System.out.format("%n%s%n", "Regression2Test.test0629");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3360,7 +3360,7 @@ public class RegressionTest1 {
     @Test
     public void test0630() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0630");
+            System.out.format("%n%s%n", "Regression2Test.test0630");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         long long3 = logMark2.getLogFileOffset();
         long long4 = logMark2.getLogFileId();
@@ -3379,7 +3379,7 @@ public class RegressionTest1 {
     @Test
     public void test0631() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0631");
+            System.out.format("%n%s%n", "Regression2Test.test0631");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) (short) 10);
         logMark2.setLogMark((long) (byte) 1, (long) 10);
         long long6 = logMark2.getLogFileOffset();
@@ -3397,7 +3397,7 @@ public class RegressionTest1 {
     @Test
     public void test0632() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0632");
+            System.out.format("%n%s%n", "Regression2Test.test0632");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         logMark2.setLogMark((long) (short) 0, (long) '#');
         java.lang.String str6 = logMark2.toString();
@@ -3409,7 +3409,7 @@ public class RegressionTest1 {
     @Test
     public void test0633() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0633");
+            System.out.format("%n%s%n", "Regression2Test.test0633");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3460,7 +3460,7 @@ public class RegressionTest1 {
     @Test
     public void test0634() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0634");
+            System.out.format("%n%s%n", "Regression2Test.test0634");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -3479,7 +3479,7 @@ public class RegressionTest1 {
     @Test
     public void test0635() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0635");
+            System.out.format("%n%s%n", "Regression2Test.test0635");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
@@ -3494,7 +3494,7 @@ public class RegressionTest1 {
     @Test
     public void test0636() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0636");
+            System.out.format("%n%s%n", "Regression2Test.test0636");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3566,7 +3566,7 @@ public class RegressionTest1 {
     @Test
     public void test0637() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0637");
+            System.out.format("%n%s%n", "Regression2Test.test0637");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3607,7 +3607,7 @@ public class RegressionTest1 {
     @Test
     public void test0638() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0638");
+            System.out.format("%n%s%n", "Regression2Test.test0638");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -3625,7 +3625,7 @@ public class RegressionTest1 {
     @Test
     public void test0639() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0639");
+            System.out.format("%n%s%n", "Regression2Test.test0639");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -3644,7 +3644,7 @@ public class RegressionTest1 {
     @Test
     public void test0640() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0640");
+            System.out.format("%n%s%n", "Regression2Test.test0640");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3656,7 +3656,7 @@ public class RegressionTest1 {
     @Test
     public void test0641() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0641");
+            System.out.format("%n%s%n", "Regression2Test.test0641");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -3681,7 +3681,7 @@ public class RegressionTest1 {
     @Test
     public void test0642() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0642");
+            System.out.format("%n%s%n", "Regression2Test.test0642");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3722,7 +3722,7 @@ public class RegressionTest1 {
     @Test
     public void test0643() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0643");
+            System.out.format("%n%s%n", "Regression2Test.test0643");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -3755,14 +3755,14 @@ public class RegressionTest1 {
     @Test
     public void test0644() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0644");
+            System.out.format("%n%s%n", "Regression2Test.test0644");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), (long) (byte) 10);
     }
 
     @Test
     public void test0645() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0645");
+            System.out.format("%n%s%n", "Regression2Test.test0645");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -3779,7 +3779,7 @@ public class RegressionTest1 {
     @Test
     public void test0646() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0646");
+            System.out.format("%n%s%n", "Regression2Test.test0646");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3809,7 +3809,7 @@ public class RegressionTest1 {
     @Test
     public void test0647() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0647");
+            System.out.format("%n%s%n", "Regression2Test.test0647");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -3830,7 +3830,7 @@ public class RegressionTest1 {
     @Test
     public void test0648() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0648");
+            System.out.format("%n%s%n", "Regression2Test.test0648");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, 35L);
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 100L + "'", long3 == 100L);
@@ -3839,7 +3839,7 @@ public class RegressionTest1 {
     @Test
     public void test0649() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0649");
+            System.out.format("%n%s%n", "Regression2Test.test0649");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -3865,7 +3865,7 @@ public class RegressionTest1 {
     @Test
     public void test0650() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0650");
+            System.out.format("%n%s%n", "Regression2Test.test0650");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -3893,14 +3893,14 @@ public class RegressionTest1 {
     @Test
     public void test0651() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0651");
+            System.out.format("%n%s%n", "Regression2Test.test0651");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (short) 10);
     }
 
     @Test
     public void test0652() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0652");
+            System.out.format("%n%s%n", "Regression2Test.test0652");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -3941,7 +3941,7 @@ public class RegressionTest1 {
     @Test
     public void test0653() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0653");
+            System.out.format("%n%s%n", "Regression2Test.test0653");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -3963,7 +3963,7 @@ public class RegressionTest1 {
     @Test
     public void test0654() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0654");
+            System.out.format("%n%s%n", "Regression2Test.test0654");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -3979,7 +3979,7 @@ public class RegressionTest1 {
     @Test
     public void test0655() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0655");
+            System.out.format("%n%s%n", "Regression2Test.test0655");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, 0L);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -3991,7 +3991,7 @@ public class RegressionTest1 {
     @Test
     public void test0656() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0656");
+            System.out.format("%n%s%n", "Regression2Test.test0656");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 0, (long) (byte) 0);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -4006,7 +4006,7 @@ public class RegressionTest1 {
     @Test
     public void test0657() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0657");
+            System.out.format("%n%s%n", "Regression2Test.test0657");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -4067,7 +4067,7 @@ public class RegressionTest1 {
     @Test
     public void test0658() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0658");
+            System.out.format("%n%s%n", "Regression2Test.test0658");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) (byte) 10);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileId();
@@ -4087,7 +4087,7 @@ public class RegressionTest1 {
     @Test
     public void test0659() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0659");
+            System.out.format("%n%s%n", "Regression2Test.test0659");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4131,7 +4131,7 @@ public class RegressionTest1 {
     @Test
     public void test0660() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0660");
+            System.out.format("%n%s%n", "Regression2Test.test0660");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) 1);
         java.lang.String str3 = logMark2.toString();
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 1" + "'", str3, "LogMark: logFileId - -1 , logFileOffset - 1");
@@ -4140,7 +4140,7 @@ public class RegressionTest1 {
     @Test
     public void test0661() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0661");
+            System.out.format("%n%s%n", "Regression2Test.test0661");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -4164,7 +4164,7 @@ public class RegressionTest1 {
     @Test
     public void test0662() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0662");
+            System.out.format("%n%s%n", "Regression2Test.test0662");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 10, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -4172,7 +4172,7 @@ public class RegressionTest1 {
     @Test
     public void test0663() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0663");
+            System.out.format("%n%s%n", "Regression2Test.test0663");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -4187,7 +4187,7 @@ public class RegressionTest1 {
     @Test
     public void test0664() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0664");
+            System.out.format("%n%s%n", "Regression2Test.test0664");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4214,7 +4214,7 @@ public class RegressionTest1 {
     @Test
     public void test0665() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0665");
+            System.out.format("%n%s%n", "Regression2Test.test0665");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -4222,15 +4222,15 @@ public class RegressionTest1 {
         java.lang.String str4 = logMark3.toString();
         java.lang.String str5 = logMark3.toString();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "31) test0665(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "22) test0665(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - 35 , logFileOffset - 10");
-// flaky "15) test0665(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str5, "LogMark: logFileId - 35 , logFileOffset - 10");
+// flaky "31) test0665(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "22) test0665(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - 35 , logFileOffset - 10");
+// flaky "15) test0665(Regression2Test)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str5, "LogMark: logFileId - 35 , logFileOffset - 10");
     }
 
     @Test
     public void test0666() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0666");
+            System.out.format("%n%s%n", "Regression2Test.test0666");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4262,14 +4262,14 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
-// flaky "32) test0666(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
-// flaky "23) test0666(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str37 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str37, "LogMark: logFileId - 35 , logFileOffset - 10");
+// flaky "32) test0666(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+// flaky "23) test0666(Regression2Test)":         org.junit.Assert.assertEquals("'" + str37 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str37, "LogMark: logFileId - 35 , logFileOffset - 10");
     }
 
     @Test
     public void test0667() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0667");
+            System.out.format("%n%s%n", "Regression2Test.test0667");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 35L);
         java.lang.String str3 = logMark2.toString();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -4288,7 +4288,7 @@ public class RegressionTest1 {
     @Test
     public void test0668() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0668");
+            System.out.format("%n%s%n", "Regression2Test.test0668");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4299,13 +4299,13 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "33) test0668(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 35L + "'", long10 == 35L);
+// flaky "33) test0668(Regression2Test)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 35L + "'", long10 == 35L);
     }
 
     @Test
     public void test0669() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0669");
+            System.out.format("%n%s%n", "Regression2Test.test0669");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 100);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -4320,7 +4320,7 @@ public class RegressionTest1 {
     @Test
     public void test0670() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0670");
+            System.out.format("%n%s%n", "Regression2Test.test0670");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4388,7 +4388,7 @@ public class RegressionTest1 {
     @Test
     public void test0671() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0671");
+            System.out.format("%n%s%n", "Regression2Test.test0671");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -4403,14 +4403,14 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "34) test0671(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - 35 , logFileOffset - 10");
-// flaky "24) test0671(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
+// flaky "34) test0671(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - 35 , logFileOffset - 10");
+// flaky "24) test0671(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
     }
 
     @Test
     public void test0672() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0672");
+            System.out.format("%n%s%n", "Regression2Test.test0672");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4454,7 +4454,7 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
-// flaky "35) test0672(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
+// flaky "35) test0672(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + (-1) + "'", int35 == (-1));
         org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
         org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
     }
@@ -4462,7 +4462,7 @@ public class RegressionTest1 {
     @Test
     public void test0673() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0673");
+            System.out.format("%n%s%n", "Regression2Test.test0673");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long4 = logMark3.getLogFileOffset();
@@ -4481,15 +4481,15 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "36) test0673(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
-// flaky "25) test0673(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str7, "LogMark: logFileId - 35 , logFileOffset - 10");
+// flaky "36) test0673(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 10L + "'", long4 == 10L);
+// flaky "25) test0673(Regression2Test)":         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str7, "LogMark: logFileId - 35 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + (-1) + "'", int14 == (-1));
     }
 
     @Test
     public void test0674() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0674");
+            System.out.format("%n%s%n", "Regression2Test.test0674");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -4508,7 +4508,7 @@ public class RegressionTest1 {
     @Test
     public void test0675() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0675");
+            System.out.format("%n%s%n", "Regression2Test.test0675");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4535,7 +4535,7 @@ public class RegressionTest1 {
     @Test
     public void test0676() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0676");
+            System.out.format("%n%s%n", "Regression2Test.test0676");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, (long) (byte) 0);
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -4544,7 +4544,7 @@ public class RegressionTest1 {
     @Test
     public void test0677() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0677");
+            System.out.format("%n%s%n", "Regression2Test.test0677");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(10L, (long) 100);
         java.lang.String str3 = logMark2.toString();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -4561,7 +4561,7 @@ public class RegressionTest1 {
     @Test
     public void test0678() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0678");
+            System.out.format("%n%s%n", "Regression2Test.test0678");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 35L);
         long long3 = logMark2.getLogFileOffset();
         long long4 = logMark2.getLogFileId();
@@ -4574,7 +4574,7 @@ public class RegressionTest1 {
     @Test
     public void test0679() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0679");
+            System.out.format("%n%s%n", "Regression2Test.test0679");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -4594,7 +4594,7 @@ public class RegressionTest1 {
     @Test
     public void test0680() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0680");
+            System.out.format("%n%s%n", "Regression2Test.test0680");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -4610,7 +4610,7 @@ public class RegressionTest1 {
         java.lang.String str18 = logMark17.toString();
         java.lang.Class<?> wildcardClass19 = logMark17.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "37) test0680(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "37) test0680(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
         org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 35" + "'", str12, "LogMark: logFileId - 0 , logFileOffset - 35");
         org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
@@ -4621,7 +4621,7 @@ public class RegressionTest1 {
     @Test
     public void test0681() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0681");
+            System.out.format("%n%s%n", "Regression2Test.test0681");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) 'a');
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -4630,7 +4630,7 @@ public class RegressionTest1 {
     @Test
     public void test0682() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0682");
+            System.out.format("%n%s%n", "Regression2Test.test0682");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -4665,7 +4665,7 @@ public class RegressionTest1 {
     @Test
     public void test0683() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0683");
+            System.out.format("%n%s%n", "Regression2Test.test0683");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -4687,20 +4687,20 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "38) test0683(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
-// flaky "26) test0683(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 52");
+// flaky "38) test0683(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "26) test0683(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 52");
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "16) test0683(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
+// flaky "16) test0683(Regression2Test)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "5) test0683(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 52L + "'", long9 == 52L);
+// flaky "5) test0683(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 52L + "'", long9 == 52L);
         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
     }
 
     @Test
     public void test0684() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0684");
+            System.out.format("%n%s%n", "Regression2Test.test0684");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4721,7 +4721,7 @@ public class RegressionTest1 {
     @Test
     public void test0685() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0685");
+            System.out.format("%n%s%n", "Regression2Test.test0685");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -4740,17 +4740,17 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "39) test0685(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
-// flaky "27) test0685(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 52");
+// flaky "39) test0685(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "27) test0685(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 52");
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "17) test0685(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
+// flaky "17) test0685(Regression2Test)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + (-1L) + "'", long6 == (-1L));
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
     }
 
     @Test
     public void test0686() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0686");
+            System.out.format("%n%s%n", "Regression2Test.test0686");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long2 = logMark0.getLogFileOffset();
@@ -4760,16 +4760,16 @@ public class RegressionTest1 {
         logMark0.setLogMark((long) '#', 10L);
         long long9 = logMark0.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "40) test0686(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 52L + "'", long2 == 52L);
-// flaky "28) test0686(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 52L + "'", long4 == 52L);
-// flaky "18) test0686(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str5, "LogMark: logFileId - -1 , logFileOffset - 52");
+// flaky "40) test0686(Regression2Test)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 52L + "'", long2 == 52L);
+// flaky "28) test0686(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 52L + "'", long4 == 52L);
+// flaky "18) test0686(Regression2Test)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 52" + "'", str5, "LogMark: logFileId - -1 , logFileOffset - 52");
         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 35L + "'", long9 == 35L);
     }
 
     @Test
     public void test0687() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0687");
+            System.out.format("%n%s%n", "Regression2Test.test0687");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         logMark2.setLogMark((long) (-1), 9223372036854775807L);
         java.lang.String str6 = logMark2.toString();
@@ -4781,7 +4781,7 @@ public class RegressionTest1 {
     @Test
     public void test0688() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0688");
+            System.out.format("%n%s%n", "Regression2Test.test0688");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -4803,7 +4803,7 @@ public class RegressionTest1 {
     @Test
     public void test0689() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0689");
+            System.out.format("%n%s%n", "Regression2Test.test0689");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) 0);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -4840,7 +4840,7 @@ public class RegressionTest1 {
     @Test
     public void test0690() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0690");
+            System.out.format("%n%s%n", "Regression2Test.test0690");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -4869,7 +4869,7 @@ public class RegressionTest1 {
     @Test
     public void test0691() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0691");
+            System.out.format("%n%s%n", "Regression2Test.test0691");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -4883,7 +4883,7 @@ public class RegressionTest1 {
     @Test
     public void test0692() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0692");
+            System.out.format("%n%s%n", "Regression2Test.test0692");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -4905,7 +4905,7 @@ public class RegressionTest1 {
     @Test
     public void test0693() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0693");
+            System.out.format("%n%s%n", "Regression2Test.test0693");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -4970,7 +4970,7 @@ public class RegressionTest1 {
     @Test
     public void test0694() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0694");
+            System.out.format("%n%s%n", "Regression2Test.test0694");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 1, (long) 1);
         logMark2.setLogMark(10L, 1L);
     }
@@ -4978,7 +4978,7 @@ public class RegressionTest1 {
     @Test
     public void test0695() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0695");
+            System.out.format("%n%s%n", "Regression2Test.test0695");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -5014,7 +5014,7 @@ public class RegressionTest1 {
     @Test
     public void test0696() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0696");
+            System.out.format("%n%s%n", "Regression2Test.test0696");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -5059,7 +5059,7 @@ public class RegressionTest1 {
     @Test
     public void test0697() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0697");
+            System.out.format("%n%s%n", "Regression2Test.test0697");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -5079,7 +5079,7 @@ public class RegressionTest1 {
     @Test
     public void test0698() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0698");
+            System.out.format("%n%s%n", "Regression2Test.test0698");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5098,7 +5098,7 @@ public class RegressionTest1 {
     @Test
     public void test0699() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0699");
+            System.out.format("%n%s%n", "Regression2Test.test0699");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -5122,7 +5122,7 @@ public class RegressionTest1 {
     @Test
     public void test0700() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0700");
+            System.out.format("%n%s%n", "Regression2Test.test0700");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -5174,7 +5174,7 @@ public class RegressionTest1 {
     @Test
     public void test0701() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0701");
+            System.out.format("%n%s%n", "Regression2Test.test0701");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5193,7 +5193,7 @@ public class RegressionTest1 {
     @Test
     public void test0702() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0702");
+            System.out.format("%n%s%n", "Regression2Test.test0702");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5234,7 +5234,7 @@ public class RegressionTest1 {
     @Test
     public void test0703() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0703");
+            System.out.format("%n%s%n", "Regression2Test.test0703");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5272,7 +5272,7 @@ public class RegressionTest1 {
     @Test
     public void test0704() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0704");
+            System.out.format("%n%s%n", "Regression2Test.test0704");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -5296,7 +5296,7 @@ public class RegressionTest1 {
     @Test
     public void test0705() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0705");
+            System.out.format("%n%s%n", "Regression2Test.test0705");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
@@ -5324,7 +5324,7 @@ public class RegressionTest1 {
     @Test
     public void test0706() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0706");
+            System.out.format("%n%s%n", "Regression2Test.test0706");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(52L, (long) (byte) 100);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -5340,7 +5340,7 @@ public class RegressionTest1 {
     @Test
     public void test0707() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0707");
+            System.out.format("%n%s%n", "Regression2Test.test0707");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -5367,7 +5367,7 @@ public class RegressionTest1 {
     @Test
     public void test0708() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0708");
+            System.out.format("%n%s%n", "Regression2Test.test0708");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -5410,7 +5410,7 @@ public class RegressionTest1 {
     @Test
     public void test0709() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0709");
+            System.out.format("%n%s%n", "Regression2Test.test0709");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -5430,14 +5430,14 @@ public class RegressionTest1 {
     @Test
     public void test0710() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0710");
+            System.out.format("%n%s%n", "Regression2Test.test0710");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, (long) (short) 100);
     }
 
     @Test
     public void test0711() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0711");
+            System.out.format("%n%s%n", "Regression2Test.test0711");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -5460,7 +5460,7 @@ public class RegressionTest1 {
     @Test
     public void test0712() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0712");
+            System.out.format("%n%s%n", "Regression2Test.test0712");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -5474,14 +5474,14 @@ public class RegressionTest1 {
     @Test
     public void test0713() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0713");
+            System.out.format("%n%s%n", "Regression2Test.test0713");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '4');
     }
 
     @Test
     public void test0714() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0714");
+            System.out.format("%n%s%n", "Regression2Test.test0714");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5519,7 +5519,7 @@ public class RegressionTest1 {
     @Test
     public void test0715() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0715");
+            System.out.format("%n%s%n", "Regression2Test.test0715");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 10, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
@@ -5570,7 +5570,7 @@ public class RegressionTest1 {
     @Test
     public void test0716() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0716");
+            System.out.format("%n%s%n", "Regression2Test.test0716");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5585,7 +5585,7 @@ public class RegressionTest1 {
     @Test
     public void test0717() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0717");
+            System.out.format("%n%s%n", "Regression2Test.test0717");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, (long) 100);
         long long3 = logMark2.getLogFileOffset();
         long long4 = logMark2.getLogFileId();
@@ -5596,7 +5596,7 @@ public class RegressionTest1 {
     @Test
     public void test0718() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0718");
+            System.out.format("%n%s%n", "Regression2Test.test0718");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -5635,7 +5635,7 @@ public class RegressionTest1 {
     @Test
     public void test0719() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0719");
+            System.out.format("%n%s%n", "Regression2Test.test0719");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, 35L);
         logMark2.setLogMark((long) (-1), 35L);
     }
@@ -5643,7 +5643,7 @@ public class RegressionTest1 {
     @Test
     public void test0720() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0720");
+            System.out.format("%n%s%n", "Regression2Test.test0720");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, (long) 10);
         long long3 = logMark2.getLogFileId();
         logMark2.setLogMark((long) 1, 0L);
@@ -5692,7 +5692,7 @@ public class RegressionTest1 {
     @Test
     public void test0721() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0721");
+            System.out.format("%n%s%n", "Regression2Test.test0721");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 97L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -5700,14 +5700,14 @@ public class RegressionTest1 {
     @Test
     public void test0722() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0722");
+            System.out.format("%n%s%n", "Regression2Test.test0722");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(9223372036854775807L, (long) 0);
     }
 
     @Test
     public void test0723() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0723");
+            System.out.format("%n%s%n", "Regression2Test.test0723");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -5738,7 +5738,7 @@ public class RegressionTest1 {
     @Test
     public void test0724() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0724");
+            System.out.format("%n%s%n", "Regression2Test.test0724");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -5755,7 +5755,7 @@ public class RegressionTest1 {
     @Test
     public void test0725() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0725");
+            System.out.format("%n%s%n", "Regression2Test.test0725");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -5778,7 +5778,7 @@ public class RegressionTest1 {
     @Test
     public void test0726() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0726");
+            System.out.format("%n%s%n", "Regression2Test.test0726");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -5793,7 +5793,7 @@ public class RegressionTest1 {
     @Test
     public void test0727() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0727");
+            System.out.format("%n%s%n", "Regression2Test.test0727");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -5823,7 +5823,7 @@ public class RegressionTest1 {
     @Test
     public void test0728() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0728");
+            System.out.format("%n%s%n", "Regression2Test.test0728");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', 10L);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -5838,14 +5838,14 @@ public class RegressionTest1 {
     @Test
     public void test0729() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0729");
+            System.out.format("%n%s%n", "Regression2Test.test0729");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) (byte) -1);
     }
 
     @Test
     public void test0730() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0730");
+            System.out.format("%n%s%n", "Regression2Test.test0730");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long4 = logMark3.getLogFileOffset();
@@ -5868,7 +5868,7 @@ public class RegressionTest1 {
     @Test
     public void test0731() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0731");
+            System.out.format("%n%s%n", "Regression2Test.test0731");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long4 = logMark3.getLogFileOffset();
@@ -5931,7 +5931,7 @@ public class RegressionTest1 {
     @Test
     public void test0732() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0732");
+            System.out.format("%n%s%n", "Regression2Test.test0732");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -5959,7 +5959,7 @@ public class RegressionTest1 {
     @Test
     public void test0733() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0733");
+            System.out.format("%n%s%n", "Regression2Test.test0733");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -5993,7 +5993,7 @@ public class RegressionTest1 {
     @Test
     public void test0734() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0734");
+            System.out.format("%n%s%n", "Regression2Test.test0734");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -6019,7 +6019,7 @@ public class RegressionTest1 {
     @Test
     public void test0735() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0735");
+            System.out.format("%n%s%n", "Regression2Test.test0735");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -6029,7 +6029,7 @@ public class RegressionTest1 {
     @Test
     public void test0736() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0736");
+            System.out.format("%n%s%n", "Regression2Test.test0736");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6051,7 +6051,7 @@ public class RegressionTest1 {
     @Test
     public void test0737() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0737");
+            System.out.format("%n%s%n", "Regression2Test.test0737");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -6065,7 +6065,7 @@ public class RegressionTest1 {
     @Test
     public void test0738() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0738");
+            System.out.format("%n%s%n", "Regression2Test.test0738");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark((long) 'a', 35L);
@@ -6076,7 +6076,7 @@ public class RegressionTest1 {
     @Test
     public void test0739() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0739");
+            System.out.format("%n%s%n", "Regression2Test.test0739");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6093,7 +6093,7 @@ public class RegressionTest1 {
     @Test
     public void test0740() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0740");
+            System.out.format("%n%s%n", "Regression2Test.test0740");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -6110,15 +6110,15 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "41) test0740(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "41) test0740(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
-// flaky "29) test0740(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str8, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "29) test0740(Regression2Test)":         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str8, "LogMark: logFileId - 32 , logFileOffset - 32");
     }
 
     @Test
     public void test0741() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0741");
+            System.out.format("%n%s%n", "Regression2Test.test0741");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6141,7 +6141,7 @@ public class RegressionTest1 {
     @Test
     public void test0742() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0742");
+            System.out.format("%n%s%n", "Regression2Test.test0742");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         java.lang.String str3 = logMark2.toString();
         logMark2.setLogMark((long) '4', 0L);
@@ -6153,7 +6153,7 @@ public class RegressionTest1 {
     @Test
     public void test0743() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0743");
+            System.out.format("%n%s%n", "Regression2Test.test0743");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         long long6 = logMark5.getLogFileId();
@@ -6176,7 +6176,7 @@ public class RegressionTest1 {
     @Test
     public void test0744() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0744");
+            System.out.format("%n%s%n", "Regression2Test.test0744");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -6192,7 +6192,7 @@ public class RegressionTest1 {
     @Test
     public void test0745() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0745");
+            System.out.format("%n%s%n", "Regression2Test.test0745");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6220,7 +6220,7 @@ public class RegressionTest1 {
     @Test
     public void test0746() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0746");
+            System.out.format("%n%s%n", "Regression2Test.test0746");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 10, (long) 0);
         java.lang.String str3 = logMark2.toString();
         logMark2.setLogMark((long) (byte) 10, (long) 10);
@@ -6230,7 +6230,7 @@ public class RegressionTest1 {
     @Test
     public void test0747() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0747");
+            System.out.format("%n%s%n", "Regression2Test.test0747");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long2 = logMark0.getLogFileOffset();
@@ -6244,13 +6244,13 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "42) test0747(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 32L + "'", long2 == 32L);
+// flaky "42) test0747(Regression2Test)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 32L + "'", long2 == 32L);
     }
 
     @Test
     public void test0748() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0748");
+            System.out.format("%n%s%n", "Regression2Test.test0748");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6264,15 +6264,15 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "43) test0748(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str10, "LogMark: logFileId - 32 , logFileOffset - 32");
-// flaky "30) test0748(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str12, "LogMark: logFileId - 32 , logFileOffset - 32");
-// flaky "19) test0748(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long13 + "' != '" + 32L + "'", long13 == 32L);
+// flaky "43) test0748(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str10, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "30) test0748(Regression2Test)":         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str12, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "19) test0748(Regression2Test)":         org.junit.Assert.assertTrue("'" + long13 + "' != '" + 32L + "'", long13 == 32L);
     }
 
     @Test
     public void test0749() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0749");
+            System.out.format("%n%s%n", "Regression2Test.test0749");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         long long3 = logMark2.getLogFileOffset();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -6289,7 +6289,7 @@ public class RegressionTest1 {
     @Test
     public void test0750() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0750");
+            System.out.format("%n%s%n", "Regression2Test.test0750");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -6317,9 +6317,9 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str9 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 52" + "'", str9, "LogMark: logFileId - 97 , logFileOffset - 52");
         org.junit.Assert.assertTrue("'" + int19 + "' != '" + 0 + "'", int19 == 0);
         org.junit.Assert.assertNotNull(logMark30);
-// flaky "44) test0750(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long31 + "' != '" + 32L + "'", long31 == 32L);
-// flaky "31) test0750(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long32 + "' != '" + 32L + "'", long32 == 32L);
-// flaky "20) test0750(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
+// flaky "44) test0750(Regression2Test)":         org.junit.Assert.assertTrue("'" + long31 + "' != '" + 32L + "'", long31 == 32L);
+// flaky "31) test0750(Regression2Test)":         org.junit.Assert.assertTrue("'" + long32 + "' != '" + 32L + "'", long32 == 32L);
+// flaky "20) test0750(Regression2Test)":         org.junit.Assert.assertTrue("'" + int33 + "' != '" + (-1) + "'", int33 == (-1));
         org.junit.Assert.assertTrue("'" + int37 + "' != '" + 1 + "'", int37 == 1);
         org.junit.Assert.assertTrue("'" + int38 + "' != '" + 1 + "'", int38 == 1);
         org.junit.Assert.assertTrue("'" + int39 + "' != '" + 1 + "'", int39 == 1);
@@ -6328,7 +6328,7 @@ public class RegressionTest1 {
     @Test
     public void test0751() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0751");
+            System.out.format("%n%s%n", "Regression2Test.test0751");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -6363,13 +6363,13 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "45) test0751(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "45) test0751(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str2, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
         org.junit.Assert.assertNotNull(logMark16);
-// flaky "32) test0751(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str18, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "32) test0751(Regression2Test)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str18, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertEquals("'" + str23 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str23, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark27);
         org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
@@ -6380,7 +6380,7 @@ public class RegressionTest1 {
     @Test
     public void test0752() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0752");
+            System.out.format("%n%s%n", "Regression2Test.test0752");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, 97L);
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -6389,7 +6389,7 @@ public class RegressionTest1 {
     @Test
     public void test0753() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0753");
+            System.out.format("%n%s%n", "Regression2Test.test0753");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6415,8 +6415,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long8 + "' != '" + (-1L) + "'", long8 == (-1L));
         org.junit.Assert.assertTrue("'" + int18 + "' != '" + 0 + "'", int18 == 0);
         org.junit.Assert.assertNotNull(logMark21);
-// flaky "46) test0753(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 32L + "'", long22 == 32L);
-// flaky "33) test0753(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str24 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str24, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "46) test0753(Regression2Test)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 32L + "'", long22 == 32L);
+// flaky "33) test0753(Regression2Test)":         org.junit.Assert.assertEquals("'" + str24 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str24, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + long28 + "' != '" + 32L + "'", long28 == 32L);
         org.junit.Assert.assertTrue("'" + int30 + "' != '" + 1 + "'", int30 == 1);
         org.junit.Assert.assertTrue("'" + int31 + "' != '" + (-1) + "'", int31 == (-1));
@@ -6426,7 +6426,7 @@ public class RegressionTest1 {
     @Test
     public void test0754() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0754");
+            System.out.format("%n%s%n", "Regression2Test.test0754");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(10L, (long) (short) -1);
         long long3 = logMark2.getLogFileId();
         logMark2.setLogMark(0L, (long) 0);
@@ -6438,14 +6438,14 @@ public class RegressionTest1 {
     @Test
     public void test0755() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0755");
+            System.out.format("%n%s%n", "Regression2Test.test0755");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), (-1L));
     }
 
     @Test
     public void test0756() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0756");
+            System.out.format("%n%s%n", "Regression2Test.test0756");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 0L);
         logMark2.setLogMark((long) (byte) 100, (long) (short) 0);
         logMark2.setLogMark(32L, 9223372036854775807L);
@@ -6459,7 +6459,7 @@ public class RegressionTest1 {
     @Test
     public void test0757() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0757");
+            System.out.format("%n%s%n", "Regression2Test.test0757");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, 35L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -6469,7 +6469,7 @@ public class RegressionTest1 {
     @Test
     public void test0758() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0758");
+            System.out.format("%n%s%n", "Regression2Test.test0758");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6491,16 +6491,16 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str4, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "47) test0758(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 32L + "'", long9 == 32L);
-// flaky "34) test0758(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 32L + "'", long10 == 32L);
-// flaky "21) test0758(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str11, "LogMark: logFileId - 32 , logFileOffset - 32");
+// flaky "47) test0758(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 32L + "'", long9 == 32L);
+// flaky "34) test0758(Regression2Test)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 32L + "'", long10 == 32L);
+// flaky "21) test0758(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - 32 , logFileOffset - 32" + "'", str11, "LogMark: logFileId - 32 , logFileOffset - 32");
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
     }
 
     @Test
     public void test0759() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0759");
+            System.out.format("%n%s%n", "Regression2Test.test0759");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6520,7 +6520,7 @@ public class RegressionTest1 {
     @Test
     public void test0760() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0760");
+            System.out.format("%n%s%n", "Regression2Test.test0760");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -6530,15 +6530,15 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long9 = logMark0.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "48) test0760(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 32L + "'", long1 == 32L);
-// flaky "35) test0760(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 32L + "'", long4 == 32L);
+// flaky "48) test0760(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 32L + "'", long1 == 32L);
+// flaky "35) test0760(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 32L + "'", long4 == 32L);
         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 52L + "'", long9 == 52L);
     }
 
     @Test
     public void test0761() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0761");
+            System.out.format("%n%s%n", "Regression2Test.test0761");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -6562,7 +6562,7 @@ public class RegressionTest1 {
     @Test
     public void test0762() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0762");
+            System.out.format("%n%s%n", "Regression2Test.test0762");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -6580,7 +6580,7 @@ public class RegressionTest1 {
     @Test
     public void test0763() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0763");
+            System.out.format("%n%s%n", "Regression2Test.test0763");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6620,7 +6620,7 @@ public class RegressionTest1 {
     @Test
     public void test0764() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0764");
+            System.out.format("%n%s%n", "Regression2Test.test0764");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -6669,7 +6669,7 @@ public class RegressionTest1 {
     @Test
     public void test0765() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0765");
+            System.out.format("%n%s%n", "Regression2Test.test0765");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark(100L, (long) '4');
@@ -6688,7 +6688,7 @@ public class RegressionTest1 {
     @Test
     public void test0766() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0766");
+            System.out.format("%n%s%n", "Regression2Test.test0766");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 32L);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -6703,7 +6703,7 @@ public class RegressionTest1 {
     @Test
     public void test0767() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0767");
+            System.out.format("%n%s%n", "Regression2Test.test0767");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, 97L);
         logMark2.setLogMark(52L, 10L);
         java.lang.String str6 = logMark2.toString();
@@ -6713,7 +6713,7 @@ public class RegressionTest1 {
     @Test
     public void test0768() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0768");
+            System.out.format("%n%s%n", "Regression2Test.test0768");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6741,7 +6741,7 @@ public class RegressionTest1 {
     @Test
     public void test0769() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0769");
+            System.out.format("%n%s%n", "Regression2Test.test0769");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -6767,21 +6767,21 @@ public class RegressionTest1 {
     @Test
     public void test0770() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0770");
+            System.out.format("%n%s%n", "Regression2Test.test0770");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, (-1L));
     }
 
     @Test
     public void test0771() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0771");
+            System.out.format("%n%s%n", "Regression2Test.test0771");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), (long) (-1));
     }
 
     @Test
     public void test0772() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0772");
+            System.out.format("%n%s%n", "Regression2Test.test0772");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -6803,7 +6803,7 @@ public class RegressionTest1 {
     @Test
     public void test0773() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0773");
+            System.out.format("%n%s%n", "Regression2Test.test0773");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, (-1L));
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -6818,7 +6818,7 @@ public class RegressionTest1 {
     @Test
     public void test0774() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0774");
+            System.out.format("%n%s%n", "Regression2Test.test0774");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long4 = logMark3.getLogFileOffset();
@@ -6843,7 +6843,7 @@ public class RegressionTest1 {
     @Test
     public void test0775() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0775");
+            System.out.format("%n%s%n", "Regression2Test.test0775");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -6908,7 +6908,7 @@ public class RegressionTest1 {
     @Test
     public void test0776() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0776");
+            System.out.format("%n%s%n", "Regression2Test.test0776");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 100, 35L);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -6923,7 +6923,7 @@ public class RegressionTest1 {
     @Test
     public void test0777() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0777");
+            System.out.format("%n%s%n", "Regression2Test.test0777");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, (-1L));
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
@@ -6932,7 +6932,7 @@ public class RegressionTest1 {
     @Test
     public void test0778() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0778");
+            System.out.format("%n%s%n", "Regression2Test.test0778");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -6951,7 +6951,7 @@ public class RegressionTest1 {
     @Test
     public void test0779() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0779");
+            System.out.format("%n%s%n", "Regression2Test.test0779");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -6991,7 +6991,7 @@ public class RegressionTest1 {
     @Test
     public void test0780() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0780");
+            System.out.format("%n%s%n", "Regression2Test.test0780");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -7014,7 +7014,7 @@ public class RegressionTest1 {
     @Test
     public void test0781() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0781");
+            System.out.format("%n%s%n", "Regression2Test.test0781");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -7048,7 +7048,7 @@ public class RegressionTest1 {
     @Test
     public void test0782() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0782");
+            System.out.format("%n%s%n", "Regression2Test.test0782");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) -1);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -7066,7 +7066,7 @@ public class RegressionTest1 {
     @Test
     public void test0783() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0783");
+            System.out.format("%n%s%n", "Regression2Test.test0783");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -7102,7 +7102,7 @@ public class RegressionTest1 {
     @Test
     public void test0784() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0784");
+            System.out.format("%n%s%n", "Regression2Test.test0784");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7114,14 +7114,14 @@ public class RegressionTest1 {
         long long12 = logMark11.getLogFileId();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str4, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "49) test0784(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+// flaky "49) test0784(Regression2Test)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
         org.junit.Assert.assertTrue("'" + long12 + "' != '" + (-1L) + "'", long12 == (-1L));
     }
 
     @Test
     public void test0785() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0785");
+            System.out.format("%n%s%n", "Regression2Test.test0785");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -7133,7 +7133,7 @@ public class RegressionTest1 {
     @Test
     public void test0786() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0786");
+            System.out.format("%n%s%n", "Regression2Test.test0786");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7153,7 +7153,7 @@ public class RegressionTest1 {
     @Test
     public void test0787() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0787");
+            System.out.format("%n%s%n", "Regression2Test.test0787");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7191,7 +7191,7 @@ public class RegressionTest1 {
     @Test
     public void test0788() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0788");
+            System.out.format("%n%s%n", "Regression2Test.test0788");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7208,7 +7208,7 @@ public class RegressionTest1 {
         logMark20.setLogMark(52L, 32L);
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str4, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "50) test0788(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+// flaky "50) test0788(Regression2Test)":         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
         org.junit.Assert.assertTrue("'" + int18 + "' != '" + (-1) + "'", int18 == (-1));
         org.junit.Assert.assertTrue("'" + long19 + "' != '" + (-1L) + "'", long19 == (-1L));
@@ -7217,7 +7217,7 @@ public class RegressionTest1 {
     @Test
     public void test0789() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0789");
+            System.out.format("%n%s%n", "Regression2Test.test0789");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7240,7 +7240,7 @@ public class RegressionTest1 {
     @Test
     public void test0790() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0790");
+            System.out.format("%n%s%n", "Regression2Test.test0790");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 100, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -7259,7 +7259,7 @@ public class RegressionTest1 {
     @Test
     public void test0791() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0791");
+            System.out.format("%n%s%n", "Regression2Test.test0791");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7293,17 +7293,17 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 10L + "'", long24 == 10L);
         org.junit.Assert.assertNotNull(logMark25);
-// flaky "51) test0791(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str27 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str27, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "51) test0791(Regression2Test)":         org.junit.Assert.assertEquals("'" + str27 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str27, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertNotNull(logMark29);
-// flaky "36) test0791(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
+// flaky "36) test0791(Regression2Test)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
         org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
-// flaky "22) test0791(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 1 + "'", int34 == 1);
+// flaky "22) test0791(Regression2Test)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 1 + "'", int34 == 1);
     }
 
     @Test
     public void test0792() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0792");
+            System.out.format("%n%s%n", "Regression2Test.test0792");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 52L);
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 1L + "'", long3 == 1L);
@@ -7312,7 +7312,7 @@ public class RegressionTest1 {
     @Test
     public void test0793() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0793");
+            System.out.format("%n%s%n", "Regression2Test.test0793");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long2 = logMark0.getLogFileOffset();
@@ -7321,15 +7321,15 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark7 = new org.apache.bookkeeper.bookie.LogMark(35L, 1L);
         int int8 = logMark0.compare(logMark7);
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "52) test0793(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
-// flaky "37) test0793(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
+// flaky "52) test0793(Regression2Test)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 10L + "'", long2 == 10L);
+// flaky "37) test0793(Regression2Test)":         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
         org.junit.Assert.assertTrue("'" + int8 + "' != '" + (-1) + "'", int8 == (-1));
     }
 
     @Test
     public void test0794() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0794");
+            System.out.format("%n%s%n", "Regression2Test.test0794");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7347,7 +7347,7 @@ public class RegressionTest1 {
     @Test
     public void test0795() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0795");
+            System.out.format("%n%s%n", "Regression2Test.test0795");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7366,13 +7366,13 @@ public class RegressionTest1 {
         org.junit.Assert.assertNotNull(logMark18);
         org.junit.Assert.assertTrue("'" + int20 + "' != '" + 1 + "'", int20 == 1);
         org.junit.Assert.assertTrue("'" + int21 + "' != '" + 1 + "'", int21 == 1);
-// flaky "53) test0795(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
+// flaky "53) test0795(Regression2Test)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
     }
 
     @Test
     public void test0796() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0796");
+            System.out.format("%n%s%n", "Regression2Test.test0796");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -7385,7 +7385,7 @@ public class RegressionTest1 {
     @Test
     public void test0797() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0797");
+            System.out.format("%n%s%n", "Regression2Test.test0797");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7428,7 +7428,7 @@ public class RegressionTest1 {
     @Test
     public void test0798() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0798");
+            System.out.format("%n%s%n", "Regression2Test.test0798");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -7470,8 +7470,8 @@ public class RegressionTest1 {
         long long62 = logMark2.getLogFileOffset();
         logMark2.setLogMark((long) (byte) -1, 0L);
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "54) test0798(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
-// flaky "38) test0798(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "54) test0798(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
+// flaky "38) test0798(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
         org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
@@ -7482,8 +7482,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long37 + "' != '" + 10L + "'", long37 == 10L);
         org.junit.Assert.assertEquals("'" + str42 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str42, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark46);
-// flaky "23) test0798(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
-// flaky "6) test0798(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
+// flaky "23) test0798(Regression2Test)":         org.junit.Assert.assertTrue("'" + int48 + "' != '" + 0 + "'", int48 == 0);
+// flaky "6) test0798(Regression2Test)":         org.junit.Assert.assertTrue("'" + int49 + "' != '" + 1 + "'", int49 == 1);
         org.junit.Assert.assertTrue("'" + int56 + "' != '" + 0 + "'", int56 == 0);
         org.junit.Assert.assertTrue("'" + int59 + "' != '" + (-1) + "'", int59 == (-1));
         org.junit.Assert.assertTrue("'" + long60 + "' != '" + 97L + "'", long60 == 97L);
@@ -7494,7 +7494,7 @@ public class RegressionTest1 {
     @Test
     public void test0799() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0799");
+            System.out.format("%n%s%n", "Regression2Test.test0799");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -7504,15 +7504,15 @@ public class RegressionTest1 {
         logMark5.setLogMark((long) (-1), (long) '4');
         java.lang.Class<?> wildcardClass9 = logMark5.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "55) test0799(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "39) test0799(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "55) test0799(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "39) test0799(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertNotNull(wildcardClass9);
     }
 
     @Test
     public void test0800() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0800");
+            System.out.format("%n%s%n", "Regression2Test.test0800");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         logMark2.setLogMark((long) (short) 0, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -7528,7 +7528,7 @@ public class RegressionTest1 {
     @Test
     public void test0801() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0801");
+            System.out.format("%n%s%n", "Regression2Test.test0801");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (short) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -7536,7 +7536,7 @@ public class RegressionTest1 {
     @Test
     public void test0802() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0802");
+            System.out.format("%n%s%n", "Regression2Test.test0802");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7593,9 +7593,9 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
-// flaky "56) test0802(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
-// flaky "40) test0802(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
-// flaky "24) test0802(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str36 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str36, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "56) test0802(Regression2Test)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+// flaky "40) test0802(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
+// flaky "24) test0802(Regression2Test)":         org.junit.Assert.assertEquals("'" + str36 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str36, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int47 + "' != '" + 0 + "'", int47 == 0);
         org.junit.Assert.assertTrue("'" + long51 + "' != '" + 10L + "'", long51 == 10L);
         org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
@@ -7611,7 +7611,7 @@ public class RegressionTest1 {
     @Test
     public void test0803() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0803");
+            System.out.format("%n%s%n", "Regression2Test.test0803");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7657,7 +7657,7 @@ public class RegressionTest1 {
     @Test
     public void test0804() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0804");
+            System.out.format("%n%s%n", "Regression2Test.test0804");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (byte) -1);
         logMark2.setLogMark((long) (byte) 1, (long) '#');
         logMark2.setLogMark((long) (-1), (long) 1);
@@ -7666,7 +7666,7 @@ public class RegressionTest1 {
     @Test
     public void test0805() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0805");
+            System.out.format("%n%s%n", "Regression2Test.test0805");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7680,7 +7680,7 @@ public class RegressionTest1 {
     @Test
     public void test0806() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0806");
+            System.out.format("%n%s%n", "Regression2Test.test0806");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, 35L);
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -7689,7 +7689,7 @@ public class RegressionTest1 {
     @Test
     public void test0807() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0807");
+            System.out.format("%n%s%n", "Regression2Test.test0807");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -7710,7 +7710,7 @@ public class RegressionTest1 {
     @Test
     public void test0808() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0808");
+            System.out.format("%n%s%n", "Regression2Test.test0808");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(0L, 52L);
         int int6 = logMark2.compare(logMark5);
@@ -7720,7 +7720,7 @@ public class RegressionTest1 {
     @Test
     public void test0809() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0809");
+            System.out.format("%n%s%n", "Regression2Test.test0809");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -7741,7 +7741,7 @@ public class RegressionTest1 {
     @Test
     public void test0810() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0810");
+            System.out.format("%n%s%n", "Regression2Test.test0810");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -7769,7 +7769,7 @@ public class RegressionTest1 {
     @Test
     public void test0811() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0811");
+            System.out.format("%n%s%n", "Regression2Test.test0811");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -7784,7 +7784,7 @@ public class RegressionTest1 {
     @Test
     public void test0812() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0812");
+            System.out.format("%n%s%n", "Regression2Test.test0812");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -7802,7 +7802,7 @@ public class RegressionTest1 {
     @Test
     public void test0813() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0813");
+            System.out.format("%n%s%n", "Regression2Test.test0813");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
@@ -7851,14 +7851,14 @@ public class RegressionTest1 {
     @Test
     public void test0814() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0814");
+            System.out.format("%n%s%n", "Regression2Test.test0814");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(9223372036854775807L, (long) (-1));
     }
 
     @Test
     public void test0815() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0815");
+            System.out.format("%n%s%n", "Regression2Test.test0815");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -7889,7 +7889,7 @@ public class RegressionTest1 {
     @Test
     public void test0816() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0816");
+            System.out.format("%n%s%n", "Regression2Test.test0816");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -7908,7 +7908,7 @@ public class RegressionTest1 {
     @Test
     public void test0817() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0817");
+            System.out.format("%n%s%n", "Regression2Test.test0817");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -7921,7 +7921,7 @@ public class RegressionTest1 {
     @Test
     public void test0818() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0818");
+            System.out.format("%n%s%n", "Regression2Test.test0818");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -7942,7 +7942,7 @@ public class RegressionTest1 {
     @Test
     public void test0819() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0819");
+            System.out.format("%n%s%n", "Regression2Test.test0819");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8001,7 +8001,7 @@ public class RegressionTest1 {
     @Test
     public void test0820() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0820");
+            System.out.format("%n%s%n", "Regression2Test.test0820");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -8041,7 +8041,7 @@ public class RegressionTest1 {
     @Test
     public void test0821() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0821");
+            System.out.format("%n%s%n", "Regression2Test.test0821");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -8073,7 +8073,7 @@ public class RegressionTest1 {
     @Test
     public void test0822() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0822");
+            System.out.format("%n%s%n", "Regression2Test.test0822");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         long long3 = logMark2.getLogFileOffset();
         long long4 = logMark2.getLogFileOffset();
@@ -8086,7 +8086,7 @@ public class RegressionTest1 {
     @Test
     public void test0823() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0823");
+            System.out.format("%n%s%n", "Regression2Test.test0823");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long4 = logMark3.getLogFileOffset();
@@ -8122,7 +8122,7 @@ public class RegressionTest1 {
     @Test
     public void test0824() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0824");
+            System.out.format("%n%s%n", "Regression2Test.test0824");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8148,7 +8148,7 @@ public class RegressionTest1 {
     @Test
     public void test0825() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0825");
+            System.out.format("%n%s%n", "Regression2Test.test0825");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8176,7 +8176,7 @@ public class RegressionTest1 {
     @Test
     public void test0826() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0826");
+            System.out.format("%n%s%n", "Regression2Test.test0826");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -8190,7 +8190,7 @@ public class RegressionTest1 {
     @Test
     public void test0827() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0827");
+            System.out.format("%n%s%n", "Regression2Test.test0827");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -8203,14 +8203,14 @@ public class RegressionTest1 {
     @Test
     public void test0828() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0828");
+            System.out.format("%n%s%n", "Regression2Test.test0828");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, (long) 0);
     }
 
     @Test
     public void test0829() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0829");
+            System.out.format("%n%s%n", "Regression2Test.test0829");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8234,7 +8234,7 @@ public class RegressionTest1 {
     @Test
     public void test0830() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0830");
+            System.out.format("%n%s%n", "Regression2Test.test0830");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark((long) 'a', 35L);
@@ -8251,7 +8251,7 @@ public class RegressionTest1 {
     @Test
     public void test0831() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0831");
+            System.out.format("%n%s%n", "Regression2Test.test0831");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8289,7 +8289,7 @@ public class RegressionTest1 {
     @Test
     public void test0832() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0832");
+            System.out.format("%n%s%n", "Regression2Test.test0832");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark4 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -8314,7 +8314,7 @@ public class RegressionTest1 {
     @Test
     public void test0833() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0833");
+            System.out.format("%n%s%n", "Regression2Test.test0833");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -8327,7 +8327,7 @@ public class RegressionTest1 {
     @Test
     public void test0834() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0834");
+            System.out.format("%n%s%n", "Regression2Test.test0834");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8358,7 +8358,7 @@ public class RegressionTest1 {
     @Test
     public void test0835() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0835");
+            System.out.format("%n%s%n", "Regression2Test.test0835");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8403,7 +8403,7 @@ public class RegressionTest1 {
     @Test
     public void test0836() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0836");
+            System.out.format("%n%s%n", "Regression2Test.test0836");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8465,7 +8465,7 @@ public class RegressionTest1 {
     @Test
     public void test0837() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0837");
+            System.out.format("%n%s%n", "Regression2Test.test0837");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8487,7 +8487,7 @@ public class RegressionTest1 {
     @Test
     public void test0838() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0838");
+            System.out.format("%n%s%n", "Regression2Test.test0838");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8544,7 +8544,7 @@ public class RegressionTest1 {
     @Test
     public void test0839() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0839");
+            System.out.format("%n%s%n", "Regression2Test.test0839");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 100, (long) '#');
         logMark2.setLogMark((long) (byte) 10, (long) (byte) 100);
         long long6 = logMark2.getLogFileId();
@@ -8555,7 +8555,7 @@ public class RegressionTest1 {
     @Test
     public void test0840() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0840");
+            System.out.format("%n%s%n", "Regression2Test.test0840");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -8578,22 +8578,22 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "57) test0840(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
-// flaky "41) test0840(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "57) test0840(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
+// flaky "41) test0840(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "25) test0840(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + 100L + "'", long6 == 100L);
+// flaky "25) test0840(Regression2Test)":         org.junit.Assert.assertTrue("'" + long6 + "' != '" + 100L + "'", long6 == 100L);
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
         org.junit.Assert.assertNotNull(logMark8);
-// flaky "7) test0840(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 97L + "'", long9 == 97L);
+// flaky "7) test0840(Regression2Test)":         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 97L + "'", long9 == 97L);
         org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
-// flaky "3) test0840(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long11 + "' != '" + 97L + "'", long11 == 97L);
-// flaky "1) test0840(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long12 + "' != '" + 100L + "'", long12 == 100L);
+// flaky "3) test0840(Regression2Test)":         org.junit.Assert.assertTrue("'" + long11 + "' != '" + 97L + "'", long11 == 97L);
+// flaky "1) test0840(Regression2Test)":         org.junit.Assert.assertTrue("'" + long12 + "' != '" + 100L + "'", long12 == 100L);
     }
 
     @Test
     public void test0841() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0841");
+            System.out.format("%n%s%n", "Regression2Test.test0841");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) 0);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8657,7 +8657,7 @@ public class RegressionTest1 {
     @Test
     public void test0842() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0842");
+            System.out.format("%n%s%n", "Regression2Test.test0842");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -8677,7 +8677,7 @@ public class RegressionTest1 {
     @Test
     public void test0843() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0843");
+            System.out.format("%n%s%n", "Regression2Test.test0843");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -8708,7 +8708,7 @@ public class RegressionTest1 {
     @Test
     public void test0844() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0844");
+            System.out.format("%n%s%n", "Regression2Test.test0844");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         logMark2.setLogMark((long) (-1), 9223372036854775807L);
         long long6 = logMark2.getLogFileId();
@@ -8718,14 +8718,14 @@ public class RegressionTest1 {
     @Test
     public void test0845() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0845");
+            System.out.format("%n%s%n", "Regression2Test.test0845");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 32L);
     }
 
     @Test
     public void test0846() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0846");
+            System.out.format("%n%s%n", "Regression2Test.test0846");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long2 = logMark0.getLogFileOffset();
@@ -8741,17 +8741,17 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark20 = new org.apache.bookkeeper.bookie.LogMark(logMark7);
         java.lang.String str21 = logMark20.toString();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "58) test0846(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 97L + "'", long2 == 97L);
+// flaky "58) test0846(Regression2Test)":         org.junit.Assert.assertTrue("'" + long2 + "' != '" + 97L + "'", long2 == 97L);
         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str8, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertTrue("'" + long12 + "' != '" + (-1L) + "'", long12 == (-1L));
-// flaky "42) test0846(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
+// flaky "42) test0846(Regression2Test)":         org.junit.Assert.assertTrue("'" + int19 + "' != '" + 1 + "'", int19 == 1);
         org.junit.Assert.assertEquals("'" + str21 + "' != '" + "LogMark: logFileId - 35 , logFileOffset - 10" + "'", str21, "LogMark: logFileId - 35 , logFileOffset - 10");
     }
 
     @Test
     public void test0847() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0847");
+            System.out.format("%n%s%n", "Regression2Test.test0847");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -8766,14 +8766,14 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "59) test0847(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
-// flaky "43) test0847(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 97L + "'", long4 == 97L);
+// flaky "59) test0847(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 97L + "'", long1 == 97L);
+// flaky "43) test0847(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 97L + "'", long4 == 97L);
     }
 
     @Test
     public void test0848() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0848");
+            System.out.format("%n%s%n", "Regression2Test.test0848");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8828,7 +8828,7 @@ public class RegressionTest1 {
     @Test
     public void test0849() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0849");
+            System.out.format("%n%s%n", "Regression2Test.test0849");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 10, (long) 100);
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 100L + "'", long3 == 100L);
@@ -8837,7 +8837,7 @@ public class RegressionTest1 {
     @Test
     public void test0850() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0850");
+            System.out.format("%n%s%n", "Regression2Test.test0850");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -8863,7 +8863,7 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
         org.junit.Assert.assertNotNull(logMark15);
-// flaky "60) test0850(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int17 + "' != '" + (-1) + "'", int17 == (-1));
+// flaky "60) test0850(Regression2Test)":         org.junit.Assert.assertTrue("'" + int17 + "' != '" + (-1) + "'", int17 == (-1));
         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 35L + "'", long21 == 35L);
         org.junit.Assert.assertEquals("'" + str22 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 35" + "'", str22, "LogMark: logFileId - 0 , logFileOffset - 35");
         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 0 + "'", int23 == 0);
@@ -8872,7 +8872,7 @@ public class RegressionTest1 {
     @Test
     public void test0851() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0851");
+            System.out.format("%n%s%n", "Regression2Test.test0851");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -8907,7 +8907,7 @@ public class RegressionTest1 {
     @Test
     public void test0852() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0852");
+            System.out.format("%n%s%n", "Regression2Test.test0852");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -8941,7 +8941,7 @@ public class RegressionTest1 {
     @Test
     public void test0853() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0853");
+            System.out.format("%n%s%n", "Regression2Test.test0853");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, 1L);
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 1L + "'", long3 == 1L);
@@ -8950,14 +8950,14 @@ public class RegressionTest1 {
     @Test
     public void test0854() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0854");
+            System.out.format("%n%s%n", "Regression2Test.test0854");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, (long) (byte) -1);
     }
 
     @Test
     public void test0855() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0855");
+            System.out.format("%n%s%n", "Regression2Test.test0855");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -8986,25 +8986,25 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark33 = new org.apache.bookkeeper.bookie.LogMark(logMark27);
         long long34 = logMark33.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "61) test0855(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "61) test0855(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str2, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertEquals("'" + str7 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str7, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark11);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + (-1) + "'", int13 == (-1));
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
         org.junit.Assert.assertNotNull(logMark16);
-// flaky "44) test0855(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str18, "LogMark: logFileId - 100 , logFileOffset - 97");
+// flaky "44) test0855(Regression2Test)":         org.junit.Assert.assertEquals("'" + str18 + "' != '" + "LogMark: logFileId - 100 , logFileOffset - 97" + "'", str18, "LogMark: logFileId - 100 , logFileOffset - 97");
         org.junit.Assert.assertEquals("'" + str23 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str23, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark27);
         org.junit.Assert.assertTrue("'" + int29 + "' != '" + (-1) + "'", int29 == (-1));
         org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 0 + "'", int31 == 0);
-// flaky "26) test0855(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long34 + "' != '" + 100L + "'", long34 == 100L);
+// flaky "26) test0855(Regression2Test)":         org.junit.Assert.assertTrue("'" + long34 + "' != '" + 100L + "'", long34 == 100L);
     }
 
     @Test
     public void test0856() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0856");
+            System.out.format("%n%s%n", "Regression2Test.test0856");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -9018,14 +9018,14 @@ public class RegressionTest1 {
     @Test
     public void test0857() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0857");
+            System.out.format("%n%s%n", "Regression2Test.test0857");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', (long) (byte) 10);
     }
 
     @Test
     public void test0858() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0858");
+            System.out.format("%n%s%n", "Regression2Test.test0858");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) -1);
         long long3 = logMark2.getLogFileOffset();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -9042,7 +9042,7 @@ public class RegressionTest1 {
     @Test
     public void test0859() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0859");
+            System.out.format("%n%s%n", "Regression2Test.test0859");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, 9223372036854775807L);
         java.lang.String str3 = logMark2.toString();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -9052,14 +9052,14 @@ public class RegressionTest1 {
     @Test
     public void test0860() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0860");
+            System.out.format("%n%s%n", "Regression2Test.test0860");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, 10L);
     }
 
     @Test
     public void test0861() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0861");
+            System.out.format("%n%s%n", "Regression2Test.test0861");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 32L);
         logMark2.setLogMark((long) (short) 10, (long) ' ');
     }
@@ -9067,7 +9067,7 @@ public class RegressionTest1 {
     @Test
     public void test0862() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0862");
+            System.out.format("%n%s%n", "Regression2Test.test0862");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9118,7 +9118,7 @@ public class RegressionTest1 {
     @Test
     public void test0863() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0863");
+            System.out.format("%n%s%n", "Regression2Test.test0863");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -9127,14 +9127,14 @@ public class RegressionTest1 {
         long long5 = logMark3.getLogFileId();
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "62) test0863(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "45) test0863(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long5 + "' != '" + (-1L) + "'", long5 == (-1L));
+// flaky "62) test0863(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "45) test0863(Regression2Test)":         org.junit.Assert.assertTrue("'" + long5 + "' != '" + (-1L) + "'", long5 == (-1L));
     }
 
     @Test
     public void test0864() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0864");
+            System.out.format("%n%s%n", "Regression2Test.test0864");
         org.apache.bookkeeper.bookie.LogMark logMark0 = new org.apache.bookkeeper.bookie.LogMark();
         logMark0.setLogMark((long) (short) 1, (long) 0);
         logMark0.setLogMark((long) 'a', 1L);
@@ -9143,7 +9143,7 @@ public class RegressionTest1 {
     @Test
     public void test0865() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0865");
+            System.out.format("%n%s%n", "Regression2Test.test0865");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -9156,7 +9156,7 @@ public class RegressionTest1 {
     @Test
     public void test0866() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0866");
+            System.out.format("%n%s%n", "Regression2Test.test0866");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, 52L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -9164,7 +9164,7 @@ public class RegressionTest1 {
     @Test
     public void test0867() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0867");
+            System.out.format("%n%s%n", "Regression2Test.test0867");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, 35L);
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 100L + "'", long3 == 100L);
@@ -9173,7 +9173,7 @@ public class RegressionTest1 {
     @Test
     public void test0868() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0868");
+            System.out.format("%n%s%n", "Regression2Test.test0868");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, (long) 'a');
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 97L + "'", long3 == 97L);
@@ -9182,7 +9182,7 @@ public class RegressionTest1 {
     @Test
     public void test0869() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0869");
+            System.out.format("%n%s%n", "Regression2Test.test0869");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', 1L);
         java.lang.Class<?> wildcardClass3 = logMark2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
@@ -9191,7 +9191,7 @@ public class RegressionTest1 {
     @Test
     public void test0870() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0870");
+            System.out.format("%n%s%n", "Regression2Test.test0870");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -9218,7 +9218,7 @@ public class RegressionTest1 {
     @Test
     public void test0871() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0871");
+            System.out.format("%n%s%n", "Regression2Test.test0871");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9271,7 +9271,7 @@ public class RegressionTest1 {
     @Test
     public void test0872() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0872");
+            System.out.format("%n%s%n", "Regression2Test.test0872");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -9295,7 +9295,7 @@ public class RegressionTest1 {
     @Test
     public void test0873() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0873");
+            System.out.format("%n%s%n", "Regression2Test.test0873");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -9352,7 +9352,7 @@ public class RegressionTest1 {
     @Test
     public void test0874() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0874");
+            System.out.format("%n%s%n", "Regression2Test.test0874");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -9372,7 +9372,7 @@ public class RegressionTest1 {
     @Test
     public void test0875() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0875");
+            System.out.format("%n%s%n", "Regression2Test.test0875");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -9431,7 +9431,7 @@ public class RegressionTest1 {
     @Test
     public void test0876() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0876");
+            System.out.format("%n%s%n", "Regression2Test.test0876");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -9442,7 +9442,7 @@ public class RegressionTest1 {
     @Test
     public void test0877() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0877");
+            System.out.format("%n%s%n", "Regression2Test.test0877");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -9459,7 +9459,7 @@ public class RegressionTest1 {
     @Test
     public void test0878() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0878");
+            System.out.format("%n%s%n", "Regression2Test.test0878");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -9469,7 +9469,7 @@ public class RegressionTest1 {
         java.lang.Class<?> wildcardClass8 = logMark2.getClass();
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "63) test0878(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str3, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "63) test0878(Regression2Test)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str3, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + long7 + "' != '" + 32L + "'", long7 == 32L);
         org.junit.Assert.assertNotNull(wildcardClass8);
     }
@@ -9477,14 +9477,14 @@ public class RegressionTest1 {
     @Test
     public void test0879() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0879");
+            System.out.format("%n%s%n", "Regression2Test.test0879");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 0L);
     }
 
     @Test
     public void test0880() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0880");
+            System.out.format("%n%s%n", "Regression2Test.test0880");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -9499,7 +9499,7 @@ public class RegressionTest1 {
     @Test
     public void test0881() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0881");
+            System.out.format("%n%s%n", "Regression2Test.test0881");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), (long) '#');
         logMark2.setLogMark((long) '#', 100L);
     }
@@ -9507,7 +9507,7 @@ public class RegressionTest1 {
     @Test
     public void test0882() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0882");
+            System.out.format("%n%s%n", "Regression2Test.test0882");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -9525,21 +9525,21 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "64) test0882(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str3, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "64) test0882(Regression2Test)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str3, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + long7 + "' != '" + 32L + "'", long7 == 32L);
     }
 
     @Test
     public void test0883() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0883");
+            System.out.format("%n%s%n", "Regression2Test.test0883");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, (-1L));
     }
 
     @Test
     public void test0884() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0884");
+            System.out.format("%n%s%n", "Regression2Test.test0884");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) -1);
         java.lang.String str3 = logMark2.toString();
         long long4 = logMark2.getLogFileId();
@@ -9550,7 +9550,7 @@ public class RegressionTest1 {
     @Test
     public void test0885() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0885");
+            System.out.format("%n%s%n", "Regression2Test.test0885");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -9576,7 +9576,7 @@ public class RegressionTest1 {
         int int40 = logMark10.compare(logMark19);
         org.junit.Assert.assertNotNull(logMark8);
         org.junit.Assert.assertTrue("'" + long9 + "' != '" + 10L + "'", long9 == 10L);
-// flaky "65) test0885(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "65) test0885(Regression2Test)":         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str11, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
         org.junit.Assert.assertTrue("'" + int13 + "' != '" + 1 + "'", int13 == 1);
         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 0 + "'", int23 == 0);
@@ -9590,7 +9590,7 @@ public class RegressionTest1 {
     @Test
     public void test0886() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0886");
+            System.out.format("%n%s%n", "Regression2Test.test0886");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, (long) (short) -1);
         java.lang.String str3 = logMark2.toString();
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - -1" + "'", str3, "LogMark: logFileId - 0 , logFileOffset - -1");
@@ -9599,7 +9599,7 @@ public class RegressionTest1 {
     @Test
     public void test0887() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0887");
+            System.out.format("%n%s%n", "Regression2Test.test0887");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 10, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
@@ -9630,26 +9630,26 @@ public class RegressionTest1 {
         int int37 = logMark2.compare(logMark35);
         logMark35.setLogMark((long) (byte) -1, (long) 'a');
         org.junit.Assert.assertNotNull(logMark3);
-// flaky "66) test0887(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str5, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "66) test0887(Regression2Test)":         org.junit.Assert.assertEquals("'" + str5 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str5, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str10, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark14);
-// flaky "46) test0887(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
+// flaky "46) test0887(Regression2Test)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
         org.junit.Assert.assertNotNull(logMark19);
-// flaky "27) test0887(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str21 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str21, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "27) test0887(Regression2Test)":         org.junit.Assert.assertEquals("'" + str21 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str21, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertEquals("'" + str26 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str26, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark30);
-// flaky "8) test0887(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int32 + "' != '" + 0 + "'", int32 == 0);
+// flaky "8) test0887(Regression2Test)":         org.junit.Assert.assertTrue("'" + int32 + "' != '" + 0 + "'", int32 == 0);
         org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
         org.junit.Assert.assertTrue("'" + long36 + "' != '" + 10L + "'", long36 == 10L);
-// flaky "4) test0887(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int37 + "' != '" + 1 + "'", int37 == 1);
+// flaky "4) test0887(Regression2Test)":         org.junit.Assert.assertTrue("'" + int37 + "' != '" + 1 + "'", int37 == 1);
     }
 
     @Test
     public void test0888() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0888");
+            System.out.format("%n%s%n", "Regression2Test.test0888");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9677,7 +9677,7 @@ public class RegressionTest1 {
     @Test
     public void test0889() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0889");
+            System.out.format("%n%s%n", "Regression2Test.test0889");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) 1);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
     }
@@ -9685,7 +9685,7 @@ public class RegressionTest1 {
     @Test
     public void test0890() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0890");
+            System.out.format("%n%s%n", "Regression2Test.test0890");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         java.lang.String str3 = logMark2.toString();
         java.nio.ByteBuffer byteBuffer4 = null;
@@ -9702,14 +9702,14 @@ public class RegressionTest1 {
     @Test
     public void test0891() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0891");
+            System.out.format("%n%s%n", "Regression2Test.test0891");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, (long) 100);
     }
 
     @Test
     public void test0892() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0892");
+            System.out.format("%n%s%n", "Regression2Test.test0892");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 0L);
         logMark2.setLogMark((long) (byte) 100, (long) (short) 0);
         logMark2.setLogMark(32L, 9223372036854775807L);
@@ -9726,7 +9726,7 @@ public class RegressionTest1 {
     @Test
     public void test0893() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0893");
+            System.out.format("%n%s%n", "Regression2Test.test0893");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9780,7 +9780,7 @@ public class RegressionTest1 {
     @Test
     public void test0894() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0894");
+            System.out.format("%n%s%n", "Regression2Test.test0894");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9795,14 +9795,14 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "67) test0894(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str10, "LogMark: logFileId - 1 , logFileOffset - 52");
-// flaky "47) test0894(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str14 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str14, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "67) test0894(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str10, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "47) test0894(Regression2Test)":         org.junit.Assert.assertEquals("'" + str14 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str14, "LogMark: logFileId - 1 , logFileOffset - 52");
     }
 
     @Test
     public void test0895() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0895");
+            System.out.format("%n%s%n", "Regression2Test.test0895");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -9828,7 +9828,7 @@ public class RegressionTest1 {
     @Test
     public void test0896() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0896");
+            System.out.format("%n%s%n", "Regression2Test.test0896");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -9843,15 +9843,15 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "68) test0896(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
-// flaky "48) test0896(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str3, "LogMark: logFileId - 1 , logFileOffset - 52");
-// flaky "28) test0896(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 1L + "'", long4 == 1L);
+// flaky "68) test0896(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "48) test0896(Regression2Test)":         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str3, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "28) test0896(Regression2Test)":         org.junit.Assert.assertTrue("'" + long4 + "' != '" + 1L + "'", long4 == 1L);
     }
 
     @Test
     public void test0897() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0897");
+            System.out.format("%n%s%n", "Regression2Test.test0897");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -9878,7 +9878,7 @@ public class RegressionTest1 {
         org.apache.bookkeeper.bookie.LogMark logMark33 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
         org.junit.Assert.assertNotNull(logMark0);
         org.junit.Assert.assertNotNull(logMark2);
-// flaky "69) test0897(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str4, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "69) test0897(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str4, "LogMark: logFileId - 1 , logFileOffset - 52");
         org.junit.Assert.assertEquals("'" + str9 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str9, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark13);
         org.junit.Assert.assertTrue("'" + int15 + "' != '" + (-1) + "'", int15 == (-1));
@@ -9894,7 +9894,7 @@ public class RegressionTest1 {
     @Test
     public void test0898() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0898");
+            System.out.format("%n%s%n", "Regression2Test.test0898");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 0, (-1L));
         long long3 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
@@ -9903,7 +9903,7 @@ public class RegressionTest1 {
     @Test
     public void test0899() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0899");
+            System.out.format("%n%s%n", "Regression2Test.test0899");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -9927,7 +9927,7 @@ public class RegressionTest1 {
     @Test
     public void test0900() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0900");
+            System.out.format("%n%s%n", "Regression2Test.test0900");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -9940,7 +9940,7 @@ public class RegressionTest1 {
     @Test
     public void test0901() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0901");
+            System.out.format("%n%s%n", "Regression2Test.test0901");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -9960,8 +9960,8 @@ public class RegressionTest1 {
         long long24 = logMark16.getLogFileId();
         int int25 = logMark3.compare(logMark16);
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "70) test0901(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
-// flaky "49) test0901(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str4, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "70) test0901(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "49) test0901(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str4, "LogMark: logFileId - 1 , logFileOffset - 52");
         org.junit.Assert.assertTrue("'" + long11 + "' != '" + 52L + "'", long11 == 52L);
         org.junit.Assert.assertTrue("'" + long12 + "' != '" + (-1L) + "'", long12 == (-1L));
         org.junit.Assert.assertEquals("'" + str13 + "' != '" + "LogMark: logFileId - 52 , logFileOffset - -1" + "'", str13, "LogMark: logFileId - 52 , logFileOffset - -1");
@@ -9975,21 +9975,21 @@ public class RegressionTest1 {
     @Test
     public void test0902() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0902");
+            System.out.format("%n%s%n", "Regression2Test.test0902");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) 1);
     }
 
     @Test
     public void test0903() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0903");
+            System.out.format("%n%s%n", "Regression2Test.test0903");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) (byte) 0);
     }
 
     @Test
     public void test0904() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0904");
+            System.out.format("%n%s%n", "Regression2Test.test0904");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -10007,7 +10007,7 @@ public class RegressionTest1 {
     @Test
     public void test0905() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0905");
+            System.out.format("%n%s%n", "Regression2Test.test0905");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10029,7 +10029,7 @@ public class RegressionTest1 {
     @Test
     public void test0906() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0906");
+            System.out.format("%n%s%n", "Regression2Test.test0906");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -10043,7 +10043,7 @@ public class RegressionTest1 {
     @Test
     public void test0907() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0907");
+            System.out.format("%n%s%n", "Regression2Test.test0907");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -10064,7 +10064,7 @@ public class RegressionTest1 {
     @Test
     public void test0908() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0908");
+            System.out.format("%n%s%n", "Regression2Test.test0908");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 35L);
         java.lang.String str3 = logMark2.toString();
         java.lang.String str4 = logMark2.toString();
@@ -10079,7 +10079,7 @@ public class RegressionTest1 {
     @Test
     public void test0909() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0909");
+            System.out.format("%n%s%n", "Regression2Test.test0909");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) (byte) 10);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileId();
@@ -10096,7 +10096,7 @@ public class RegressionTest1 {
     @Test
     public void test0910() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0910");
+            System.out.format("%n%s%n", "Regression2Test.test0910");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -10113,7 +10113,7 @@ public class RegressionTest1 {
     @Test
     public void test0911() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0911");
+            System.out.format("%n%s%n", "Regression2Test.test0911");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -10162,13 +10162,13 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int41 + "' != '" + 1 + "'", int41 == 1);
         org.junit.Assert.assertNotNull(logMark43);
         org.junit.Assert.assertTrue("'" + int47 + "' != '" + (-1) + "'", int47 == (-1));
-// flaky "71) test0911(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str48 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str48, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "71) test0911(Regression2Test)":         org.junit.Assert.assertEquals("'" + str48 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str48, "LogMark: logFileId - 1 , logFileOffset - 52");
     }
 
     @Test
     public void test0912() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0912");
+            System.out.format("%n%s%n", "Regression2Test.test0912");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -10190,17 +10190,17 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "72) test0912(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
+// flaky "72) test0912(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 52L + "'", long1 == 52L);
         org.junit.Assert.assertTrue("'" + int11 + "' != '" + (-1) + "'", int11 == (-1));
         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 35" + "'", str12, "LogMark: logFileId - 0 , logFileOffset - 35");
-// flaky "50) test0912(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
-// flaky "29) test0912(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str17 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str17, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "50) test0912(Regression2Test)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + (-1) + "'", int16 == (-1));
+// flaky "29) test0912(Regression2Test)":         org.junit.Assert.assertEquals("'" + str17 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str17, "LogMark: logFileId - 1 , logFileOffset - 52");
     }
 
     @Test
     public void test0913() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0913");
+            System.out.format("%n%s%n", "Regression2Test.test0913");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) 0);
         long long3 = logMark2.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -10249,7 +10249,7 @@ public class RegressionTest1 {
     @Test
     public void test0914() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0914");
+            System.out.format("%n%s%n", "Regression2Test.test0914");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -10283,10 +10283,10 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 1 + "'", int16 == 1);
         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 0 + "'", int17 == 0);
         org.junit.Assert.assertNotNull(logMark23);
-// flaky "73) test0914(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 52L + "'", long24 == 52L);
-// flaky "51) test0914(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str25 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str25, "LogMark: logFileId - 1 , logFileOffset - 52");
+// flaky "73) test0914(Regression2Test)":         org.junit.Assert.assertTrue("'" + long24 + "' != '" + 52L + "'", long24 == 52L);
+// flaky "51) test0914(Regression2Test)":         org.junit.Assert.assertEquals("'" + str25 + "' != '" + "LogMark: logFileId - 1 , logFileOffset - 52" + "'", str25, "LogMark: logFileId - 1 , logFileOffset - 52");
         org.junit.Assert.assertNotNull(logMark26);
-// flaky "30) test0914(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long29 + "' != '" + 1L + "'", long29 == 1L);
+// flaky "30) test0914(Regression2Test)":         org.junit.Assert.assertTrue("'" + long29 + "' != '" + 1L + "'", long29 == 1L);
         org.junit.Assert.assertTrue("'" + int30 + "' != '" + 0 + "'", int30 == 0);
         org.junit.Assert.assertTrue("'" + int34 + "' != '" + (-1) + "'", int34 == (-1));
     }
@@ -10294,7 +10294,7 @@ public class RegressionTest1 {
     @Test
     public void test0915() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0915");
+            System.out.format("%n%s%n", "Regression2Test.test0915");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -10311,7 +10311,7 @@ public class RegressionTest1 {
         long long17 = logMark12.getLogFileId();
         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str4, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark6);
-// flaky "74) test0915(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long8 + "' != '" + 52L + "'", long8 == 52L);
+// flaky "74) test0915(Regression2Test)":         org.junit.Assert.assertTrue("'" + long8 + "' != '" + 52L + "'", long8 == 52L);
         org.junit.Assert.assertNotNull(logMark12);
         org.junit.Assert.assertTrue("'" + long13 + "' != '" + 97L + "'", long13 == 97L);
         org.junit.Assert.assertTrue("'" + int14 + "' != '" + 0 + "'", int14 == 0);
@@ -10323,7 +10323,7 @@ public class RegressionTest1 {
     @Test
     public void test0916() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0916");
+            System.out.format("%n%s%n", "Regression2Test.test0916");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -10355,14 +10355,14 @@ public class RegressionTest1 {
     @Test
     public void test0917() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0917");
+            System.out.format("%n%s%n", "Regression2Test.test0917");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(1L, (long) 10);
     }
 
     @Test
     public void test0918() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0918");
+            System.out.format("%n%s%n", "Regression2Test.test0918");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -10378,7 +10378,7 @@ public class RegressionTest1 {
     @Test
     public void test0919() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0919");
+            System.out.format("%n%s%n", "Regression2Test.test0919");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         java.lang.String str2 = logMark0.toString();
@@ -10400,7 +10400,7 @@ public class RegressionTest1 {
     @Test
     public void test0920() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0920");
+            System.out.format("%n%s%n", "Regression2Test.test0920");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -10414,7 +10414,7 @@ public class RegressionTest1 {
     @Test
     public void test0921() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0921");
+            System.out.format("%n%s%n", "Regression2Test.test0921");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark2.toString();
@@ -10440,18 +10440,18 @@ public class RegressionTest1 {
         org.junit.Assert.assertEquals("'" + str11 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str11, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertTrue("'" + int24 + "' != '" + 0 + "'", int24 == 0);
         org.junit.Assert.assertNotNull(logMark25);
-// flaky "75) test0921(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
-// flaky "52) test0921(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
-// flaky "31) test0921(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long29 + "' != '" + (-1L) + "'", long29 == (-1L));
-// flaky "9) test0921(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
-// flaky "5) test0921(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 1 + "'", int31 == 1);
+// flaky "75) test0921(Regression2Test)":         org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
+// flaky "52) test0921(Regression2Test)":         org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
+// flaky "31) test0921(Regression2Test)":         org.junit.Assert.assertTrue("'" + long29 + "' != '" + (-1L) + "'", long29 == (-1L));
+// flaky "9) test0921(Regression2Test)":         org.junit.Assert.assertTrue("'" + long30 + "' != '" + 10L + "'", long30 == 10L);
+// flaky "5) test0921(Regression2Test)":         org.junit.Assert.assertTrue("'" + int31 + "' != '" + 1 + "'", int31 == 1);
         org.junit.Assert.assertEquals("'" + str32 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str32, "LogMark: logFileId - 97 , logFileOffset - 0");
     }
 
     @Test
     public void test0922() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0922");
+            System.out.format("%n%s%n", "Regression2Test.test0922");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10473,7 +10473,7 @@ public class RegressionTest1 {
     @Test
     public void test0923() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0923");
+            System.out.format("%n%s%n", "Regression2Test.test0923");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 0, (long) (short) 0);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -10488,7 +10488,7 @@ public class RegressionTest1 {
     @Test
     public void test0924() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0924");
+            System.out.format("%n%s%n", "Regression2Test.test0924");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', 0L);
         long long3 = logMark2.getLogFileId();
         java.lang.String str4 = logMark2.toString();
@@ -10499,7 +10499,7 @@ public class RegressionTest1 {
     @Test
     public void test0925() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0925");
+            System.out.format("%n%s%n", "Regression2Test.test0925");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -10509,15 +10509,15 @@ public class RegressionTest1 {
         long long8 = logMark3.getLogFileId();
         org.apache.bookkeeper.bookie.LogMark logMark9 = new org.apache.bookkeeper.bookie.LogMark(logMark3);
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "76) test0925(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "53) test0925(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "76) test0925(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "53) test0925(Regression2Test)":         org.junit.Assert.assertEquals("'" + str4 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str4, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + long8 + "' != '" + 0L + "'", long8 == 0L);
     }
 
     @Test
     public void test0926() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0926");
+            System.out.format("%n%s%n", "Regression2Test.test0926");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, 0L);
         logMark2.setLogMark((long) (byte) 0, (long) (byte) 100);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -10527,7 +10527,7 @@ public class RegressionTest1 {
     @Test
     public void test0927() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0927");
+            System.out.format("%n%s%n", "Regression2Test.test0927");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10589,8 +10589,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long33 + "' != '" + 10L + "'", long33 == 10L);
         org.junit.Assert.assertEquals("'" + str38 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str38, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark42);
-// flaky "77) test0927(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int44 + "' != '" + 0 + "'", int44 == 0);
-// flaky "54) test0927(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int45 + "' != '" + 1 + "'", int45 == 1);
+// flaky "77) test0927(Regression2Test)":         org.junit.Assert.assertTrue("'" + int44 + "' != '" + 0 + "'", int44 == 0);
+// flaky "54) test0927(Regression2Test)":         org.junit.Assert.assertTrue("'" + int45 + "' != '" + 1 + "'", int45 == 1);
         org.junit.Assert.assertTrue("'" + int52 + "' != '" + 0 + "'", int52 == 0);
         org.junit.Assert.assertTrue("'" + int55 + "' != '" + (-1) + "'", int55 == (-1));
         org.junit.Assert.assertTrue("'" + long56 + "' != '" + 10L + "'", long56 == 10L);
@@ -10605,7 +10605,7 @@ public class RegressionTest1 {
     @Test
     public void test0928() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0928");
+            System.out.format("%n%s%n", "Regression2Test.test0928");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -10635,7 +10635,7 @@ public class RegressionTest1 {
     @Test
     public void test0929() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0929");
+            System.out.format("%n%s%n", "Regression2Test.test0929");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(100L, (long) 10);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -10662,7 +10662,7 @@ public class RegressionTest1 {
     @Test
     public void test0930() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0930");
+            System.out.format("%n%s%n", "Regression2Test.test0930");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10684,21 +10684,21 @@ public class RegressionTest1 {
     @Test
     public void test0931() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0931");
+            System.out.format("%n%s%n", "Regression2Test.test0931");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         long long3 = logMark2.getLogFileId();
         logMark2.setLogMark((long) 'a', (long) (-1));
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "78) test0931(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
-// flaky "55) test0931(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
+// flaky "78) test0931(Regression2Test)":         org.junit.Assert.assertTrue("'" + long1 + "' != '" + 10L + "'", long1 == 10L);
+// flaky "55) test0931(Regression2Test)":         org.junit.Assert.assertTrue("'" + long3 + "' != '" + (-1L) + "'", long3 == (-1L));
     }
 
     @Test
     public void test0932() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0932");
+            System.out.format("%n%s%n", "Regression2Test.test0932");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         logMark2.setLogMark((long) (-1), 9223372036854775807L);
         java.lang.String str6 = logMark2.toString();
@@ -10713,7 +10713,7 @@ public class RegressionTest1 {
     @Test
     public void test0933() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0933");
+            System.out.format("%n%s%n", "Regression2Test.test0933");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) '4', (long) (byte) -1);
@@ -10744,10 +10744,10 @@ public class RegressionTest1 {
         long long45 = logMark2.getLogFileOffset();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 10L + "'", long3 == 10L);
         org.junit.Assert.assertNotNull(logMark12);
-// flaky "79) test0933(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long13 + "' != '" + 10L + "'", long13 == 10L);
-// flaky "56) test0933(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str15 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str15, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "32) test0933(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 1 + "'", int16 == 1);
-// flaky "10) test0933(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
+// flaky "79) test0933(Regression2Test)":         org.junit.Assert.assertTrue("'" + long13 + "' != '" + 10L + "'", long13 == 10L);
+// flaky "56) test0933(Regression2Test)":         org.junit.Assert.assertEquals("'" + str15 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str15, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "32) test0933(Regression2Test)":         org.junit.Assert.assertTrue("'" + int16 + "' != '" + 1 + "'", int16 == 1);
+// flaky "10) test0933(Regression2Test)":         org.junit.Assert.assertTrue("'" + int17 + "' != '" + 1 + "'", int17 == 1);
         org.junit.Assert.assertTrue("'" + int24 + "' != '" + 0 + "'", int24 == 0);
         org.junit.Assert.assertTrue("'" + long28 + "' != '" + 10L + "'", long28 == 10L);
         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 0 + "'", int35 == 0);
@@ -10763,7 +10763,7 @@ public class RegressionTest1 {
     @Test
     public void test0934() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0934");
+            System.out.format("%n%s%n", "Regression2Test.test0934");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 1L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -10789,9 +10789,9 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
         org.junit.Assert.assertNotNull(logMark20);
-// flaky "80) test0934(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 10L + "'", long21 == 10L);
-// flaky "57) test0934(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
-// flaky "33) test0934(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
+// flaky "80) test0934(Regression2Test)":         org.junit.Assert.assertTrue("'" + long21 + "' != '" + 10L + "'", long21 == 10L);
+// flaky "57) test0934(Regression2Test)":         org.junit.Assert.assertTrue("'" + long22 + "' != '" + 10L + "'", long22 == 10L);
+// flaky "33) test0934(Regression2Test)":         org.junit.Assert.assertTrue("'" + int23 + "' != '" + 1 + "'", int23 == 1);
         org.junit.Assert.assertTrue("'" + int27 + "' != '" + 1 + "'", int27 == 1);
         org.junit.Assert.assertTrue("'" + int28 + "' != '" + 1 + "'", int28 == 1);
     }
@@ -10799,7 +10799,7 @@ public class RegressionTest1 {
     @Test
     public void test0935() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0935");
+            System.out.format("%n%s%n", "Regression2Test.test0935");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         logMark3.setLogMark(100L, (long) '4');
@@ -10816,14 +10816,14 @@ public class RegressionTest1 {
     @Test
     public void test0936() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0936");
+            System.out.format("%n%s%n", "Regression2Test.test0936");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, (long) ' ');
     }
 
     @Test
     public void test0937() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0937");
+            System.out.format("%n%s%n", "Regression2Test.test0937");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 100, (long) 100);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -10838,14 +10838,14 @@ public class RegressionTest1 {
     @Test
     public void test0938() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0938");
+            System.out.format("%n%s%n", "Regression2Test.test0938");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) 'a');
     }
 
     @Test
     public void test0939() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0939");
+            System.out.format("%n%s%n", "Regression2Test.test0939");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 1, 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         long long6 = logMark5.getLogFileOffset();
@@ -10863,7 +10863,7 @@ public class RegressionTest1 {
     @Test
     public void test0940() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0940");
+            System.out.format("%n%s%n", "Regression2Test.test0940");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10928,7 +10928,7 @@ public class RegressionTest1 {
     @Test
     public void test0941() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0941");
+            System.out.format("%n%s%n", "Regression2Test.test0941");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(52L, 0L);
         java.lang.String str3 = logMark2.toString();
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "LogMark: logFileId - 52 , logFileOffset - 0" + "'", str3, "LogMark: logFileId - 52 , logFileOffset - 0");
@@ -10937,7 +10937,7 @@ public class RegressionTest1 {
     @Test
     public void test0942() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0942");
+            System.out.format("%n%s%n", "Regression2Test.test0942");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10954,8 +10954,8 @@ public class RegressionTest1 {
         java.lang.Class<?> wildcardClass19 = logMark17.getClass();
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark9);
-// flaky "81) test0942(RegressionTest1)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 10L + "'", long10 == 10L);
-// flaky "58) test0942(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str12, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "81) test0942(Regression2Test)":         org.junit.Assert.assertTrue("'" + long10 + "' != '" + 10L + "'", long10 == 10L);
+// flaky "58) test0942(Regression2Test)":         org.junit.Assert.assertEquals("'" + str12 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str12, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + long16 + "' != '" + 32L + "'", long16 == 32L);
         org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
         org.junit.Assert.assertNotNull(wildcardClass19);
@@ -10964,7 +10964,7 @@ public class RegressionTest1 {
     @Test
     public void test0943() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0943");
+            System.out.format("%n%s%n", "Regression2Test.test0943");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -10984,14 +10984,14 @@ public class RegressionTest1 {
         }
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
-// flaky "82) test0943(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
-// flaky "59) test0943(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "82) test0943(Regression2Test)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+// flaky "59) test0943(Regression2Test)":         org.junit.Assert.assertEquals("'" + str10 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str10, "LogMark: logFileId - -1 , logFileOffset - 10");
     }
 
     @Test
     public void test0944() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0944");
+            System.out.format("%n%s%n", "Regression2Test.test0944");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11037,8 +11037,8 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
-// flaky "83) test0944(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
-// flaky "60) test0944(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
+// flaky "83) test0944(Regression2Test)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+// flaky "60) test0944(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
         org.junit.Assert.assertTrue("'" + int42 + "' != '" + 0 + "'", int42 == 0);
         org.junit.Assert.assertTrue("'" + int45 + "' != '" + (-1) + "'", int45 == (-1));
         org.junit.Assert.assertTrue("'" + long46 + "' != '" + 10L + "'", long46 == 10L);
@@ -11052,7 +11052,7 @@ public class RegressionTest1 {
     @Test
     public void test0945() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0945");
+            System.out.format("%n%s%n", "Regression2Test.test0945");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11064,14 +11064,14 @@ public class RegressionTest1 {
         java.lang.String str14 = logMark13.toString();
         org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
         org.junit.Assert.assertNotNull(logMark7);
-// flaky "84) test0945(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
+// flaky "84) test0945(Regression2Test)":         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 1 + "'", int9 == 1);
         org.junit.Assert.assertEquals("'" + str14 + "' != '" + "LogMark: logFileId - 0 , logFileOffset - 35" + "'", str14, "LogMark: logFileId - 0 , logFileOffset - 35");
     }
 
     @Test
     public void test0946() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0946");
+            System.out.format("%n%s%n", "Regression2Test.test0946");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -11081,16 +11081,16 @@ public class RegressionTest1 {
         java.lang.String str8 = logMark1.toString();
         java.lang.Class<?> wildcardClass9 = logMark1.getClass();
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "85) test0946(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
-// flaky "61) test0946(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
-// flaky "34) test0946(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str8, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "85) test0946(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "61) test0946(Regression2Test)":         org.junit.Assert.assertTrue("'" + int7 + "' != '" + (-1) + "'", int7 == (-1));
+// flaky "34) test0946(Regression2Test)":         org.junit.Assert.assertEquals("'" + str8 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str8, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertNotNull(wildcardClass9);
     }
 
     @Test
     public void test0947() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0947");
+            System.out.format("%n%s%n", "Regression2Test.test0947");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -11106,13 +11106,13 @@ public class RegressionTest1 {
             // Expected exception.
         }
         org.junit.Assert.assertNotNull(logMark0);
-// flaky "86) test0947(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "86) test0947(Regression2Test)":         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str2, "LogMark: logFileId - -1 , logFileOffset - 10");
     }
 
     @Test
     public void test0948() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0948");
+            System.out.format("%n%s%n", "Regression2Test.test0948");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11133,7 +11133,7 @@ public class RegressionTest1 {
     @Test
     public void test0949() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0949");
+            System.out.format("%n%s%n", "Regression2Test.test0949");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11186,9 +11186,9 @@ public class RegressionTest1 {
         org.junit.Assert.assertTrue("'" + long23 + "' != '" + 10L + "'", long23 == 10L);
         org.junit.Assert.assertEquals("'" + str28 + "' != '" + "LogMark: logFileId - 97 , logFileOffset - 0" + "'", str28, "LogMark: logFileId - 97 , logFileOffset - 0");
         org.junit.Assert.assertNotNull(logMark32);
-// flaky "87) test0949(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
-// flaky "62) test0949(RegressionTest1)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
-// flaky "35) test0949(RegressionTest1)":         org.junit.Assert.assertEquals("'" + str36 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str36, "LogMark: logFileId - -1 , logFileOffset - 10");
+// flaky "87) test0949(Regression2Test)":         org.junit.Assert.assertTrue("'" + int34 + "' != '" + 0 + "'", int34 == 0);
+// flaky "62) test0949(Regression2Test)":         org.junit.Assert.assertTrue("'" + int35 + "' != '" + 1 + "'", int35 == 1);
+// flaky "35) test0949(Regression2Test)":         org.junit.Assert.assertEquals("'" + str36 + "' != '" + "LogMark: logFileId - -1 , logFileOffset - 10" + "'", str36, "LogMark: logFileId - -1 , logFileOffset - 10");
         org.junit.Assert.assertTrue("'" + int47 + "' != '" + 0 + "'", int47 == 0);
         org.junit.Assert.assertTrue("'" + long51 + "' != '" + 10L + "'", long51 == 10L);
         org.junit.Assert.assertTrue("'" + int52 + "' != '" + (-1) + "'", int52 == (-1));
@@ -11204,7 +11204,7 @@ public class RegressionTest1 {
     @Test
     public void test0950() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0950");
+            System.out.format("%n%s%n", "Regression2Test.test0950");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -11218,7 +11218,7 @@ public class RegressionTest1 {
     @Test
     public void test0951() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0951");
+            System.out.format("%n%s%n", "Regression2Test.test0951");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', 0L);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -11251,7 +11251,7 @@ public class RegressionTest1 {
     @Test
     public void test0952() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0952");
+            System.out.format("%n%s%n", "Regression2Test.test0952");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) -1);
         java.lang.String str3 = logMark2.toString();
         logMark2.setLogMark(0L, 10L);
@@ -11296,7 +11296,7 @@ public class RegressionTest1 {
     @Test
     public void test0953() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0953");
+            System.out.format("%n%s%n", "Regression2Test.test0953");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -11319,7 +11319,7 @@ public class RegressionTest1 {
     @Test
     public void test0954() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0954");
+            System.out.format("%n%s%n", "Regression2Test.test0954");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -11337,7 +11337,7 @@ public class RegressionTest1 {
     @Test
     public void test0955() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0955");
+            System.out.format("%n%s%n", "Regression2Test.test0955");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark3.getLogFileOffset();
@@ -11371,7 +11371,7 @@ public class RegressionTest1 {
     @Test
     public void test0956() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0956");
+            System.out.format("%n%s%n", "Regression2Test.test0956");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11390,7 +11390,7 @@ public class RegressionTest1 {
     @Test
     public void test0957() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0957");
+            System.out.format("%n%s%n", "Regression2Test.test0957");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(35L, 97L);
         long long3 = logMark2.getLogFileId();
         org.junit.Assert.assertTrue("'" + long3 + "' != '" + 35L + "'", long3 == 35L);
@@ -11399,7 +11399,7 @@ public class RegressionTest1 {
     @Test
     public void test0958() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0958");
+            System.out.format("%n%s%n", "Regression2Test.test0958");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) -1);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -11411,7 +11411,7 @@ public class RegressionTest1 {
     @Test
     public void test0959() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0959");
+            System.out.format("%n%s%n", "Regression2Test.test0959");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -11428,7 +11428,7 @@ public class RegressionTest1 {
     @Test
     public void test0960() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0960");
+            System.out.format("%n%s%n", "Regression2Test.test0960");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11491,7 +11491,7 @@ public class RegressionTest1 {
     @Test
     public void test0961() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0961");
+            System.out.format("%n%s%n", "Regression2Test.test0961");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -11512,7 +11512,7 @@ public class RegressionTest1 {
     @Test
     public void test0962() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0962");
+            System.out.format("%n%s%n", "Regression2Test.test0962");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -11535,7 +11535,7 @@ public class RegressionTest1 {
     @Test
     public void test0963() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0963");
+            System.out.format("%n%s%n", "Regression2Test.test0963");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         java.lang.String str2 = logMark1.toString();
@@ -11580,7 +11580,7 @@ public class RegressionTest1 {
     @Test
     public void test0964() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0964");
+            System.out.format("%n%s%n", "Regression2Test.test0964");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11611,7 +11611,7 @@ public class RegressionTest1 {
     @Test
     public void test0965() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0965");
+            System.out.format("%n%s%n", "Regression2Test.test0965");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11632,7 +11632,7 @@ public class RegressionTest1 {
     @Test
     public void test0966() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0966");
+            System.out.format("%n%s%n", "Regression2Test.test0966");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(10L, (long) (short) -1);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -11647,7 +11647,7 @@ public class RegressionTest1 {
     @Test
     public void test0967() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0967");
+            System.out.format("%n%s%n", "Regression2Test.test0967");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) 1);
         long long3 = logMark2.getLogFileId();
         java.lang.String str4 = logMark2.toString();
@@ -11668,14 +11668,14 @@ public class RegressionTest1 {
     @Test
     public void test0968() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0968");
+            System.out.format("%n%s%n", "Regression2Test.test0968");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(52L, 52L);
     }
 
     @Test
     public void test0969() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0969");
+            System.out.format("%n%s%n", "Regression2Test.test0969");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -11754,7 +11754,7 @@ public class RegressionTest1 {
     @Test
     public void test0970() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0970");
+            System.out.format("%n%s%n", "Regression2Test.test0970");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -11787,7 +11787,7 @@ public class RegressionTest1 {
     @Test
     public void test0971() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0971");
+            System.out.format("%n%s%n", "Regression2Test.test0971");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 100, (long) 1);
         logMark2.setLogMark((long) 1, (long) (short) 0);
     }
@@ -11795,7 +11795,7 @@ public class RegressionTest1 {
     @Test
     public void test0972() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0972");
+            System.out.format("%n%s%n", "Regression2Test.test0972");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         long long1 = logMark0.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
@@ -11817,7 +11817,7 @@ public class RegressionTest1 {
     @Test
     public void test0973() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0973");
+            System.out.format("%n%s%n", "Regression2Test.test0973");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -11844,7 +11844,7 @@ public class RegressionTest1 {
     @Test
     public void test0974() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0974");
+            System.out.format("%n%s%n", "Regression2Test.test0974");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(97L, 0L);
         logMark2.setLogMark((long) (byte) 0, (long) (byte) 100);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -11855,7 +11855,7 @@ public class RegressionTest1 {
     @Test
     public void test0975() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0975");
+            System.out.format("%n%s%n", "Regression2Test.test0975");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         int int6 = logMark2.compare(logMark5);
@@ -11895,7 +11895,7 @@ public class RegressionTest1 {
     @Test
     public void test0976() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0976");
+            System.out.format("%n%s%n", "Regression2Test.test0976");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((-1L), 10L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark4 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
@@ -11907,7 +11907,7 @@ public class RegressionTest1 {
     @Test
     public void test0977() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0977");
+            System.out.format("%n%s%n", "Regression2Test.test0977");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (long) '#');
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -11925,14 +11925,14 @@ public class RegressionTest1 {
     @Test
     public void test0978() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0978");
+            System.out.format("%n%s%n", "Regression2Test.test0978");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 1, (long) (byte) 10);
     }
 
     @Test
     public void test0979() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0979");
+            System.out.format("%n%s%n", "Regression2Test.test0979");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 100, (long) '#');
         logMark2.setLogMark((long) (byte) 10, (long) (byte) 100);
         long long6 = logMark2.getLogFileId();
@@ -11968,7 +11968,7 @@ public class RegressionTest1 {
     @Test
     public void test0980() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0980");
+            System.out.format("%n%s%n", "Regression2Test.test0980");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         java.lang.String str3 = logMark2.toString();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(100L, (long) 10);
@@ -11994,7 +11994,7 @@ public class RegressionTest1 {
     @Test
     public void test0981() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0981");
+            System.out.format("%n%s%n", "Regression2Test.test0981");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) -1, (long) (short) 1);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -12009,7 +12009,7 @@ public class RegressionTest1 {
     @Test
     public void test0982() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0982");
+            System.out.format("%n%s%n", "Regression2Test.test0982");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(52L, (long) 'a');
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark(logMark5);
@@ -12037,7 +12037,7 @@ public class RegressionTest1 {
     @Test
     public void test0983() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0983");
+            System.out.format("%n%s%n", "Regression2Test.test0983");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -12058,7 +12058,7 @@ public class RegressionTest1 {
     @Test
     public void test0984() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0984");
+            System.out.format("%n%s%n", "Regression2Test.test0984");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (short) 1, 35L);
         java.lang.String str3 = logMark2.toString();
         java.lang.String str4 = logMark2.toString();
@@ -12073,7 +12073,7 @@ public class RegressionTest1 {
     @Test
     public void test0985() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0985");
+            System.out.format("%n%s%n", "Regression2Test.test0985");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(logMark1);
@@ -12094,21 +12094,21 @@ public class RegressionTest1 {
     @Test
     public void test0986() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0986");
+            System.out.format("%n%s%n", "Regression2Test.test0986");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 1);
     }
 
     @Test
     public void test0987() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0987");
+            System.out.format("%n%s%n", "Regression2Test.test0987");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark(0L, (-1L));
     }
 
     @Test
     public void test0988() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0988");
+            System.out.format("%n%s%n", "Regression2Test.test0988");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -12138,7 +12138,7 @@ public class RegressionTest1 {
     @Test
     public void test0989() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0989");
+            System.out.format("%n%s%n", "Regression2Test.test0989");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), 0L);
         org.apache.bookkeeper.bookie.LogMark logMark5 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark8 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -12196,7 +12196,7 @@ public class RegressionTest1 {
     @Test
     public void test0990() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0990");
+            System.out.format("%n%s%n", "Regression2Test.test0990");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) ' ', (long) 0);
         long long3 = logMark2.getLogFileId();
         logMark2.setLogMark(32L, 0L);
@@ -12210,7 +12210,7 @@ public class RegressionTest1 {
     @Test
     public void test0991() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0991");
+            System.out.format("%n%s%n", "Regression2Test.test0991");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, 35L);
         long long3 = logMark2.getLogFileOffset();
         org.apache.bookkeeper.bookie.LogMark logMark6 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
@@ -12233,7 +12233,7 @@ public class RegressionTest1 {
     @Test
     public void test0992() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0992");
+            System.out.format("%n%s%n", "Regression2Test.test0992");
         org.apache.bookkeeper.bookie.LogMark logMark0 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
         org.apache.bookkeeper.bookie.LogMark logMark1 = new org.apache.bookkeeper.bookie.LogMark(logMark0);
         org.apache.bookkeeper.bookie.LogMark logMark2 = org.apache.bookkeeper.bookie.LogMark.MAX_VALUE;
@@ -12285,14 +12285,14 @@ public class RegressionTest1 {
     @Test
     public void test0993() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0993");
+            System.out.format("%n%s%n", "Regression2Test.test0993");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) -1, (long) 'a');
     }
 
     @Test
     public void test0994() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0994");
+            System.out.format("%n%s%n", "Regression2Test.test0994");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -12317,7 +12317,7 @@ public class RegressionTest1 {
     @Test
     public void test0995() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0995");
+            System.out.format("%n%s%n", "Regression2Test.test0995");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (-1), (long) 10);
         java.nio.ByteBuffer byteBuffer3 = null;
         // The following exception was thrown during execution in test generation
@@ -12332,7 +12332,7 @@ public class RegressionTest1 {
     @Test
     public void test0996() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0996");
+            System.out.format("%n%s%n", "Regression2Test.test0996");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -12351,7 +12351,7 @@ public class RegressionTest1 {
     @Test
     public void test0997() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0997");
+            System.out.format("%n%s%n", "Regression2Test.test0997");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         long long4 = logMark2.getLogFileOffset();
@@ -12418,7 +12418,7 @@ public class RegressionTest1 {
     @Test
     public void test0998() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0998");
+            System.out.format("%n%s%n", "Regression2Test.test0998");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) 'a', (long) 0);
         org.apache.bookkeeper.bookie.LogMark logMark3 = new org.apache.bookkeeper.bookie.LogMark(logMark2);
         java.lang.String str4 = logMark3.toString();
@@ -12431,14 +12431,14 @@ public class RegressionTest1 {
     @Test
     public void test0999() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test0999");
+            System.out.format("%n%s%n", "Regression2Test.test0999");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) (byte) 0, (long) (byte) 10);
     }
 
     @Test
     public void test1000() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest1.test1000");
+            System.out.format("%n%s%n", "Regression2Test.test1000");
         org.apache.bookkeeper.bookie.LogMark logMark2 = new org.apache.bookkeeper.bookie.LogMark((long) '#', 0L);
         logMark2.setLogMark((long) (byte) 100, (long) (short) 0);
         logMark2.setLogMark(32L, 9223372036854775807L);

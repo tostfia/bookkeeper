@@ -1,14 +1,11 @@
 package org.apache.bookkeeper.bookie;
 
-import com.beust.jcommander.Parameter;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -44,7 +41,14 @@ public class CompareTest {
 
                 // Boundary: valori estremi
                 {new LogMark(Long.MIN_VALUE, 0), new LogMark(Long.MAX_VALUE, 0), 1, "Boundary: MIN vs MAX id"},
-                {new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), new LogMark(Long.MAX_VALUE, Long.MIN_VALUE), -1, "Boundary: offset MAX vs MIN con stesso id"}
+                {new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), new LogMark(Long.MAX_VALUE, Long.MIN_VALUE), -1, "Boundary: offset MAX vs MIN con stesso id"},
+
+                //valori identici
+                {new LogMark(12345, 67890), new LogMark(12345, 67890), 0, "Valori identici → 0"},
+
+                //overflow potenziale
+                //{new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), 1, "Overflow potenziale: MAX vs MIN"},
+                //{new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), -1, "Overflow potenziale: MIN vs MAX"}
         });
     }
 

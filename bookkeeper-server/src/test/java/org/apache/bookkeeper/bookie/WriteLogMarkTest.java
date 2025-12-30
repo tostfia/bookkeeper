@@ -30,7 +30,7 @@ public class WriteLogMarkTest {
         this.description = description;
     }
 
-    @Parameterized.Parameters(name = "{index}: {5}")
+    @Parameterized.Parameters
     public static Object[][] data() {
         return new Object[][]{
                 // --- Partizione 1: Buffer troppo piccolo ---
@@ -50,6 +50,12 @@ public class WriteLogMarkTest {
 
                 // --- Partizione 6: Valori estremi ---
                 {Long.MAX_VALUE, Long.MIN_VALUE, 32, 0, false, "Valori estremi di long"},
+
+                // --- Partizione 7: Null caso limite critico ---
+                /**{null, null, null, null, true, "Caso limite aspetto un'eccezione"},
+                {1L,1L,null, null, true,"Caso limite LogMark valido ma buffer nullo"},
+                {1L,1L,16,null, true, "Caso limite LogMark valido, buffer di 16 byte, ma posizione iniziale nulla mi aspetto un'eccezione"},
+                {1L,1L,null,0,true,"Caso limite LogMark valido, buffer size nulla, posizione valida mi aspetto un'eccezione"}**/
         };
     }
 
@@ -86,4 +92,6 @@ public class WriteLogMarkTest {
             fail("Eccezione inattesa in " + description + ": " + e);
         }
     }
+
+
 }

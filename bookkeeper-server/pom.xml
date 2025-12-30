@@ -307,8 +307,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <!-- **INSERISCI QUI LA VERSIONE DEL PLUGIN SUREFIRE** -->
-        <!-- Dal tuo log, la versione è 3.2.5. Quindi useremo quella. -->
+
         <version>3.5.3</version>
         <configuration>
           <!-- Escludi i test che non vuoi eseguire -->
@@ -321,7 +320,7 @@
             <exclude>**/randoop/**</exclude>
             <exclude>**/evosuite/**</exclude>
           </excludes>
-          <!-- Questa riga è cruciale per JaCoCo, assicura che l'agente sia usato durante i test -->
+
           <argLine>${argLine}</argLine>
 
           <properties>

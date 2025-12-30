@@ -21,7 +21,7 @@ public class SetLogMarkTest {
         this.description = description;
     }
 
-    @Parameterized.Parameters(name = "{index}: {2}")
+    @Parameterized.Parameters
     public static Object[][] data() {
         return new Object[][]{
                 // Partizione 1: valori normali

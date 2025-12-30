@@ -24,7 +24,7 @@ public class LogMarkConstructorTest {
         this.description = description;
     }
 
-    @Parameterized.Parameters(name = "{index}: {3}")
+    @Parameterized.Parameters
     public static Object[][] data() {
         LogMark sample = new LogMark(10L, 20L);
         LogMark extreme = new LogMark(Long.MAX_VALUE, Long.MIN_VALUE);
@@ -35,11 +35,19 @@ public class LogMarkConstructorTest {
                 {extreme, Long.MAX_VALUE, Long.MIN_VALUE, "Copy constructor con estremi long"},
                 {new LogMark(-5L, -50L), -5L, -50L, "Copy constructor con valori negativi"},
 
+                //Caso limite deve lanciare un'eccezione se si passa null
+                //{null, null, null, "Copy constructor con null-> attesa eccezione"},
+
                 // ---- Costruttore con long,long ----
                 {new long[]{10L, 20L}, 10L, 20L, "Costruttore con valori normali"},
                 {new long[]{0L, 0L}, 0L, 0L, "Costruttore con zeri"},
                 {new long[]{-5L, -50L}, -5L, -50L, "Costruttore con valori negativi"},
-                {new long[]{Long.MAX_VALUE, Long.MIN_VALUE}, Long.MAX_VALUE, Long.MIN_VALUE, "Costruttore con estremi long"},
+                { new long[]{Long.MAX_VALUE, Long.MAX_VALUE}, Long.MAX_VALUE, Long.MAX_VALUE, "Costruttore con estremi massimi" },
+                { new long[]{Long.MIN_VALUE, Long.MIN_VALUE}, Long.MIN_VALUE, Long.MIN_VALUE, "Costruttore con estremi minimi" },
+                { new long[]{Long.MAX_VALUE, Long.MIN_VALUE}, Long.MAX_VALUE, Long.MIN_VALUE, "Costruttore con valori misti" },
+                { new long[]{1L, 1L}, 1L, 1L, "Costruttore con primi valori positivi" },
+
+
 
                 // ---- Default constructor ----
                 {null, 0L, 0L, "Default constructor -> valori 0"}

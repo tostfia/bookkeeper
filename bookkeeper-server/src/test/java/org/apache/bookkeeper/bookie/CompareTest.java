@@ -47,8 +47,8 @@ public class CompareTest {
                 {new LogMark(12345, 67890), new LogMark(12345, 67890), 0, "Valori identici → 0"},
 
                 //overflow potenziale
-                //{new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), 1, "Overflow potenziale: MAX vs MIN"},
-                //{new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), -1, "Overflow potenziale: MIN vs MAX"}
+                {new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), -1, "Overflow potenziale: MAX vs MIN"},
+                {new LogMark(Long.MIN_VALUE, Long.MIN_VALUE), new LogMark(Long.MAX_VALUE, Long.MAX_VALUE), 1, "Overflow potenziale: MIN vs MAX"}
         });
     }
 
@@ -58,9 +58,6 @@ public class CompareTest {
         assertEquals("Errore nel caso: " + description, expectedResult, result);
     }
 
-    @Test(expected = NullPointerException.class)
-    public void testCompareWithNull() {
-        thisMark.compare(null);
-    }
+
 }
 

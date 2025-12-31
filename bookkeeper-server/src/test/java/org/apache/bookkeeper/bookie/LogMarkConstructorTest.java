@@ -35,8 +35,7 @@ public class LogMarkConstructorTest {
                 {extreme, Long.MAX_VALUE, Long.MIN_VALUE, "Copy constructor con estremi long"},
                 {new LogMark(-5L, -50L), -5L, -50L, "Copy constructor con valori negativi"},
 
-                //Caso limite deve lanciare un'eccezione se si passa null
-                //{null, null, null, "Copy constructor con null-> attesa eccezione"},
+
 
                 // ---- Costruttore con long,long ----
                 {new long[]{10L, 20L}, 10L, 20L, "Costruttore con valori normali"},
@@ -71,4 +70,6 @@ public class LogMarkConstructorTest {
         assertEquals("logFileId errato - " + description, expectedFileId.longValue(), mark.getLogFileId());
         assertEquals("logFileOffset errato - " + description, expectedOffset.longValue(), mark.getLogFileOffset());
     }
+
+
 }

@@ -51,11 +51,7 @@ public class WriteLogMarkTest {
                 // --- Partizione 6: Valori estremi ---
                 {Long.MAX_VALUE, Long.MIN_VALUE, 32, 0, false, "Valori estremi di long"},
 
-                // --- Partizione 7: Null caso limite critico ---
-                /**{null, null, null, null, true, "Caso limite aspetto un'eccezione"},
-                {1L,1L,null, null, true,"Caso limite LogMark valido ma buffer nullo"},
-                {1L,1L,16,null, true, "Caso limite LogMark valido, buffer di 16 byte, ma posizione iniziale nulla mi aspetto un'eccezione"},
-                {1L,1L,null,0,true,"Caso limite LogMark valido, buffer size nulla, posizione valida mi aspetto un'eccezione"}**/
+
         };
     }
 
@@ -91,6 +87,16 @@ public class WriteLogMarkTest {
         } catch (Exception e) {
             fail("Eccezione inattesa in " + description + ": " + e);
         }
+    }
+
+
+    @Test(expected = BufferOverflowException.class)
+    public void testWriteLogMarkInvalidCase() {
+        LogMark mark = new LogMark(1L, 1L);
+        // buffer di dimensione zero
+        ByteBuffer tiny = ByteBuffer.allocate(0);
+        mark.writeLogMark(tiny);
+
     }
 
 

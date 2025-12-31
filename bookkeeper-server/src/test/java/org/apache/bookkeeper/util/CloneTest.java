@@ -1,7 +1,7 @@
 package org.apache.bookkeeper.util;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.util.ReferenceCounted;
+
 
 import org.junit.After;
 import org.junit.Before;
@@ -12,11 +12,8 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
@@ -84,7 +81,7 @@ public class CloneTest {
         }
         // Non è necessario rilasciare individualmente originalMocks o duplicateMocks qui,
         // poiché sono gestiti da originalBufList.release() o sono stati aggiunti alla clonedList.
-        // Abbiamo configurato i loro metodi .release() per restituire true.
+        // Ho configurato i loro metodi .release() per restituire true.
         originalMocks.clear();
         duplicateMocks.clear();
     }

@@ -1,7 +1,6 @@
 package org.apache.bookkeeper.util;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.util.ReferenceCounted; // Importiamo se necessario, ma non strettamente per questo test
 
 import org.junit.After;
 import org.junit.Before;
@@ -13,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;

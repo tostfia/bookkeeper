@@ -1,7 +1,6 @@
 package org.apache.bookkeeper.util;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.util.ReferenceCounted;
 
 import org.junit.After;
 import org.junit.Before;
@@ -12,9 +11,7 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -128,7 +125,7 @@ public class PrependTest {
         // Helper: params.add(new Object[] { initialNumBuffers, prependNullBuf, expectedFinalSize, expectedExceptionClass });
 
         // --- Partizione: buf è null ---
-        // Stiamo modificando questi test case per riflettere il comportamento *reale* di prepend(null):
+        // Modificando questi test case per riflettere il comportamento *reale* di prepend(null):
         // 1. NON lancia eccezioni al momento della chiamata di prepend.
         // 2. Aggiunge null alla lista, quindi la dimensione aumenta.
         // 3. Il valore atteso all'indice 0 è null.

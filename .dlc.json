@@ -67,6 +67,9 @@
       "pattern": "^https://calendar.google.com/"
     },
     {
+      "pattern": "maven-badges.herokuapp.com"
+    },
+    {
       "pattern": "^#"
     },
     {
@@ -86,4 +89,5 @@
     401,
     403
   ]
+
 }

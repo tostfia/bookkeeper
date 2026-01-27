@@ -42,11 +42,11 @@ public class ReadLogMarkTest {
                         Long.MAX_VALUE, Long.MIN_VALUE, null, "Buffer valido con estremi long"},
 
                 // Partizione 2: offset iniziale non zero
-                {((ByteBuffer) ByteBuffer.allocate(24)
+                {ByteBuffer.allocate(24)
                         .putLong(999L)     // "spazzatura"
                         .putLong(30L)
                         .putLong(40L)
-                        .flip())
+                        .flip()
                         .position(8),
                         30L, 40L, null, "Buffer con offset iniziale"},
 
@@ -61,12 +61,16 @@ public class ReadLogMarkTest {
                         "Buffer vuoto"},
 
                 // Partizione 5: buffer più grande del necessario
-                {((ByteBuffer) ByteBuffer.allocate(24)
+                {ByteBuffer.allocate(24)
                         .putLong(123L)
                         .putLong(456L)
                         .putLong(789L)
-                        .flip()),
-                        123L, 456L, null, "Buffer con dati extra ignorati"}
+                        .flip(),
+                        123L, 456L, null, "Buffer con dati extra ignorati"},
+
+                //caso null
+                {null,null,null,NullPointerException.class,"Parametri nulli"}
+
         };
     }
 

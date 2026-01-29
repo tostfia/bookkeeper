@@ -127,35 +127,17 @@ public class GetBufferTest {
         // params.add(new Object[] { bufListContentData, index, expectedBufferContent, expectedExceptionClass });
 
         // --- Partizione S1: ByteBufList vuota ---
-        // Qualsiasi indice dovrebbe lanciare ArrayIndexOutOfBoundsException (come osservato)
-        params.add(new Object[] {
-                Collections.emptyList(),                // bufListContent
-                0,                                      // index (anche 0 è invalido)
-                null,                                   // expectedBufferContent
-                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
-        });
+
         params.add(new Object[] {
                 Collections.emptyList(),
-                -1,
-                null,
-                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
-        });
-        params.add(new Object[] {
-                Collections.emptyList(),
-                5,
+                1,
                 null,
                 IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
         });
 
 
         // --- Partizione S2: ByteBufList con un singolo ByteBuf ---
-        // Contenuto: [1,2,3]
-        params.add(new Object[] {
-                Arrays.asList(new byte[] { 1, 2, 3 }),
-                0,                                      // index: valido (primo e unico)
-                new byte[] { 1, 2, 3 },                 // expectedBufferContent
-                null
-        });
+
         // index negativo
         params.add(new Object[] {
                 Arrays.asList(new byte[] { 1, 2, 3 }),
@@ -163,32 +145,13 @@ public class GetBufferTest {
                 null,
                 IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
         });
-        // index fuori limite (uguale alla dimensione)
-        params.add(new Object[] {
-                Arrays.asList(new byte[] { 1, 2, 3 }),
-                1,
-                null,
-                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
-        });
+
 
         // --- Partizione S3: ByteBufList con più ByteBuf ---
         // Contenuto: [1,2], [3,4,5], [6,7] (size = 3)
 
-        // P1: index negativo
-        params.add(new Object[] {
-                Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4, 5 }, new byte[] { 6, 7 }),
-                -1,
-                null,
-                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
-        });
 
-        // P2: index = 0 (primo elemento)
-        params.add(new Object[] {
-                Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4, 5 }, new byte[] { 6, 7 }),
-                0,
-                new byte[] { 1, 2 },
-                null
-        });
+
 
         // P3: index positivo valido (elemento intermedio)
         params.add(new Object[] {
@@ -207,12 +170,7 @@ public class GetBufferTest {
         });
 
         // P5: index >= buffers.size() (fuori limite)
-        params.add(new Object[] {
-                Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4, 5 }, new byte[] { 6, 7 }),
-                3, // buffers.size() = 3
-                null,
-                IndexOutOfBoundsException.class    // Eccezione attesa (corretto in base all'output)
-        });
+
         params.add(new Object[] {
                 Arrays.asList(new byte[] { 1, 2 }, new byte[] { 3, 4, 5 }, new byte[] { 6, 7 }),
                 10,

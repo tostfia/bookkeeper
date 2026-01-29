@@ -58,6 +58,11 @@ public class CompareTest {
         assertEquals("Errore nel caso: " + description, expectedResult, result);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void testCompareWithNull() {
+        thisMark.compare(null);
+    }
+
 
 }
 

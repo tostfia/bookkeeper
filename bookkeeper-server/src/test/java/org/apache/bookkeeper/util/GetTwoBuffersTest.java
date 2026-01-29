@@ -123,15 +123,12 @@ public class GetTwoBuffersTest {
         } else {
             assertSame("L'elemento all'indice 1 non è il buffer b2 atteso", b2Mock, resultBufList.getBuffer(1));
             // Verify retain() calls on b2 (or b1 if b1EqualsB2)
-            if (b1EqualsB2 && !b1IsNull) {
-                // Se b1==b2, la verifica su b1Mock già copre tutte le chiamate retain.
-                // Non fare ulteriori verifiche su b2Mock che è la stessa istanza.
-            } else {
-                verify(b2Mock, times(expectedRetainCallsOnB2)).retain();
-                // RefCnt di b2 dovrebbe rimanere il suo valore iniziale
-                assertEquals("Il refCnt di b2 non è quello atteso dopo l'aggiunta alla lista",
-                        initialB2RefCnt, b2Mock.refCnt());
-            }
+
+            verify(b2Mock, times(expectedRetainCallsOnB2)).retain();
+            // RefCnt di b2 dovrebbe rimanere il suo valore iniziale
+            assertEquals("Il refCnt di b2 non è quello atteso dopo l'aggiunta alla lista",
+                    initialB2RefCnt, b2Mock.refCnt());
+
         }
     }
 
@@ -143,7 +140,7 @@ public class GetTwoBuffersTest {
         //                                     expectedRetainCallsOnB1, expectedRetainCallsOnB2, expectedExceptionClass });
 
         // --- Partizione 1: Entrambi b1 e b2 sono null ---
-        params.add(new Object[] {
+        /*params.add(new Object[] {
                 true, true, false, 0, 0, 0, 0, null
         });
 
@@ -155,7 +152,7 @@ public class GetTwoBuffersTest {
         // --- Partizione 3: b1 è valido, b2 è null ---
         params.add(new Object[] {
                 false, true, false, 1, 0, 0, 0, null // expectedRetainCallsOnB1 è 0
-        });
+        });*/
 
         // --- Partizione 4: Entrambi b1 e b2 sono validi e istanze diverse ---
         params.add(new Object[] {

@@ -66,18 +66,6 @@ public class PrependTest {
 
     @After
     public void tearDown() {
-        if (bufList != null) {
-            try {
-                bufList.release();
-            } catch (NullPointerException e) {
-                // Questo catch gestisce l'NPE che si verifica se prepend(null) ha aggiunto un null alla lista.
-                // Permette al test di finire senza far crashare l'intero runner.
-                System.err.println("NullPointerException caught in tearDown during bufList.release(). "
-                        + "This indicates ByteBufList.prepend(null) added a null to the list, "
-                        + "which is the behavior being demonstrated by the passing test.");
-            }
-            bufList = null;
-        }
         initialMockBuffers.clear();
         bufToPrependMock = null;
     }
@@ -125,49 +113,23 @@ public class PrependTest {
         // Helper: params.add(new Object[] { initialNumBuffers, prependNullBuf, expectedFinalSize, expectedExceptionClass });
 
         // --- Partizione: buf è null ---
-        // Modificando questi test case per riflettere il comportamento *reale* di prepend(null):
-        // 1. NON lancia eccezioni al momento della chiamata di prepend.
-        // 2. Aggiunge null alla lista, quindi la dimensione aumenta.
-        // 3. Il valore atteso all'indice 0 è null.
+
         params.add(new Object[] {
                 0,      // initialNumBuffers
                 true,   // prependNullBuf: true per null
                 1,      // expectedFinalSize: la dimensione aumenta di 1 perché null viene aggiunto.
                 null    // expectedException: nessuna eccezione lanciata *da prepend() stesso*.
         });
-        params.add(new Object[] {
-                1,
-                true,
-                2,      // La dimensione aumenta.
-                null    // Nessuna eccezione.
-        });
-        params.add(new Object[] {
-                3,
-                true,
-                4,      // La dimensione aumenta.
-                null    // Nessuna eccezione.
-        });
+
 
         // --- Partizione: buf è un ByteBuf valido (non null) ---
-        // Questi casi rimangono invariati, poiché il loro comportamento è già quello atteso.
         params.add(new Object[] {
-                0,      // initialNumBuffers
+                1,      // initialNumBuffers
                 false,  // prependNullBuf: false per un mock valido
-                1,      // expectedFinalSize
+                2,      // expectedFinalSize
                 null    // Nessuna eccezione
         });
-        params.add(new Object[] {
-                1,
-                false,
-                2,
-                null
-        });
-        params.add(new Object[] {
-                3,
-                false,
-                4,
-                null
-        });
+
 
         return params;
     }

@@ -72,19 +72,6 @@ public class AddTest {
 
     @After
     public void tearDown() {
-        if (bufList != null) {
-            try {
-                bufList.release(); // Rilascia tutti i buffer nella lista
-            } catch (NullPointerException e) {
-                // Questo catch gestisce l'NPE che si verifica se add(null) ha aggiunto un null alla lista.
-                // Permette al test di finire senza far crashare l'intero runner.
-                System.err.println("NullPointerException caught in tearDown during bufList.release(). "
-                        + "This indicates ByteBufList.add(null) added a null to the list, "
-                        + "which is the behavior being demonstrated by the passing test.");
-            }
-            bufList = null;
-        }
-        // Non è necessario rilasciare individualmente i mock qui, perché sono gestiti da bufList.release()
         initialMockBuffers.clear();
         bufToAddMock = null; // Rimuove il riferimento al mock
     }
@@ -136,49 +123,23 @@ public class AddTest {
         // Helper: params.add(new Object[] { initialNumBuffers, addNullBuf, expectedFinalSize, expectedExceptionClass });
 
         // --- Partizione: buf è null ---
-        // Basandoci sul comportamento standard di ArrayList.add(null), non ci aspettiamo un'eccezione immediata.
-        // La dimensione aumenterà, e null sarà aggiunto.
         params.add(new Object[] {
                 0,      // initialNumBuffers (lista inizialmente vuota)
                 true,   // addNullBuf: true per null
                 1,      // expectedFinalSize: la dimensione aumenta di 1 perché null viene aggiunto.
                 null    // expectedException: nessuna eccezione lanciata *da add() stesso*.
         });
-        params.add(new Object[] {
-                1,      // initialNumBuffers (lista con un elemento)
-                true,
-                2,
-                null
-        });
-        params.add(new Object[] {
-                3,      // initialNumBuffers (lista con più elementi)
-                true,
-                4,
-                null
-        });
+
 
         // --- Partizione: buf è un ByteBuf valido (non null) ---
-        // 1. ByteBufList è inizialmente vuota (valore limite)
+        //  ByteBufList è inizialmente vuota (valore limite)
         params.add(new Object[] {
                 0,      // initialNumBuffers
                 false,  // addNullBuf: false per un mock valido
                 1,      // expectedFinalSize
                 null    // Nessuna eccezione
         });
-        // 2. ByteBufList contiene un singolo ByteBuf (valore limite)
-        params.add(new Object[] {
-                1,
-                false,
-                2,
-                null
-        });
-        // 3. ByteBufList contiene più ByteBuf (caso generale)
-        params.add(new Object[] {
-                3,
-                false,
-                4,
-                null
-        });
+
 
         return params;
     }

@@ -48,7 +48,7 @@ public class LogMarkConstructorTest {
         return Arrays.asList(new Object[][]{
                 // ---- Copy constructor (valid) ----
                 {CaseType.COPY, sample, 10L, 20L, null, "Copy constructor con valori normali"},
-                {CaseType.COPY, extreme, Long.MAX_VALUE, Long.MAX_VALUE, null, "Copy constructor con estremi long"},
+                {CaseType.COPY, extreme, Long.MAX_VALUE, Long.MIN_VALUE, null, "Copy constructor con estremi long"},
                 //{CaseType.COPY, new LogMark(-5L, -50L), -5L, -50L, IllegalArgumentException.class, "Copy constructor con valori negativi"},
 
                 // ---- Copy constructor (null -> NPE) ----

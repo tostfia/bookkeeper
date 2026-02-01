@@ -30,8 +30,7 @@ public class HasArrayTest {
         bufList.add(Unpooled.wrappedBuffer(data1));
         bufList.add(Unpooled.wrappedBuffer(data2));
 
-        //l’API ByteBufList.hasArray() molto probabilmente è stata progettata per dire true solo
-        //  se tutta la lista può essere vista come un unico backing array (cioè un solo buffer heap).
+
         assertFalse(bufList.hasArray());
     }
 
@@ -56,8 +55,6 @@ public class HasArrayTest {
         bufList.add(Unpooled.wrappedBuffer(data)); // heap
         bufList.add(Unpooled.directBuffer().writeBytes("world".getBytes())); // direct
 
-        // se ByteBufList.hasArray() richiede che tutti i buffer abbiano backing array,
-        // allora in questo caso deve essere false
         assertFalse(bufList.hasArray());
     }
 
@@ -66,7 +63,7 @@ public class HasArrayTest {
         byte[] data = "hello".getBytes();
         bufList.add(Unpooled.wrappedBuffer(data));
 
-        assertTrue(bufList.hasArray()); // con un solo buffer heap dovrebbe funzionare
+        assertTrue(bufList.hasArray());
     }
 
 }

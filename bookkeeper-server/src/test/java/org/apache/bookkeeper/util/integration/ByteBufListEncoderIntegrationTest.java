@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 
 import static org.junit.Assert.*;
 
-public class ByteBufListEncoderE2ETest {
+public class ByteBufListEncoderIntegrationTest {
 
     @Test
     public void testOutboundMessagesAreWrittenCorrectly() {

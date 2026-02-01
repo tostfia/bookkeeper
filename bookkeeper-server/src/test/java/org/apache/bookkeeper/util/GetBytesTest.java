@@ -1,6 +1,6 @@
 package org.apache.bookkeeper.util;
 
-import io.netty.buffer.ByteBuf;
+
 import io.netty.buffer.Unpooled; // Per creare istanze di ByteBuf
 
 import org.junit.After;
@@ -232,33 +232,26 @@ public class GetBytesTest {
                 null                                    // Nessuna eccezione attesa normalmente
         });
 
+        params.add(new Object[] {
+                new byte[2],                                  // dst esattamente pieno
+                Arrays.asList(
+                        new byte[] { 1, 2 },                  // riempie dst
+                        new byte[] { 3 }                       // NON dovrebbe mai essere letto
+                ),
+                2,
+                new byte[] { 1, 2 },
+                null
+        });
+
+
+
+
 
 
         return params;
     }
 
-    //Test aggiunti per uccidere la mutation
-    /*@Test
-    public void testDoesNotCopyBeyondDstLength() {
 
-        // Primo buffer con più dati di quanti ce ne stanno in dst
-        ByteBuf buf1 = Unpooled.buffer();
-        buf1.writeBytes(new byte[]{1, 2, 3, 4, 5});
-        bufList.add(buf1);
-
-        // Secondo buffer che non dovrebbe mai essere letto,
-        // perché dst è troppo corto
-        ByteBuf buf2 = Unpooled.buffer();
-        buf2.writeBytes(new byte[]{9, 9, 9});
-        bufList.add(buf2);
-
-        byte[] dst = new byte[2];
-        int copied = bufList.getBytes(dst);
-
-        // Verifica che copia solo i primi due byte
-        assertEquals(2, copied);
-        assertArrayEquals(new byte[]{1, 2}, dst);
-    }*/
 
 }
 
